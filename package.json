@@ -19,7 +19,9 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
-    "prettier": "^1.17.0"
+    "gatsby-plugin-typescript": "^2.0.13",
+    "prettier": "^1.17.0",
+    "typescript": "^3.4.5"
   },
   "keywords": [
     "gatsby"
@@ -27,7 +29,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",

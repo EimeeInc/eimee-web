@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "outDir": "./dist/",
+      "sourceMap": true,
+      "strict": true,
+      "module": "commonjs",
+      "target": "esnext",
+      "jsx": "react",
+      "lib": ["dom", "es2015", "es2017"],
+      "baseUrl": "./",
+      "paths": {
+        "@*": ["src*"],
+      },
+      "noEmit": true,
+      "skipLibCheck": true
+    },
+    "include": ["./src/**/*"]
+  }

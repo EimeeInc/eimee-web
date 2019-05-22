@@ -1,31 +1,40 @@
+const path = require("path");
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `エイミー株式会社《 Eimee Inc. 》`,
+    description: `クレジットカード一括比較サイト【hikaQ(ヒカキュー)】を運営する「エイミー株式会社」です。皆さんの日々を豊かにする便利なアイデア・サービスをお届けします。Yahoo!プロモーション広告正規代理店｜東京都江東区｜エイミー株式会社《 Eimee Inc. 》`,
+    author: `@EimeeInc`,
+    baseUrl: "https://eimee.co.jp",
   },
   plugins: [
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-plugin-postcss`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        syntax: "postcss-scss",
+        postCssPlugins: [
+          require("postcss-import")({
+            resolve(id, basedir, { root, resolve }) {
+              const fullPath = id.startsWith("@/") ? path.join(root, "src", id.slice(2)) : path.join(basedir, id);
+
+              return fullPath;
+            }
+          }),
+          require("postcss-preset-env")(),
+          require("postcss-nested")(),
+          require("postcss-sorting")(),
+          require("postcss-css-variables")(),
+          require("postcss-calc")(),
+          require("postcss-functions")(),
+        ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-layout`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        component: require.resolve(`./src/components/layout.tsx`),
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

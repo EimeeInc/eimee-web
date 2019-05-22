@@ -68,6 +68,10 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
         .concat(meta)}
       link={[
         {
+          rel: "shortcut icon",
+          href: `/favicon.ico`,
+        },
+        {
           rel: "canonical",
           href: `${site.siteMetadata.baseUrl}${canonical}`,
         },

@@ -30,13 +30,14 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
 
   const metaDescription = description || site.siteMetadata.description
 
+  const selectedTitle = title ? `${site.siteMetadata.title} | ${title}`  : site.siteMetadata.title;
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title || site.siteMetadata.title}
-      titleTemplate={`%s${ title ? ` | ${site.siteMetadata.title}` : "" }`}
+      title={selectedTitle}
       meta={[
         {
           name: `description`,
@@ -44,7 +45,7 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
         },
         {
           property: `og:title`,
-          content: title,
+          content: selectedTitle,
         },
         {
           property: `og:description`,

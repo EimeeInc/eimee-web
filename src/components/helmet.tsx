@@ -2,6 +2,22 @@ import * as React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
+type SiteMetadata = {
+ title: string,
+ description: string,
+ author: string,
+ baseUrl: string,
+ css: (string | Object)[] 
+}
+
+type Site = {
+  siteMetadata: SiteMetadata,
+}
+
+type QueryResult = {
+  site: Site,
+}
+
 export default ({ description, lang = "ja", meta = [], keywords = [], title, canonical = "/" }: Partial<{
   description: string,
   lang: string,
@@ -13,7 +29,7 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
   title: string,
   canonical: string,
 }>) => {
-  const { site } = useStaticQuery(
+  const { site } : QueryResult = useStaticQuery(
     graphql`
       query {
         site {
@@ -29,9 +45,9 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
     `
   )
 
-  const metaDescription : string = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description
 
-  const selectedTitle : string = title ? `${site.siteMetadata.title} | ${title}`  : site.siteMetadata.title;
+  const selectedTitle = title ? `${site.siteMetadata.title} | ${title}`  : site.siteMetadata.title;
 
   return (
     <Helmet
@@ -77,7 +93,7 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
           rel: "canonical",
           href: `${site.siteMetadata.baseUrl}${canonical}`,
         },
-        ...site.siteMetadata.css.map((x : string | Object) => (typeof x === "string") ? { rel: "stylesheet", href: x } : x),
+        ...site.siteMetadata.css.map((x) => (typeof x === "string") ? { rel: "stylesheet", href: x } : x),
       ]}
     />
   )

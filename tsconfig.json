@@ -1,5 +1,6 @@
 {
     "compilerOptions": {
+      "typeRoots": ["src/@types"],
       "outDir": "./dist/",
       "sourceMap": true,
       "strict": true,
@@ -14,5 +15,5 @@
       "noEmit": true,
       "skipLibCheck": true
     },
-    "include": ["./src/**/*"]
+    "include": ["./src/**/*", ".cache/@types"]
   }

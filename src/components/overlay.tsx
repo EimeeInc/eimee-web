@@ -1,8 +1,9 @@
 import * as React from "react"
 import classnames from "classnames"
 import { Link } from "gatsby"
-import * as style from "./overlay.module.scss"
-import OverlayContext, { initOverlayStore } from "@/contexts/overlay";
+import OverlayContext, { initOverlayStore } from "@/contexts/Overlay";
+import styled from "styled-components"
+import media from "@/util/breakpoint";
 
 const links = [
   {
@@ -37,21 +38,76 @@ const links = [
     title: "お問い合わせ",
     link: "/contact/",
   },
-]
+];
 
-const Overlay = ({className} : { className? : string }) => {
+const Wrapper = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  transform: scale(1.0);
+  transition: transform 0.15s, opacity 0.15s;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  &:not(.isActive) {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+  }
+`;
+
+const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 80px;
+  line-height: 1;
+  color: #ffffff;
+
+  ${media.lessThan("md")`
+  padding: 60px;
+  `}
+`;
+
+const ListItem = styled.li`
+  flex-grow: 1;
+`;
+
+const StyledLink = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 3rem;
+  font-weight: bold;
+  text-decoration: none;
+
+  &:hover {
+    background-color: rgba(255,255,255,0.4);
+  }
+
+  ${media.lessThan("md")`
+    font-size: 2.5rem;
+  `}
+`
+
+const Overlay = ({ className } : { className? : string }) => {
   const overlayContext = React.useContext(OverlayContext) || initOverlayStore(false);
 
   return (
-    <div className={ classnames(style.wrapper, {[style.isActive]: overlayContext.isActive} , className) }>
-      <ul className={style.list}>
+    <Wrapper className={ classnames(className, { isActive: overlayContext.isActive }) }>
+      <List>
         {links.map(({ title, link }, i) => (
-          <li className={style.listItem} key={i}>
-            <Link className={style.link} to={link}>{title}</Link>
-          </li>
+          <ListItem key={i}>
+            <StyledLink to={link}>{title}</StyledLink>
+          </ListItem>
         ))}
-      </ul>
-    </div>
+      </List>
+    </Wrapper>
   )
 }
 

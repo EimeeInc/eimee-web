@@ -22,15 +22,16 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
             description
             author
             baseUrl
+            css
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription : string = description || site.siteMetadata.description
 
-  const selectedTitle = title ? `${site.siteMetadata.title} | ${title}`  : site.siteMetadata.title;
+  const selectedTitle : string = title ? `${site.siteMetadata.title} | ${title}`  : site.siteMetadata.title;
 
   return (
     <Helmet
@@ -76,14 +77,7 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
           rel: "canonical",
           href: `${site.siteMetadata.baseUrl}${canonical}`,
         },
-        {
-          rel: "stylesheet",
-          href: `https://fonts.googleapis.com/css?family=Montserrat:400,700`,
-        },
-        {
-          rel: "stylesheet",
-          href: `https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700`,
-        },
+        ...site.siteMetadata.css.map((x : string | Object) => (typeof x === "string") ? { rel: "stylesheet", href: x } : x),
       ]}
     />
   )

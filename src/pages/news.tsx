@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Link } from "gatsby"
-import Helmet from "@/components/helmet"
+import Helmet from "@/components/Helmet"
 
 const IndexPage = () => (
   <>

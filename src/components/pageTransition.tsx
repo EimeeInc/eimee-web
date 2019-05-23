@@ -1,10 +1,88 @@
 import * as React from "react"
-import classnames from "classnames";
 import {
   TransitionGroup,
   Transition as ReactTransition,
 } from "react-transition-group"
-import * as style from "./pageTransition.module.scss"
+import styled, { keyframes } from "styled-components"
+
+const fadeIn = keyframes`
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  40% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+`;
+
+const fadeOut = keyframes`
+  0% {
+    display: block;
+    opacity: 1;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+`;
+
+const hideLoading = keyframes`
+  0% {
+    display: flex;
+    opacity: 1;
+  }
+  39% {
+    display: flex;
+    opacity: 1;
+  }
+  40% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: none;
+    opacity: 0;
+  }
+`;
+
+const Wrapper = styled.div`
+  &.entering {
+    display: none;
+    position: absolute;
+    opacity: 0;
+  }
+
+  &.entered {
+    animation: ${fadeIn} 2.5s linear 0s 1 forwards;
+  }
+
+  &.exiting {
+    animation: ${fadeOut} 0.8s linear 0s 1 forwards;
+  }
+`
+
+const Loading = styled.div`
+  display: none;
+
+  &.entered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f0cd6c;
+    z-index: 999;
+    pointer-events: none;
+    animation: ${hideLoading} 2.5s linear 0s 1 forwards;
+  }
+`;
 
 const Transition = ({ children, location } : { children: React.ReactNode, location: Location }) => (
   <TransitionGroup>
@@ -17,10 +95,10 @@ const Transition = ({ children, location } : { children: React.ReactNode, locati
     >
       {status => (
         <>
-          <div className={classnames(style.wrapper, status)}>
+          <Wrapper className={status}>
             {children}
-          </div>
-          <div className={classnames(style.loading, status)}>
+          </Wrapper>
+          <Loading className={status}>
             <div className="fl">
               <div className="spinner6">
                 <div className="rect1" />
@@ -30,7 +108,7 @@ const Transition = ({ children, location } : { children: React.ReactNode, locati
                 <div className="rect5" />
               </div>
             </div>
-          </div>
+          </Loading>
         </>
       )}
     </ReactTransition>

@@ -2,20 +2,20 @@ import * as React from "react"
 import Overlay from "@/components/Overlay"
 import OverlayButton from "@/components/OverlayButton"
 import HomeButton from "@/components/HomeButton"
-import OverlayContext, { initOverlayStore } from "@/contexts/Overlay";
+import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
 import styled from "styled-components"
-import media from "@/util/breakpoint";
+import media from "@/util/breakpoint"
 
- const StyledHomeButton = styled(HomeButton)`
+const StyledHomeButton = styled(HomeButton)`
   position: fixed;
   top: 0;
   left: 0;
   z-index: 150;
- `;
+`
 
 const StyledOverlayButton = styled(OverlayButton)`
   position: fixed;
-  top:0;
+  top: 0;
   right: 0;
   width: 80px;
   height: 80px;
@@ -25,19 +25,19 @@ const StyledOverlayButton = styled(OverlayButton)`
     width: 60px;
     height: 60px;
   `}
-`;
+`
 
 const StyledOverlay = styled(Overlay)`
   z-index: 150;
 `
 
-const Header = ({ className } : { className? : string }) => {
-  const overlayStore = initOverlayStore(false);
+const Header = ({ className }: { className?: string }) => {
+  const overlayStore = initOverlayStore(false)
 
   return (
-    <header className={ className }>
+    <header className={className}>
       <StyledHomeButton />
-      <OverlayContext.Provider value={ overlayStore } >
+      <OverlayContext.Provider value={overlayStore}>
         <StyledOverlayButton />
         <StyledOverlay />
       </OverlayContext.Provider>

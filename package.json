@@ -45,7 +45,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "start": "gatsby serve",
-    "format": "prettier --write src/**/*.{js,jsx}",
+    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
     "typed": "tcm src -p **/*.scss",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },

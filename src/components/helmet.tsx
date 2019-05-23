@@ -3,33 +3,40 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 type SiteMetadata = {
- title: string,
- description: string,
- author: string,
- baseUrl: string,
- css: (string | Object)[] 
+  title: string
+  description: string
+  author: string
+  baseUrl: string
+  css: (string | Object)[]
 }
 
 type Site = {
-  siteMetadata: SiteMetadata,
+  siteMetadata: SiteMetadata
 }
 
 type QueryResult = {
-  site: Site,
+  site: Site
 }
 
-export default ({ description, lang = "ja", meta = [], keywords = [], title, canonical = "/" }: Partial<{
-  description: string,
-  lang: string,
+export default ({
+  description,
+  lang = "ja",
+  meta = [],
+  keywords = [],
+  title,
+  canonical = "/",
+}: Partial<{
+  description: string
+  lang: string
   meta: {
-    name: string,
-    content: string,
-  }[],
-  keywords: string[],
-  title: string,
-  canonical: string,
+    name: string
+    content: string
+  }[]
+  keywords: string[]
+  title: string
+  canonical: string
 }>) => {
-  const { site } : QueryResult = useStaticQuery(
+  const { site }: QueryResult = useStaticQuery(
     graphql`
       query {
         site {
@@ -47,7 +54,9 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
 
   const metaDescription = description || site.siteMetadata.description
 
-  const selectedTitle = title ? `${site.siteMetadata.title} | ${title}`  : site.siteMetadata.title;
+  const selectedTitle = title
+    ? `${site.siteMetadata.title} | ${title}`
+    : site.siteMetadata.title
 
   return (
     <Helmet
@@ -77,12 +86,19 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
           content: `IE=edge`,
         },
       ]
-        .concat(
-            {
-                name: `keywords`,
-                content: [...keywords, "ニュース","サービス","エイミー","Eimee","えいみー","hikaQ","ヒカキュー"].join(`, `),
-              }
-        )
+        .concat({
+          name: `keywords`,
+          content: [
+            ...keywords,
+            "ニュース",
+            "サービス",
+            "エイミー",
+            "Eimee",
+            "えいみー",
+            "hikaQ",
+            "ヒカキュー",
+          ].join(`, `),
+        })
         .concat(meta)}
       link={[
         {
@@ -93,7 +109,9 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
           rel: "canonical",
           href: `${site.siteMetadata.baseUrl}${canonical}`,
         },
-        ...site.siteMetadata.css.map((x) => (typeof x === "string") ? { rel: "stylesheet", href: x } : x),
+        ...site.siteMetadata.css.map(x =>
+          typeof x === "string" ? { rel: "stylesheet", href: x } : x
+        ),
       ]}
     />
   )

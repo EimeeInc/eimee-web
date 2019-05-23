@@ -1,19 +1,19 @@
 import * as React from "react"
 import classnames from "classnames"
-import OverlayContext, { initOverlayStore } from "@/contexts/Overlay";
-import styled from "styled-components";
+import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
+import styled from "styled-components"
 
 const cssVal = {
   lineLength: 30,
   lineThin: 5,
-};
+}
 
 const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 1.0;
-  transition: opacity,background-color 0.15s ease;
+  opacity: 1;
+  transition: opacity, background-color 0.15s ease;
   cursor: pointer;
   background-color: #f5f5f5;
 
@@ -25,14 +25,14 @@ const Wrapper = styled.div`
   &.isActive {
     background-color: transparent;
   }
-`;
+`
 
 const TransformContainer = styled.div`
   position: relative;
   width: ${cssVal.lineLength}px;
   height: ${cssVal.lineThin}px;
   pointer-events: none;
-`;
+`
 
 const Line = styled.span`
   display: block;
@@ -67,17 +67,21 @@ const Line = styled.span`
       transform: rotate(-45deg);
     }
   }
-`;
+`
 
-const OverlayButton = ({ className } : { className? : string }) => {
-  const overlayContext = React.useContext(OverlayContext) || initOverlayStore(false);
+const OverlayButton = ({ className }: { className?: string }) => {
+  const overlayContext =
+    React.useContext(OverlayContext) || initOverlayStore(false)
 
   return (
-    <Wrapper className={ classnames(className, {isActive: overlayContext.isActive}) } onClick={overlayContext.toggle}>
+    <Wrapper
+      className={classnames(className, { isActive: overlayContext.isActive })}
+      onClick={overlayContext.toggle}
+    >
       <TransformContainer>
-        <Line className={ classnames({isActive: overlayContext.isActive}) } />
-        <Line className={ classnames({isActive: overlayContext.isActive}) } />
-        <Line className={ classnames({isActive: overlayContext.isActive}) } />
+        <Line className={classnames({ isActive: overlayContext.isActive })} />
+        <Line className={classnames({ isActive: overlayContext.isActive })} />
+        <Line className={classnames({ isActive: overlayContext.isActive })} />
       </TransformContainer>
     </Wrapper>
   )

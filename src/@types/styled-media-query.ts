@@ -8,13 +8,15 @@ declare module "styled-media-query" {
   import {
     ThemedStyledProps,
     InterpolationValue,
-    FlattenInterpolation
-  } from 'styled-components'
+    FlattenInterpolation,
+  } from "styled-components"
 
   type InterpolationFunction<Props, Theme> = (
     props: ThemedStyledProps<Props, Theme>
-  ) => InterpolationValue | FlattenInterpolation<ThemedStyledProps<Props, Theme>>
-  
+  ) =>
+    | InterpolationValue
+    | FlattenInterpolation<ThemedStyledProps<Props, Theme>>
+
   type GeneratorFunction<Props, Theme> = (
     strings: TemplateStringsArray,
     ...interpolations: (
@@ -22,9 +24,9 @@ declare module "styled-media-query" {
       | InterpolationFunction<Props, Theme>
       | FlattenInterpolation<ThemedStyledProps<Props, Theme>>)[]
   ) => any
-  
+
   // --
-  
+
   export interface MediaGenerator<Breakpoints, Theme> {
     lessThan: <Props>(
       breakpoint: keyof Breakpoints
@@ -37,32 +39,32 @@ declare module "styled-media-query" {
       second: keyof Breakpoints
     ) => GeneratorFunction<Props, Theme>
   }
-  
+
   // --
-  
+
   export interface DefaultBreakpoints {
     huge: string
     large: string
     medium: string
     small: string
   }
-  
+
   export const defaultBreakpoints: DefaultBreakpoints
-  
+
   // --
-  
+
   export function generateMedia<Breakpoints = DefaultBreakpoints, Theme = any>(
     breakpoints?: Breakpoints
-  ): MediaGenerator<Breakpoints, Theme>;
-  
+  ): MediaGenerator<Breakpoints, Theme>
+
   // --
-  
+
   const media: MediaGenerator<DefaultBreakpoints, any>
-  
+
   export default media
-  
+
   // Convertors --
-  
+
   export function pxToEm<B>(breakpoints: B, ratio?: number): B
   export function pxToRem<B>(breakpoints: B, ratio?: number): B
 }

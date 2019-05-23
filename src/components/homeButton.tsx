@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import media from "@/util/breakpoint";
+import media from "@/util/breakpoint"
 
 const StyledLink = styled(Link)`
   width: 80px;
@@ -23,8 +23,8 @@ const StyledLink = styled(Link)`
   `}
 `
 
-const HomeButton = ({ className } : { className? : string }) => (
-  <StyledLink className={ className } to="/" />
+const HomeButton = ({ className }: { className?: string }) => (
+  <StyledLink className={className} to="/" />
 )
 
 export default HomeButton

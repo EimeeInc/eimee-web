@@ -17,7 +17,7 @@ const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-`;
+`
 
 const fadeOut = keyframes`
   0% {
@@ -28,7 +28,7 @@ const fadeOut = keyframes`
     display: none;
     opacity: 0;
   }
-`;
+`
 
 const hideLoading = keyframes`
   0% {
@@ -47,7 +47,7 @@ const hideLoading = keyframes`
     display: none;
     opacity: 0;
   }
-`;
+`
 
 const Wrapper = styled.div`
   &.entering {
@@ -82,9 +82,15 @@ const Loading = styled.div`
     pointer-events: none;
     animation: ${hideLoading} 2.5s linear 0s 1 forwards;
   }
-`;
+`
 
-const Transition = ({ children, location } : { children: React.ReactNode, location: Location }) => (
+const Transition = ({
+  children,
+  location,
+}: {
+  children: React.ReactNode
+  location: Location
+}) => (
   <TransitionGroup>
     <ReactTransition
       key={location.pathname}
@@ -95,9 +101,7 @@ const Transition = ({ children, location } : { children: React.ReactNode, locati
     >
       {status => (
         <>
-          <Wrapper className={status}>
-            {children}
-          </Wrapper>
+          <Wrapper className={status}>{children}</Wrapper>
           <Loading className={status}>
             <div className="fl">
               <div className="spinner6">

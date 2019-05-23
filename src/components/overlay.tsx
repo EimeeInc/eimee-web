@@ -1,9 +1,9 @@
 import * as React from "react"
 import classnames from "classnames"
 import { Link } from "gatsby"
-import OverlayContext, { initOverlayStore } from "@/contexts/Overlay";
+import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
 import styled from "styled-components"
-import media from "@/util/breakpoint";
+import media from "@/util/breakpoint"
 
 const links = [
   {
@@ -38,7 +38,7 @@ const links = [
     title: "お問い合わせ",
     link: "/contact/",
   },
-];
+]
 
 const Wrapper = styled.div`
   position: fixed;
@@ -47,7 +47,7 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   opacity: 1;
-  transform: scale(1.0);
+  transform: scale(1);
   transition: transform 0.15s, opacity 0.15s;
   background-color: rgba(0, 0, 0, 0.8);
 
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
     transform: scale(0.9);
     pointer-events: none;
   }
-`;
+`
 
 const List = styled.ul`
   display: flex;
@@ -70,11 +70,11 @@ const List = styled.ul`
   ${media.lessThan("md")`
   padding: 60px;
   `}
-`;
+`
 
 const ListItem = styled.li`
   flex-grow: 1;
-`;
+`
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -87,7 +87,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
   }
 
   ${media.lessThan("md")`
@@ -95,11 +95,14 @@ const StyledLink = styled(Link)`
   `}
 `
 
-const Overlay = ({ className } : { className? : string }) => {
-  const overlayContext = React.useContext(OverlayContext) || initOverlayStore(false);
+const Overlay = ({ className }: { className?: string }) => {
+  const overlayContext =
+    React.useContext(OverlayContext) || initOverlayStore(false)
 
   return (
-    <Wrapper className={ classnames(className, { isActive: overlayContext.isActive }) }>
+    <Wrapper
+      className={classnames(className, { isActive: overlayContext.isActive })}
+    >
       <List>
         {links.map(({ title, link }, i) => (
           <ListItem key={i}>

@@ -7,6 +7,6 @@ const IndexPage = () => (
     <Helmet />
     <TopBackground />
   </>
-);
+)
 
 export default IndexPage

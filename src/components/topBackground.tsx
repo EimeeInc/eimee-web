@@ -1,6 +1,6 @@
 import * as React from "react"
 import styled, { keyframes } from "styled-components"
-import media from "@/util/breakpoint";
+import media from "@/util/breakpoint"
 
 const fadeIn = keyframes`
   0% {
@@ -15,7 +15,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: relative;
-`;
+`
 
 const Background = styled.div`
   position: relative;
@@ -48,7 +48,7 @@ const Background = styled.div`
   &:nth-of-type(2) {
     background-image: url("/assets/img/ph_top2.jpg");
     background-position: left top;
-    animation: ${fadeIn} 1.5s ease 1.0s 1 forwards;
+    animation: ${fadeIn} 1.5s ease 1s 1 forwards;
 
     ${media.lessThan("md")`
       display: none;
@@ -66,13 +66,13 @@ const Background = styled.div`
 
   &:nth-of-type(4) {
     background-image: url("/assets/img/ph_top4.jpg");
-    animation: ${fadeIn} 1.5s ease 2.0s 1 forwards;
+    animation: ${fadeIn} 1.5s ease 2s 1 forwards;
 
     ${media.lessThan("md")`
       display: none;
     `}
   }
-`;
+`
 
 const Logo = styled.div`
   position: absolute;
@@ -96,15 +96,13 @@ const Logo = styled.div`
     width: 250px;
     height: 60px;
   `}
-`;
+`
 
-const TopBackground = ({ className } : { className? : string }) => (
-  <Wrapper classname={ className }>
-    {
-      Array.from(Array(4).keys()).map((i) => (
-        <Background key={i} />
-      ))
-    }
+const TopBackground = ({ className }: { className?: string }) => (
+  <Wrapper classname={className}>
+    {Array.from(Array(4).keys()).map(i => (
+      <Background key={i} />
+    ))}
     <Logo />
   </Wrapper>
 )

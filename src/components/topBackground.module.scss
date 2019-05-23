@@ -89,6 +89,13 @@
         animation: fadein 5s ease 1.5s 1 forwards;
       }
     }
+
+    @media isUnderSmall {
+      & {
+        width: 250px;
+        height: 60px;
+      }
+    }
   }
 }
 

@@ -2,7 +2,7 @@ import * as React from "react"
 import classnames from "classnames"
 import { Link } from "gatsby"
 import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import media from "@/util/breakpoint"
 
 const links = [

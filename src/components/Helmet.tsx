@@ -47,7 +47,6 @@ export default ({
             author
             baseUrl
             css
-            script
           }
         }
       }
@@ -115,11 +114,11 @@ export default ({
           typeof x === "string" ? { rel: "stylesheet", href: x } : x
         ),
       ]}
-      script={
-        site.siteMetadata.script.map(x =>
+      script={[
+        ...(site.siteMetadata.script || []).map(x =>
           typeof x === "string" ? { src: x } : x
-        )
-      }
+        ),
+      ]}
     />
   )
 }

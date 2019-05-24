@@ -3,7 +3,8 @@ import {
   TransitionGroup,
   Transition as ReactTransition,
 } from "react-transition-group"
-import styled, { keyframes } from "styled-components"
+import styled from "@emotion/styled"
+import { keyframes } from "@emotion/core"
 
 const fadeIn = keyframes`
   0% {

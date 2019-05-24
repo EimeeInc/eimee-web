@@ -117,9 +117,8 @@ export default ({
       script={[
         ...(site.siteMetadata.script || []).map(x =>
           typeof x === "string" ? { src: x } : x
-        ) 
-      ]
-      }
+        ),
+      ]}
     />
   )
 }

@@ -1,5 +1,5 @@
 import * as React from "react"
-import Helmet from "@/components/helmet"
+import Helmet from "@/components/Helmet"
 
 const NotFoundPage = () => (
   <>

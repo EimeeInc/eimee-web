@@ -1,13 +1,12 @@
 import * as React from "react"
-import { Link, graphql } from "gatsby"
-import Helmet from "@/components/helmet"
-import TopBackground from "@/components/topBackground"
+import Helmet from "@/components/Helmet"
+import TopBackground from "@/components/TopBackground"
 
 const IndexPage = () => (
   <>
     <Helmet />
     <TopBackground />
   </>
-);
+)
 
 export default IndexPage

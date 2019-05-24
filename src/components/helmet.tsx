@@ -2,18 +2,41 @@ import * as React from "react"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-export default ({ description, lang = "ja", meta = [], keywords = [], title, canonical = "/" }: Partial<{
-  description: string,
-  lang: string,
+type SiteMetadata = {
+  title: string
+  description: string
+  author: string
+  baseUrl: string
+  css: (string | Object)[]
+}
+
+type Site = {
+  siteMetadata: SiteMetadata
+}
+
+type QueryResult = {
+  site: Site
+}
+
+export default ({
+  description,
+  lang = "ja",
+  meta = [],
+  keywords = [],
+  title,
+  canonical = "/",
+}: Partial<{
+  description: string
+  lang: string
   meta: {
-    name: string,
-    content: string,
-  }[],
-  keywords: string[],
-  title: string,
-  canonical: string,
+    name: string
+    content: string
+  }[]
+  keywords: string[]
+  title: string
+  canonical: string
 }>) => {
-  const { site } = useStaticQuery(
+  const { site }: QueryResult = useStaticQuery(
     graphql`
       query {
         site {
@@ -22,6 +45,7 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
             description
             author
             baseUrl
+            css
           }
         }
       }
@@ -30,13 +54,16 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
 
   const metaDescription = description || site.siteMetadata.description
 
+  const selectedTitle = title
+    ? `${site.siteMetadata.title} | ${title}`
+    : site.siteMetadata.title
+
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
-      title={title || site.siteMetadata.title}
-      titleTemplate={`%s${ title ? ` | ${site.siteMetadata.title}` : "" }`}
+      title={selectedTitle}
       meta={[
         {
           name: `description`,
@@ -44,7 +71,7 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
         },
         {
           property: `og:title`,
-          content: title,
+          content: selectedTitle,
         },
         {
           property: `og:description`,
@@ -59,12 +86,19 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
           content: `IE=edge`,
         },
       ]
-        .concat(
-            {
-                name: `keywords`,
-                content: [...keywords, "ニュース","サービス","エイミー","Eimee","えいみー","hikaQ","ヒカキュー"].join(`, `),
-              }
-        )
+        .concat({
+          name: `keywords`,
+          content: [
+            ...keywords,
+            "ニュース",
+            "サービス",
+            "エイミー",
+            "Eimee",
+            "えいみー",
+            "hikaQ",
+            "ヒカキュー",
+          ].join(`, `),
+        })
         .concat(meta)}
       link={[
         {
@@ -75,14 +109,9 @@ export default ({ description, lang = "ja", meta = [], keywords = [], title, can
           rel: "canonical",
           href: `${site.siteMetadata.baseUrl}${canonical}`,
         },
-        {
-          rel: "stylesheet",
-          href: `https://fonts.googleapis.com/css?family=Montserrat:400,700`,
-        },
-        {
-          rel: "stylesheet",
-          href: `https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700`,
-        },
+        ...site.siteMetadata.css.map(x =>
+          typeof x === "string" ? { rel: "stylesheet", href: x } : x
+        ),
       ]}
     />
   )

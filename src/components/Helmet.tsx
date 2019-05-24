@@ -7,8 +7,8 @@ type SiteMetadata = {
   description: string
   author: string
   baseUrl: string
-  css: (string | Object)[],
-  script: (string | Object)[],
+  css: (string | Object)[]
+  script: (string | Object)[]
 }
 
 type Site = {
@@ -115,7 +115,11 @@ export default ({
           typeof x === "string" ? { rel: "stylesheet", href: x } : x
         ),
       ]}
-      script={site.siteMetadata.script}
+      script={
+        site.siteMetadata.script.map(x =>
+          typeof x === "string" ? { src: x } : x
+        )
+      }
     />
   )
 }

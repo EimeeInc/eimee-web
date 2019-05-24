@@ -99,7 +99,7 @@ const Logo = styled.div`
 `
 
 const TopBackground = ({ className }: { className?: string }) => (
-  <Wrapper classname={className}>
+  <Wrapper className={className}>
     {Array.from(Array(4).keys()).map(i => (
       <Background key={i} />
     ))}

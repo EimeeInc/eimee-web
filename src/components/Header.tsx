@@ -3,7 +3,7 @@ import Overlay from "@/components/Overlay"
 import OverlayButton from "@/components/OverlayButton"
 import HomeButton from "@/components/HomeButton"
 import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 import media from "@/util/breakpoint"
 
 const StyledHomeButton = styled(HomeButton)`

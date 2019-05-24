@@ -1,10 +1,10 @@
-// Type definitions for styled-media-query 2.1.1
-// Project: https://github.com/morajabi/styled-media-query
+// Type definitions for emotion-media-query 1.0.1
+// Project: https://github.com/mrmartineau/emotion-media-query
 // Definitions by: François Best <https://github.com/franky47>
 // Requires @types/styled-components definitions ^4.1
 // TypeScript version: 3.3.3
 
-declare module "styled-media-query" {
+declare module "emotion-media-query" {
   import {
     ThemedStyledProps,
     InterpolationValue,

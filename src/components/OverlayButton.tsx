@@ -1,7 +1,7 @@
 import * as React from "react"
 import classnames from "classnames"
 import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
-import styled from "styled-components"
+import styled from "@emotion/styled"
 
 const cssVal = {
   lineLength: 30,

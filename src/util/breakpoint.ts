@@ -8,21 +8,31 @@ export type Breakpoints = {
   md: string
 }
 
-export const lessThan = (bp: keyof Breakpoints) => (
-  strings: TemplateStringsArray,
-  ...keys: any[]
-) => {
+const makeQuery = (strings: TemplateStringsArray, ...keys: any[]) => {
   const args = [strings, keys]
   const query = [...args[0]]
     .map((_, i) => args.map(x => x[i]))
     .map(x => x.join(""))
-    .join("")
+    .join("");
 
-  return `@media screen and (max-width: ${breakpoints[bp]}px) {
-    ${query}
-  }`
+  return query;
 }
+
+export const lessThan = (bp: keyof Breakpoints) => (
+  strings: TemplateStringsArray,
+  ...keys: any[]
+) => `@media screen and (max-width: ${breakpoints[bp]}px) {
+  ${makeQuery(strings, keys)}
+}`
+
+export const greaterThan = (bp: keyof Breakpoints) => (
+  strings: TemplateStringsArray,
+  ...keys: any[]
+) => `@media screen and (min-width: ${breakpoints[bp] + 0.025}px) {
+  ${makeQuery(strings, keys)}
+}`
 
 export default {
   lessThan,
+  greaterThan,
 }

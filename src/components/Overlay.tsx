@@ -4,41 +4,7 @@ import { Link } from "gatsby"
 import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
 import styled from "@emotion/styled"
 import media from "@/util/breakpoint"
-
-const links = [
-  {
-    title: "TOPページ",
-    link: "/",
-  },
-  {
-    title: "ニュース",
-    link: "/news/",
-  },
-  {
-    title: "私たちについて",
-    link: "/about/",
-  },
-  {
-    title: "会社概要",
-    link: "/company/",
-  },
-  {
-    title: "ワークスタイル",
-    link: "/office/",
-  },
-  {
-    title: "スタッフ紹介",
-    link: "/staff/",
-  },
-  {
-    title: "採用情報",
-    link: "/recruit/",
-  },
-  {
-    title: "お問い合わせ",
-    link: "/contact/",
-  },
-]
+import routings from "@/util/routings"
 
 const Wrapper = styled.div`
   position: fixed;
@@ -84,6 +50,7 @@ const StyledLink = styled(Link)`
   height: 100%;
   font-size: 3rem;
   font-weight: bold;
+  color: #ffffff;
   text-decoration: none;
 
   &:hover {
@@ -104,9 +71,9 @@ const Overlay = ({ className }: { className?: string }) => {
       className={classnames(className, { isActive: overlayContext.isActive })}
     >
       <List>
-        {links.map(({ title, link }, i) => (
+        {Array.from(Object.values(routings)).map(({ label, location }, i) => (
           <ListItem key={i}>
-            <StyledLink to={link}>{title}</StyledLink>
+            <StyledLink to={location}>{label}</StyledLink>
           </ListItem>
         ))}
       </List>

@@ -19,14 +19,7 @@ type QueryResult = {
   site: Site
 }
 
-export default ({
-  description,
-  lang = "ja",
-  meta = [],
-  keywords = [],
-  title,
-  canonical = "/",
-}: Partial<{
+type HelmetProps = Partial<{
   description: string
   lang: string
   meta: {
@@ -36,7 +29,16 @@ export default ({
   keywords: string[]
   title: string
   canonical: string
-}>) => {
+}>
+
+export default ({
+  description,
+  lang = "ja",
+  meta = [],
+  keywords = [],
+  title,
+  canonical = "/",
+}: HelmetProps) => {
   const { site }: QueryResult = useStaticQuery(
     graphql`
       query {

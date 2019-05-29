@@ -1,11 +1,12 @@
 const breakpoints = {
   sm: 480,
   md: 768,
+  lg: 1024,
+  xl: 1440,
 }
 
 export type Breakpoints = {
-  sm: string
-  md: string
+  [T in keyof typeof breakpoints]: string
 }
 
 const makeQuery = (strings: TemplateStringsArray, ...keys: any[]) => {

@@ -48,6 +48,7 @@ export default ({
             description
             author
             baseUrl
+            script
             css
           }
         }

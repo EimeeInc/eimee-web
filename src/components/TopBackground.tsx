@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: relative;
+  overflow: hidden;
 `
 
 const Background = styled.div`
@@ -90,7 +91,7 @@ const Logo = styled.div`
   animation: ${fadeIn} 5s ease 2.5s 1 forwards;
 
   ${media.lessThan("md")`
-    animation: ${fadeIn} 5s ease 1.5s 1 forwards;
+    animation: ${fadeIn.name} 5s ease 1.5s 1 forwards;
   `}
 
   ${media.lessThan("sm")`
@@ -98,6 +99,30 @@ const Logo = styled.div`
     height: 60px;
   `}
 `
+
+console.log(`
+position: absolute;
+top: 50.75%;
+left: 50%;
+width: 400px;
+height: 95px;
+opacity: 0;
+background-image: url("/assets/img/logo_top.png");
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center center;
+transform: translate(-50%, -50%);
+animation: ${fadeIn} 5s ease 2.5s 1 forwards;
+
+${media.lessThan("md")`
+  animation: ${fadeIn} 5s ease 1.5s 1 forwards;
+`}
+
+${media.lessThan("sm")`
+  width: 250px;
+  height: 60px;
+`}
+`);
 
 const TopBackground = ({ className }: { className?: string }) => (
   <Wrapper className={className}>

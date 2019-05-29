@@ -7,8 +7,15 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
+  margin-bottom: 60px;
   font-size: 5rem;
   font-weight: bold;
+
+  ${media.lessThan("md")`
+    margin-top: 10px;
+    margin-bottom: 20px;
+  `}
 
   ${media.lessThan("sm")`
     font-size: 3rem;

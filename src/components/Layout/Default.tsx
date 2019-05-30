@@ -1,6 +1,6 @@
 import * as React from "react"
 import PageTransition from "@/components/PageTransition"
-import Header from "@/components/Header"
+import Header from "@/components/Organism/Header"
 import styled from "@emotion/styled"
 
 const PageWrapper = styled.main`

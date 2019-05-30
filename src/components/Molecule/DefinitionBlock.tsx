@@ -1,22 +1,18 @@
-import { Link } from "gatsby"
 import * as React from "react"
-import {css} from "@emotion/core"
 import styled from "@emotion/styled"
 import media from "@/util/breakpoint"
-
-type Linkable = {
-  to?: string,
-  blank?: boolean,
-}
+import Link from "@/components/Atom/Link"
 
 type DefinitionBlockProps = {
-} & Linkable;
+  to?: string,
+  blank?: boolean,
+} & React.HTMLAttributes<HTMLDivElement>;
 
-type ImageProps = {}
+type ImageProps = {} & React.ImgHTMLAttributes<HTMLImageElement>;
 
-type HeaderProps = {}
+type HeaderProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
-type BodyProps = {}
+type BodyProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
 const Wrapper = styled.div`
   display: flex;
@@ -60,6 +56,7 @@ const TextContainer = styled.div`
 `;
 
 const Header = styled.div<HeaderProps>`
+display: inline-block;
   margin-bottom: 20px;
   font-size: 3.4rem;
   font-weight: bold;
@@ -97,16 +94,11 @@ const Body = styled.div<BodyProps>`
   `}
 `;
 
-const Linker = styled.a`
-  display: block;
+const TextLink = styled(Link)`
+  display: inline-block;
   position: relative;
   margin-top: 15px;
   margin-left: 30px;
-  color: #0b69a0;
-
-  &:hover {
-    color: #df944c;
-  }
 
   &:before {
     content: "";
@@ -125,67 +117,59 @@ const Linker = styled.a`
   }
 `;
 
-const ImageLinkStyle = css`
+const ImageLink = styled(Link)`
   flex: none;
-
 
   ${media.lessThan("md")`
     width: 100%;
   `}
 `;
 
-const HeaderLinkStyle = css`
+const HeaderLink = styled(Link)`
   color: inherit;
   text-decoration: none;
+
+  &:hover {
+    color: inherit;
+  }
 `;
 
 const isReactElement = <T extends {}>(value: any): value is React.ReactElement<T> => value && typeof value.type === "function";
 const isReactNodeArray = (value: any): value is React.ReactNodeArray => value && value.length && value.find;
 
-const DefinitionBlock = ({ to, blank, children, ...props }: DefinitionBlockProps & React.HTMLAttributes<HTMLDivElement>) => {
-  const Image = isReactNodeArray(children) ? children.find(x => isReactElement(x) ? x.type === DefinitionBlock.Image : false) : null;
-  const Header = isReactNodeArray(children) ? children.find(x => isReactElement(x) ? x.type === DefinitionBlock.Header : false) : null;
-  const Body = isReactNodeArray(children) ? children.find(x => isReactElement(x) ? x.type === DefinitionBlock.Body : false) : null;
+const DefinitionBlock = ({ to, blank, children, ...props }: DefinitionBlockProps) => {
+  const LinkProps = { to, blank };
+  const Image = isReactNodeArray(children) && children.find(x => isReactElement(x) && x.type === DefinitionBlock.Image) || null;
+  const Header = isReactNodeArray(children) && children.find(x => isReactElement(x) && x.type === DefinitionBlock.Header) || null;
+  const Body = isReactNodeArray(children) && children.find(x => isReactElement(x) && x.type === DefinitionBlock.Body) || null;
 
   return (
     <Wrapper { ...props }>
-    {
-      (() => (
-        (to)
-          ? (blank)
-            ? <a href={to} target="_blank" css={ImageLinkStyle}>{Image || null}</a>
-            : <Link to={to} css={ImageLinkStyle}>{Image || null}</Link>
-          : Image || null
-      ))()
-    }
+      {
+        to ? <ImageLink { ...LinkProps }>{Image}</ImageLink> : Image
+      }
       <TextContainer>
         {
-          (() => (
-            (to)
-              ? (blank)
-                ? <a href={to} target="_blank" css={HeaderLinkStyle}>{Header || null}</a>
-                : <Link to={to} css={HeaderLinkStyle}>{Header || null}</Link>
-              : Header || null
-          ))()
+          to ? <HeaderLink { ...LinkProps }>{Header}</HeaderLink> : Header
         }
-        { Body || null }
-        { (() => (to && blank ? <Linker href={to} target={blank ? "_blank" : undefined}>{to}</Linker> : null))() }
+        { Body }
+        <TextLink { ...LinkProps }>{to}</TextLink>
       </TextContainer>
     </Wrapper>
   );
 };
 
-DefinitionBlock.Image = ({ ...props } : ImageProps & React.ImgHTMLAttributes<HTMLImageElement>) => (() => (
+DefinitionBlock.Image = ({ ...props } : ImageProps) => (
   <Image { ...props }/>
-))();
+);
 
-DefinitionBlock.Header = ({ children, ...props } : HeaderProps & React.HTMLAttributes<HTMLDivElement>) => (
+DefinitionBlock.Header = ({ children, ...props } : HeaderProps) => (
   <Header { ...props }>
     {children}
   </Header>
 );
 
-DefinitionBlock.Body = ({ children, ...props } : BodyProps & React.HTMLAttributes<HTMLDivElement>) => (
+DefinitionBlock.Body = ({ children, ...props } : BodyProps) => (
   <Body { ...props }>
     {children}
   </Body>

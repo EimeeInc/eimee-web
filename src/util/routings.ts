@@ -1,14 +1,22 @@
-type Pages = "top" | "news" | "about" | "company" | "office" | "staff" | "recruit" | "contact";
+type Pages =
+  | "top"
+  | "news"
+  | "about"
+  | "company"
+  | "office"
+  | "staff"
+  | "recruit"
+  | "contact"
 
 type Routings = {
   [T in Pages]: {
-    location: string,
-    parent: Pages | null,
-    label: string,
+    location: string
+    parent: Pages | null
+    label: string
   }
-};
+}
 
-const routings : Routings = {
+const routings: Routings = {
   top: {
     location: "/",
     parent: null,
@@ -49,6 +57,6 @@ const routings : Routings = {
     parent: "top",
     label: "お問い合わせ",
   },
-};
+}
 
-export default routings;
+export default routings

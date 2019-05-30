@@ -8,7 +8,7 @@ const AnchorLink = styled.a`
   &:hover {
     color: #df944c;
   }
-`;
+`
 
 const StyledLink = styled(GatsbyLink)`
   color: #0b69a0;
@@ -16,17 +16,27 @@ const StyledLink = styled(GatsbyLink)`
   &:hover {
     color: #df944c;
   }
-`;
+`
 
 type LinkProps = {
-  to?: string,
-  blank?: boolean,
+  to?: string
+  blank?: boolean
 }
 
-const Link = ({ to = "", blank = false, children, ...props }: LinkProps & React.HTMLAttributes<HTMLAnchorElement>) => (
-  (blank)
-    ? <AnchorLink href={ to } target="_blank" { ...props }>{children}</AnchorLink>
-    : <StyledLink to={ to } { ...props }>{children}</StyledLink>
-);
+const Link = ({
+  to = "",
+  blank = false,
+  children,
+  ...props
+}: LinkProps & React.HTMLAttributes<HTMLAnchorElement>) =>
+  blank ? (
+    <AnchorLink href={to} target="_blank" {...props}>
+      {children}
+    </AnchorLink>
+  ) : (
+    <StyledLink to={to} {...props}>
+      {children}
+    </StyledLink>
+  )
 
 export default Link

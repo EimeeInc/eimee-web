@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   border-bottom: solid 1px #efefef;
   color: #505050;
   background-color: #f1f1f1;
-`;
+`
 
 const Label = styled.span`
   display: flex;
@@ -25,50 +25,53 @@ const Label = styled.span`
   &:not(.isRoot) {
     padding-left: 24px;
   }
-`;
+`
 
 const StyledLink = styled(Link)`
   color: #0b69a0;
   text-decoration: none;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   background-color: #dddddd;
 
   &:hover {
     background-color: #fccf88;
   }
-`;
+`
 
 type BreadcrumbProps = {
-  name: keyof typeof routings | null,
-  isCurrent? : boolean
-};
+  name: keyof typeof routings | null
+  isCurrent?: boolean
+}
 
-const Breadcrumb = ({ name, isCurrent = false }: BreadcrumbProps) => (
-    (name !== null) ?
-      <>
-        <Breadcrumb name={routings[name].parent} />
-        {
-          (isCurrent)
-            ? <Label className={ classnames({ isRoot: !routings[name].parent }) }>{routings[name].label}</Label>
-            : <StyledLink to={routings[name].location}><Label className={ classnames({ isRoot: !routings[name].parent }) }>{routings[name].label}へ戻る</Label></StyledLink>
-        }
-      </> : null
-);
+const Breadcrumb = ({ name, isCurrent = false }: BreadcrumbProps) =>
+  name !== null ? (
+    <>
+      <Breadcrumb name={routings[name].parent} />
+      {isCurrent ? (
+        <Label className={classnames({ isRoot: !routings[name].parent })}>
+          {routings[name].label}
+        </Label>
+      ) : (
+        <StyledLink to={routings[name].location}>
+          <Label className={classnames({ isRoot: !routings[name].parent })}>
+            {routings[name].label}へ戻る
+          </Label>
+        </StyledLink>
+      )}
+    </>
+  ) : null
 
 type BreadcrumbsProps = {
-  name?: keyof typeof routings,
+  name?: keyof typeof routings
   className?: string
-};
+}
 
 const Breadcrumbs = ({ name = "top", className }: BreadcrumbsProps) => (
   <Wrapper className={className}>
     <Breadcrumb name={name} isCurrent />
   </Wrapper>
-);
+)
 
-export {
-  Breadcrumb,
-  Breadcrumbs,
-}
+export { Breadcrumb, Breadcrumbs }
 
 export default Breadcrumbs

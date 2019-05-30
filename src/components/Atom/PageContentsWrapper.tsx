@@ -21,10 +21,11 @@ const Wrapper = styled.div`
   `}
 `
 
-const PageContentsWrapper = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
-  <Wrapper { ...props }>
-    {children}
-  </Wrapper>
-);
+const PageContentsWrapper = ({
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) => (
+  <Wrapper {...props}>{children}</Wrapper>
+)
 
 export default PageContentsWrapper

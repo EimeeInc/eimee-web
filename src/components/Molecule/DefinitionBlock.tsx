@@ -172,7 +172,7 @@ const DefinitionBlock = ({
       <TextContainer>
         {to ? <HeaderLink {...LinkProps}>{Header}</HeaderLink> : Header}
         {Body}
-        <TextLink {...LinkProps}>{to}</TextLink>
+        {to && <TextLink {...LinkProps}>{to}</TextLink>}
       </TextContainer>
     </Wrapper>
   )

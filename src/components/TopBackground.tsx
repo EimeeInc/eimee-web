@@ -100,30 +100,6 @@ const Logo = styled.div`
   `}
 `
 
-console.log(`
-position: absolute;
-top: 50.75%;
-left: 50%;
-width: 400px;
-height: 95px;
-opacity: 0;
-background-image: url("/assets/img/logo_top.png");
-background-size: cover;
-background-repeat: no-repeat;
-background-position: center center;
-transform: translate(-50%, -50%);
-animation: ${fadeIn} 5s ease 2.5s 1 forwards;
-
-${media.lessThan("md")`
-  animation: ${fadeIn} 5s ease 1.5s 1 forwards;
-`}
-
-${media.lessThan("sm")`
-  width: 250px;
-  height: 60px;
-`}
-`);
-
 const TopBackground = ({ className }: { className?: string }) => (
   <Wrapper className={className}>
     {Array.from(Array(4).keys()).map(i => (

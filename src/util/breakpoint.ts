@@ -5,9 +5,9 @@ const breakpoints = {
   xl: 1440,
 }
 
-export type Breakpoints = {
-  [T in keyof typeof breakpoints]: string
-}
+export type Breakpoints = keyof typeof breakpoints
+
+export type Orientation = "none" | "portrait" | "landscape";
 
 const makeQuery = (strings: TemplateStringsArray, ...keys: any[]) => {
   const args = [strings, keys]
@@ -19,17 +19,17 @@ const makeQuery = (strings: TemplateStringsArray, ...keys: any[]) => {
   return query;
 }
 
-export const lessThan = (bp: keyof Breakpoints) => (
+export const lessThan = (bp: Breakpoints, orient: Orientation = "none") => (
   strings: TemplateStringsArray,
   ...keys: any[]
-) => `@media screen and (max-width: ${breakpoints[bp]}px) {
+) => `@media screen and (max-width: ${breakpoints[bp]}px)${orient !== "none" ? ` and (orientation: ${orient})` : ""} {
   ${makeQuery(strings, keys)}
 }`
 
-export const greaterThan = (bp: keyof Breakpoints) => (
+export const greaterThan = (bp: Breakpoints, orient: Orientation = "none") => (
   strings: TemplateStringsArray,
   ...keys: any[]
-) => `@media screen and (min-width: ${breakpoints[bp] + 0.025}px) {
+) => `@media screen and (min-width: ${breakpoints[bp] + 0.025}px)${orient !== "none" ? ` and (orientation: ${orient})` : ""} {
   ${makeQuery(strings, keys)}
 }`
 

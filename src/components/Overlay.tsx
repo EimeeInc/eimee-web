@@ -33,6 +33,11 @@ const List = styled.ul`
   line-height: 1;
   color: #ffffff;
 
+  ${media.greaterThan("md", "landscape")`
+    flex-direction: row;
+    flex-wrap: wrap;
+  `}
+
   ${media.lessThan("md")`
   padding: 60px;
   `}
@@ -40,6 +45,10 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   flex-grow: 1;
+
+  ${media.greaterThan("md", "landscape")`
+    width: 50%;
+  `}
 `
 
 const StyledLink = styled(Link)`

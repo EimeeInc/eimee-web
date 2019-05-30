@@ -90,7 +90,7 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
     <NewsBlock to="https://クレジットカードおすすめ比較.net/" blank>
       <NewsBlock.Title>クレジットカードhikaQリリース</NewsBlock.Title>
       <NewsBlock.Body>
-        クレジットカードhikaQをリリースしました。。
+        クレジットカードhikaQをリリースしました。
       </NewsBlock.Body>
       <NewsBlock.Image src="/assets/img/ph_news_credit.jpg" />
       <NewsBlock.PublsihDate

@@ -122,19 +122,21 @@ const Image = styled.div<ImageProps>`
   }
 
   ${Wrapper.toString()}:hover &:before {
+    right: 50%;
     opacity: 0.9;
-    transform: scaleX(0.5) translateX(-50%);
+    transform: translateX(0);
     transition: transform 0.3s, opacity 0.3s;
   }
 
   &:after {
+    left: 50%;
     transform: skew(-30deg) translateX(100%);
     transition: transform 0.6s, opacity 0.6s;
   }
 
   ${Wrapper.toString()}:hover &:after {
     opacity: 0.9;
-    transform: scaleX(0.5) translateX(50%);
+    transform: translateX(0);
     transition: transform 0.3s, opacity 0.3s;
   }
 `

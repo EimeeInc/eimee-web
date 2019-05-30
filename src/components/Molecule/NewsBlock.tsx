@@ -161,6 +161,7 @@ const Body = styled.p<BodyProps>`
 `
 
 const StyledLink = styled(Link)`
+  display: inline-block;
   margin-top: 10px;
   font-size: 1.4rem;
   color: #4fbcfb;

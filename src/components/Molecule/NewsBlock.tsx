@@ -23,8 +23,53 @@ type PublsihDateProps = {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 350px;
-  height: 230px;
+  width: calc(100% / 4 - 10px);
+  height: 250px;
+
+  ${media.lessThan("xl")`
+    width: calc(100% / 3 - 5px);
+  `}
+
+  &:nth-of-type(n+4) {
+    ${media.lessThan("xl")`
+      margin-top: 10px;
+    `}
+
+    ${media.lessThan("lg")`
+      margin-top: 0;
+    `}
+  }
+
+  ${media.lessThan("lg")`
+    width: calc(100% / 2 - 20px);
+    height: 280px;
+  `}
+
+  &:nth-of-type(n+3) {
+    ${media.lessThan("lg")`
+      margin-top: 10px;
+    `}
+
+    ${media.lessThan("sm")`
+      margin-top: 0;
+    `}
+  }
+
+  ${media.lessThan("md")`
+    width: calc(100% / 2 - 5px);
+    height: 250px;
+  `}
+
+  ${media.lessThan("sm")`
+    width: 90%;
+    height: 280px;
+  `}
+
+  &:not(:first-of-type) {
+    ${media.lessThan("sm")`
+      margin-top: 10px;
+    `}
+  }
 `;
 
 const Footer = styled.div`
@@ -57,41 +102,41 @@ const Image = styled.div<ImageProps>`
   left: 0;
   overflow: hidden;
   background-image: url(${(props) => props.src});
-  background-position: center center;
+  background-position: center top;
   background-size: cover;
 
-&:before, &:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  background-color: #313131;
-}
+  &:before, &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background-color: #313131;
+  }
 
-&:before {
-  transform: skew(-30deg) translateX(-100%);
-  transition: transform 0.6s, opacity 0.6s;
-}
+  &:before {
+    transform: skew(-30deg) translateX(-100%);
+    transition: transform 0.6s, opacity 0.6s;
+  }
 
-${Wrapper.toString()}:hover &:before {
-  opacity: 0.9;
-  transform: scaleX(0.5) translateX(-50%);
-  transition: transform 0.3s, opacity 0.3s;
-}
+  ${Wrapper.toString()}:hover &:before {
+    opacity: 0.9;
+    transform: scaleX(0.5) translateX(-50%);
+    transition: transform 0.3s, opacity 0.3s;
+  }
 
-&:after {
-  transform: skew(-30deg) translateX(100%);
-  transition: transform 0.6s, opacity 0.6s;
-}
+  &:after {
+    transform: skew(-30deg) translateX(100%);
+    transition: transform 0.6s, opacity 0.6s;
+  }
 
-${Wrapper.toString()}:hover &:after {
-  opacity: 0.9;
-  transform: scaleX(0.5) translateX(50%);
-  transition: transform 0.3s, opacity 0.3s;
-}
+  ${Wrapper.toString()}:hover &:after {
+    opacity: 0.9;
+    transform: scaleX(0.5) translateX(50%);
+    transition: transform 0.3s, opacity 0.3s;
+  }
 `;
 
 const BodyWrapper = styled.div`

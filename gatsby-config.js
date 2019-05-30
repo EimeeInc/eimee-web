@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-layout`,
       options: {
-        component: require.resolve(`./src/components/Layout/Default.tsx`),
+        component: require.resolve(`./src/components/Template/Default.tsx`),
       },
     },
     `gatsby-plugin-emotion`,

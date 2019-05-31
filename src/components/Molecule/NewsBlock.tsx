@@ -9,7 +9,8 @@ type DefinitionBlockProps = {
 } & React.HTMLAttributes<HTMLDivElement>
 
 type ImageProps = {
-  src: string
+  src: string,
+  top?: boolean,
 } & React.HTMLAttributes<HTMLDivElement>
 
 type TitleProps = {} & React.HTMLAttributes<HTMLDivElement>
@@ -101,7 +102,7 @@ const Image = styled.div<ImageProps>`
   left: 0;
   overflow: hidden;
   background-image: url(${props => props.src});
-  background-position: center top;
+  background-position: center ${props => props.top ? "top" : "center"};
   background-size: cover;
 
   &:before,
@@ -225,8 +226,8 @@ const DefinitionBlock = ({
   )
 }
 
-DefinitionBlock.Image = ({ src, ...props }: ImageProps) => (
-  <Image src={src} {...props} />
+DefinitionBlock.Image = ({ src, top = false, ...props }: ImageProps) => (
+  <Image src={src} top={top} {...props} />
 )
 
 DefinitionBlock.PublsihDate = ({ dateTime, ...props }: PublsihDateProps) => (

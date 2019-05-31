@@ -82,7 +82,7 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
       <NewsBlock.Body>
         Yahoo!プロモーション広告正規代理店になりました。
       </NewsBlock.Body>
-      <NewsBlock.Image src="/assets/img/ph_news_promotion.jpg" />
+      <NewsBlock.Image src="/assets/img/ph_news_promotion.jpg" top />
       <NewsBlock.PublsihDate
         dateTime={new Date("2017-07-26T00:00:00.000+09:00")}
       />
@@ -92,7 +92,7 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
       <NewsBlock.Body>
         クレジットカードhikaQをリリースしました。
       </NewsBlock.Body>
-      <NewsBlock.Image src="/assets/img/ph_news_credit.jpg" />
+      <NewsBlock.Image src="/assets/img/ph_news_credit.jpg" top />
       <NewsBlock.PublsihDate
         dateTime={new Date("2012-11-21T00:00:00.000+09:00")}
       />

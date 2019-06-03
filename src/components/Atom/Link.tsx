@@ -1,6 +1,7 @@
-import { Link as GatsbyLink } from "gatsby"
 import * as React from "react"
+import { Link as GatsbyLink } from "gatsby"
 import styled from "@emotion/styled"
+import RoutingContext from "@/contexts/Routing"
 
 const AnchorLink = styled.a`
   color: #0b69a0;
@@ -21,22 +22,35 @@ const StyledLink = styled(GatsbyLink)`
 type LinkProps = {
   to?: string
   blank?: boolean
-}
+  replace?: boolean
+} & React.HTMLAttributes<HTMLAnchorElement>
 
 const Link = ({
   to = "",
   blank = false,
+  replace = false,
   children,
   ...props
-}: LinkProps & React.HTMLAttributes<HTMLAnchorElement>) =>
-  blank ? (
-    <AnchorLink href={to} target="_blank" {...props}>
-      {children}
-    </AnchorLink>
-  ) : (
-    <StyledLink to={to} {...props}>
-      {children}
-    </StyledLink>
-  )
+}: LinkProps) => {
+  const routingContext = React.useContext(RoutingContext);
+  const from = routingContext ? routingContext.current : "/";
+  const isSameRouting = (to === from);
+
+if(!blank) console.log(isSameRouting, to, from);
+
+  return (to
+    ? blank
+      ? (
+          <AnchorLink href={to} target="_blank" {...props}>
+            {children}
+          </AnchorLink>
+        )
+      : (
+          <StyledLink to={to} replace={isSameRouting || replace} state={{ from: from }} {...props}>
+            {children}
+          </StyledLink>
+        )
+    : <></>);
+}
 
 export default Link

@@ -1,7 +1,7 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import styled from "@emotion/styled"
 import media from "@/util/breakpoint"
+import Link from "@/components/Atom/Link"
 
 const StyledLink = styled(Link)`
   width: 80px;

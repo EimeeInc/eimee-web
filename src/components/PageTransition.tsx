@@ -5,6 +5,7 @@ import {
 } from "react-transition-group"
 import styled from "@emotion/styled"
 import { keyframes } from "@emotion/core"
+import { WindowLocation } from "@reach/router";
 
 const fadeIn = keyframes`
   0% {
@@ -90,11 +91,11 @@ const Transition = ({
   location,
 }: {
   children: React.ReactNode
-  location: Location
+  location: WindowLocation,
 }) => (
   <TransitionGroup>
     <ReactTransition
-      key={location.pathname}
+      key={location.state && location.state.key}
       timeout={{
         enter: 1300,
         exit: 800,

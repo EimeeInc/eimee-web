@@ -1,10 +1,10 @@
 import * as React from "react"
 import classnames from "classnames"
-import { Link } from "gatsby"
 import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
 import styled from "@emotion/styled"
 import media from "@/util/breakpoint"
 import routings from "@/util/routings"
+import Link from "@/components/Atom/Link"
 
 const Wrapper = styled.div`
   position: fixed;

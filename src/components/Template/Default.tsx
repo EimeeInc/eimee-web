@@ -5,7 +5,7 @@ import RoutingContext, { initRoutingStore } from "@/contexts/Routing"
 import PageTransition from "@/components/PageTransition"
 import MediaQuery from "@/components/MediaQuery"
 import Routing from "@/components/Routing"
-import Header from "@/components/Organism/Header"
+import GlobalMenu from "@/components/Organism/GlobalMenu"
 import Footer from "@/components/Organism/Footer"
 import { LocationContext } from "@reach/router"
 
@@ -35,7 +35,7 @@ const Layout = ({
       <RoutingContext.Provider value={routingStore}>
         <Routing path={location.pathname} />
         <PageTransition location={location}>
-          <Header />
+          <GlobalMenu />
           <PageWrapper>
             <Page>{children}</Page>
           </PageWrapper>

@@ -1,6 +1,6 @@
 import * as React from "react"
 import Helmet from "@/components/Helmet"
-import TopBackground from "@/components/Organism/TopBackground"
+import TopHeader from "@/components/Organism/TopHeader"
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper"
 import CardTitle from "@/components/Atom/CardTitle"
 import Works from "@/components/Organism/Works"
@@ -10,7 +10,7 @@ import TopRecruitBanner from "@/components/Organism/TopRecruitBanner"
 const IndexPage = () => (
   <>
     <Helmet />
-    <TopBackground />
+    <TopHeader />
     <PageContentsWrapper>
       <CardTitle large>WORKS</CardTitle>
       <Works />

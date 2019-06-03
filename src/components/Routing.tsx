@@ -1,16 +1,14 @@
 import * as React from "react"
 import RoutingContext from "@/contexts/Routing"
 
-const Routing = ({path}: {path: string}) => {
-  const routingContext = React.useContext(RoutingContext);
+const Routing = ({ path }: { path: string }) => {
+  const routingContext = React.useContext(RoutingContext)
 
-  if(routingContext) {
-    routingContext.update(path);
+  if (routingContext) {
+    routingContext.update(path)
   }
 
-  return (
-    <></>
-  )
+  return <></>
 }
 
 export default Routing

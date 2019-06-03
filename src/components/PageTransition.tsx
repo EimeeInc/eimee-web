@@ -5,7 +5,7 @@ import {
 } from "react-transition-group"
 import styled from "@emotion/styled"
 import { keyframes } from "@emotion/core"
-import { WindowLocation } from "@reach/router";
+import { WindowLocation } from "@reach/router"
 
 const fadeIn = keyframes`
   0% {
@@ -91,7 +91,7 @@ const Transition = ({
   location,
 }: {
   children: React.ReactNode
-  location: WindowLocation,
+  location: WindowLocation
 }) => (
   <TransitionGroup>
     <ReactTransition

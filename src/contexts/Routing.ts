@@ -14,6 +14,6 @@ export const initRoutingStore: (
 
   return {
     current,
-    update: (path) => setCurrent(path),
+    update: path => setCurrent(path),
   }
 }

@@ -32,25 +32,30 @@ const Link = ({
   children,
   ...props
 }: LinkProps) => {
-  const routingContext = React.useContext(RoutingContext);
-  const from = routingContext ? routingContext.current : "/";
-  const isSameRouting = (to === from);
+  const routingContext = React.useContext(RoutingContext)
+  const from = routingContext ? routingContext.current : "/"
+  const isSameRouting = to === from
 
-if(!blank) console.log(isSameRouting, to, from);
+  if (!blank) console.log(isSameRouting, to, from)
 
-  return (to
-    ? blank
-      ? (
-          <AnchorLink href={to} target="_blank" {...props}>
-            {children}
-          </AnchorLink>
-        )
-      : (
-          <StyledLink to={to} replace={isSameRouting || replace} state={{ from: from }} {...props}>
-            {children}
-          </StyledLink>
-        )
-    : <></>);
+  return to ? (
+    blank ? (
+      <AnchorLink href={to} target="_blank" {...props}>
+        {children}
+      </AnchorLink>
+    ) : (
+      <StyledLink
+        to={to}
+        replace={isSameRouting || replace}
+        state={{ from: from }}
+        {...props}
+      >
+        {children}
+      </StyledLink>
+    )
+  ) : (
+    <></>
+  )
 }
 
 export default Link

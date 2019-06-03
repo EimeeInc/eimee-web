@@ -15,6 +15,6 @@ export const initMediaQueryStore: (
 
   return {
     current,
-    update: (bp) => setCurrent(bp),
+    update: bp => setCurrent(bp),
   }
 }

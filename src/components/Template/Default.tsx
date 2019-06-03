@@ -6,7 +6,8 @@ import PageTransition from "@/components/PageTransition"
 import MediaQuery from "@/components/MediaQuery"
 import Routing from "@/components/Routing"
 import Header from "@/components/Organism/Header"
-import { LocationContext } from "@reach/router";
+import Footer from "@/components/Organism/Footer"
+import { LocationContext } from "@reach/router"
 
 const PageWrapper = styled.main`
   display: flex;
@@ -21,28 +22,24 @@ const Page = styled.div`
 
 const Layout = ({
   children,
-  location
+  location,
 }: {
   children: React.ReactNode
 } & LocationContext) => {
-  const mediaQueryStore = initMediaQueryStore("sm");
-  const routingStore = initRoutingStore(location.pathname);
+  const mediaQueryStore = initMediaQueryStore("sm")
+  const routingStore = initRoutingStore(location.pathname)
 
   return (
     <MediaQueryContext.Provider value={mediaQueryStore}>
       <MediaQuery />
       <RoutingContext.Provider value={routingStore}>
-        <Routing path={location.pathname}/>
+        <Routing path={location.pathname} />
         <PageTransition location={location}>
-            <Header />
-            <PageWrapper>
-              <Page>{children}</Page>
-            </PageWrapper>
-            <footer>
-              © {new Date().getFullYear()}, Built with
-              {` `}
-              <a href="https://www.gatsbyjs.org">Gatsby</a>
-            </footer>
+          <Header />
+          <PageWrapper>
+            <Page>{children}</Page>
+          </PageWrapper>
+          <Footer />
         </PageTransition>
       </RoutingContext.Provider>
     </MediaQueryContext.Provider>

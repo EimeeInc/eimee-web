@@ -9,8 +9,8 @@ type DefinitionBlockProps = {
 } & React.HTMLAttributes<HTMLDivElement>
 
 type ImageProps = {
-  src: string,
-  top?: boolean,
+  src: string
+  top?: boolean
 } & React.HTMLAttributes<HTMLDivElement>
 
 type TitleProps = {} & React.HTMLAttributes<HTMLDivElement>
@@ -102,7 +102,7 @@ const Image = styled.div<ImageProps>`
   left: 0;
   overflow: hidden;
   background-image: url(${props => props.src});
-  background-position: center ${props => props.top ? "top" : "center"};
+  background-position: center ${props => (props.top ? "top" : "center")};
   background-size: cover;
 
   &:before,

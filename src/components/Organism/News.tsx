@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
-  margin: 0 auto;
+  margin: 0 auto 80px auto;
 
   ${media.lessThan("xl")`
     max-width: 1200px;
@@ -89,9 +89,7 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
     </NewsBlock>
     <NewsBlock to="https://クレジットカードおすすめ比較.net/" blank>
       <NewsBlock.Title>クレジットカードhikaQリリース</NewsBlock.Title>
-      <NewsBlock.Body>
-        クレジットカードhikaQをリリースしました。
-      </NewsBlock.Body>
+      <NewsBlock.Body>クレジットカードhikaQをリリースしました。</NewsBlock.Body>
       <NewsBlock.Image src="/assets/img/ph_news_credit.jpg" top />
       <NewsBlock.PublsihDate
         dateTime={new Date("2012-11-21T00:00:00.000+09:00")}

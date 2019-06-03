@@ -5,6 +5,7 @@ import PageContentsWrapper from "@/components/Atom/PageContentsWrapper"
 import CardTitle from "@/components/Atom/CardTitle"
 import Works from "@/components/Organism/Works"
 import News from "@/components/Organism/News"
+import TopRecruitBanner from "@/components/Organism/TopRecruitBanner"
 
 const IndexPage = () => (
   <>
@@ -15,6 +16,7 @@ const IndexPage = () => (
       <Works />
       <CardTitle large>NEWS</CardTitle>
       <News />
+      <TopRecruitBanner />
     </PageContentsWrapper>
   </>
 )

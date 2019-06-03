@@ -14,6 +14,7 @@ module.exports = {
       "https://fonts.googleapis.com/css?family=Montserrat:400,700",
       "https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700",
       "https://fonts.googleapis.com/css?family=Sawarabi+Gothic:400,700&text=%E2%80%9C%E2%80%9D",
+      "https://use.fontawesome.com/releases/v5.8.2/css/all.css",
     ],
   },
   plugins: [

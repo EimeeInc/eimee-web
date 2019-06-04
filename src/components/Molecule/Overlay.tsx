@@ -63,6 +63,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 
   &:hover {
+    color: inherit;
     background-color: rgba(255, 255, 255, 0.4);
   }
 

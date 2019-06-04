@@ -126,11 +126,11 @@ const StyledLink = styled(Link)`
 const FooterBanner = styled(Banner)`
   margin-left: 60px;
 
-${media.lessThan("xl")`
+  ${media.lessThan("xl")`
   margin-left: 30px;
 `}
 
-${media.lessThan("lg")`
+  ${media.lessThan("lg")`
   margin-left: 0;
   margin-bottom: 30px;
 `}
@@ -156,7 +156,9 @@ const Footer = ({ className }: { className?: string }) => {
         <List>
           {Array.from(Object.values(routings)).map(({ label, location }, i) => (
             <ListItem key={i}>
-              <StyledLink to={location}><span>{label}</span></StyledLink>
+              <StyledLink to={location}>
+                <span>{label}</span>
+              </StyledLink>
             </ListItem>
           ))}
         </List>

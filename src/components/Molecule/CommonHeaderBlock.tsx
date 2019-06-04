@@ -13,7 +13,9 @@ type WrapperProps = {
 type CommonHeaderBlockProps = {
   title: string
   ruby: string
-} & WrapperProps & React.HTMLAttributes<HTMLDivElement> & IBackgroundImage
+} & WrapperProps &
+  React.HTMLAttributes<HTMLDivElement> &
+  IBackgroundImage
 
 type ImageProps = {} & React.HTMLAttributes<HTMLDivElement> & IBackgroundImage
 
@@ -58,7 +60,7 @@ const PlainBlock = styled.div<IBackgroundImage>`
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(${(props) => props.src});
+  background-image: url(${props => props.src});
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -79,7 +81,7 @@ const PlainBlock = styled.div<IBackgroundImage>`
       content: none;
     }
   `}
-`;
+`
 
 const TextContainer = styled.div`
   display: flex;

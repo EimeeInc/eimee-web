@@ -9,8 +9,13 @@ import Breadcrumbs from "@/components/Molecule/Breadcrumbs"
 const IndexPage = () => (
   <>
     <Helmet title="ワークスタイル" />
-    <CommonHeaderBlock title="Work Style" ruby="ワークスタイル" color="#67d8c4" src="/assets/img/ph_top_office.jpg" />
-    <Breadcrumbs name="office"/>
+    <CommonHeaderBlock
+      title="Work Style"
+      ruby="ワークスタイル"
+      color="#67d8c4"
+      src="/assets/img/ph_top_office.jpg"
+    />
+    <Breadcrumbs name="office" />
     <PageContentsWrapper>
       <CardTitle large>Work Style</CardTitle>
       <News />

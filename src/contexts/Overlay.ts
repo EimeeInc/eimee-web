@@ -1,19 +1,19 @@
-import * as React from "react"
+import * as React from "react";
 
 export interface IOverlayContext {
-  isActive: boolean
-  toggle: () => void
+  isActive: boolean;
+  toggle: () => void;
 }
 
-export default React.createContext<IOverlayContext | null>(null)
+export default React.createContext<IOverlayContext | null>(null);
 
 export const initOverlayStore: (
-  initialState: boolean
+  initialState: boolean,
 ) => IOverlayContext = initialState => {
-  const [isActive, setIsActive] = React.useState(initialState)
+  const [isActive, setIsActive] = React.useState(initialState);
 
   return {
     isActive,
     toggle: () => setIsActive(!isActive),
-  }
-}
+  };
+};

@@ -1,35 +1,35 @@
-import * as React from "react"
-import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import * as React from "react";
+import Helmet from "react-helmet";
+import { useStaticQuery, graphql } from "gatsby";
 
 type SiteMetadata = {
-  title: string
-  description: string
-  author: string
-  baseUrl: string
-  css: (string | Object)[]
-  script: (string | Object)[]
-}
+  title: string;
+  description: string;
+  author: string;
+  baseUrl: string;
+  css: (string | Object)[];
+  script: (string | Object)[];
+};
 
 type Site = {
-  siteMetadata: SiteMetadata
-}
+  siteMetadata: SiteMetadata;
+};
 
 type QueryResult = {
-  site: Site
-}
+  site: Site;
+};
 
 type HelmetProps = Partial<{
-  description: string
-  lang: string
+  description: string;
+  lang: string;
   meta: {
-    name: string
-    content: string
-  }[]
-  keywords: string[]
-  title: string
-  canonical: string
-}>
+    name: string;
+    content: string;
+  }[];
+  keywords: string[];
+  title: string;
+  canonical: string;
+}>;
 
 export default ({
   description,
@@ -53,14 +53,14 @@ export default ({
           }
         }
       }
-    `
-  )
+    `,
+  );
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || site.siteMetadata.description;
 
   const selectedTitle = title
     ? `${title} | ${site.siteMetadata.title}`
-    : site.siteMetadata.title
+    : site.siteMetadata.title;
 
   return (
     <Helmet
@@ -114,14 +114,14 @@ export default ({
           href: `${site.siteMetadata.baseUrl}${canonical}`,
         },
         ...site.siteMetadata.css.map(x =>
-          typeof x === "string" ? { rel: "stylesheet", href: x } : x
+          typeof x === "string" ? { rel: "stylesheet", href: x } : x,
         ),
       ]}
       script={[
         ...(site.siteMetadata.script || []).map(x =>
-          typeof x === "string" ? { src: x } : x
+          typeof x === "string" ? { src: x } : x,
         ),
       ]}
     />
-  )
-}
+  );
+};

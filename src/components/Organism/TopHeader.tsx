@@ -1,20 +1,20 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import { keyframes } from "@emotion/core"
-import media from "@/util/breakpoint"
+import * as React from "react";
+import styled from "@emotion/styled";
+import { keyframes } from "@emotion/core";
+import media from "@/util/breakpoint";
 
 const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-`
+`;
 
 const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
-`
+`;
 
 const Background = styled.div`
   position: relative;
@@ -74,7 +74,7 @@ const Background = styled.div`
       animation: none;
     `}
   }
-`
+`;
 
 const Logo = styled.div`
   position: absolute;
@@ -98,7 +98,7 @@ const Logo = styled.div`
     width: 250px;
     height: 60px;
   `}
-`
+`;
 
 const TopBackground = ({ className }: { className?: string }) => (
   <Wrapper className={className}>
@@ -107,6 +107,6 @@ const TopBackground = ({ className }: { className?: string }) => (
     ))}
     <Logo />
   </Wrapper>
-)
+);
 
-export default TopBackground
+export default TopBackground;

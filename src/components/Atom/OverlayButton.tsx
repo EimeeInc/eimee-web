@@ -1,12 +1,12 @@
-import * as React from "react"
-import classnames from "classnames"
-import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
-import styled from "@emotion/styled"
+import * as React from "react";
+import classnames from "classnames";
+import OverlayContext, { initOverlayStore } from "@/contexts/Overlay";
+import styled from "@emotion/styled";
 
 const cssVal = {
   lineLength: 30,
   lineThin: 5,
-}
+};
 
 const Wrapper = styled.div`
   display: flex;
@@ -25,14 +25,14 @@ const Wrapper = styled.div`
   &.isActive {
     background-color: transparent;
   }
-`
+`;
 
 const TransformContainer = styled.div`
   position: relative;
   width: ${cssVal.lineLength}px;
   height: ${cssVal.lineThin}px;
   pointer-events: none;
-`
+`;
 
 const Line = styled.span`
   display: block;
@@ -67,11 +67,11 @@ const Line = styled.span`
       transform: rotate(-45deg);
     }
   }
-`
+`;
 
 const OverlayButton = ({ className }: { className?: string }) => {
   const overlayContext =
-    React.useContext(OverlayContext) || initOverlayStore(false)
+    React.useContext(OverlayContext) || initOverlayStore(false);
 
   return (
     <Wrapper
@@ -84,7 +84,7 @@ const OverlayButton = ({ className }: { className?: string }) => {
         <Line className={classnames({ isActive: overlayContext.isActive })} />
       </TransformContainer>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default OverlayButton
+export default OverlayButton;

@@ -1,9 +1,9 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
-import routings from "@/util/routings"
-import Banner from "@/components/Atom/Banner"
-import Link from "@/components/Atom/Link"
+import * as React from "react";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
+import routings from "@/util/routings";
+import Banner from "@/components/Atom/Banner";
+import Link from "@/components/Atom/Link";
 
 const Wrapper = styled.footer`
   color: #ffffff;
@@ -13,7 +13,7 @@ const Wrapper = styled.footer`
   ${media.lessThan("md")`
     padding: 30px 5px;
   `}
-`
+`;
 
 const FlexWrapper = styled.div`
   display: flex;
@@ -36,9 +36,9 @@ const FlexWrapper = styled.div`
       width: auto;
     }
   `}
-`
+`;
 
-const InfomationContainer = styled.div``
+const InfomationContainer = styled.div``;
 
 const Logo = styled.img`
   display: block;
@@ -49,12 +49,12 @@ const Logo = styled.img`
     margin-right: auto;
     margin-left: auto;
   `}
-`
+`;
 
 const CompanyName = styled.p`
   font-size: 1.8rem;
   font-weight: bold;
-`
+`;
 
 const CompanyAddress = styled.p`
   font-size: 1.5rem;
@@ -62,7 +62,7 @@ const CompanyAddress = styled.p`
   ${media.lessThan("lg")`
     margin-bottom: 30px;
   `}
-`
+`;
 
 const List = styled.ul`
   flex: auto;
@@ -85,7 +85,7 @@ const List = styled.ul`
     border-left: none;
     border-right: none;
   `}
-`
+`;
 
 const ListItem = styled.li`
   flex-grow: 1;
@@ -95,7 +95,7 @@ const ListItem = styled.li`
   ${media.lessThan("lg")`
     border: solid 0.5px #292929;
   `}
-`
+`;
 
 const StyledLink = styled(Link)`
   display: inline-block;
@@ -121,7 +121,7 @@ const StyledLink = styled(Link)`
   & > * {
     vertical-align: middle;
   }
-`
+`;
 
 const FooterBanner = styled(Banner)`
   margin-left: 60px;
@@ -134,14 +134,14 @@ const FooterBanner = styled(Banner)`
   margin-left: 0;
   margin-bottom: 30px;
 `}
-`
+`;
 
 const Copylight = styled.p`
   text-align: center;
-`
+`;
 
 const Footer = ({ className }: { className?: string }) => {
-  const src = "/assets/img/fun_to_share_1_sp1.png"
+  const src = "/assets/img/fun_to_share_1_sp1.png";
 
   return (
     <Wrapper className={className}>
@@ -171,7 +171,7 @@ const Footer = ({ className }: { className?: string }) => {
       </FlexWrapper>
       <Copylight>&#169; 2017 Eimee Inc.</Copylight>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

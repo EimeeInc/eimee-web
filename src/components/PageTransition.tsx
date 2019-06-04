@@ -1,11 +1,11 @@
-import * as React from "react"
+import * as React from "react";
 import {
   TransitionGroup,
   Transition as ReactTransition,
-} from "react-transition-group"
-import styled from "@emotion/styled"
-import { keyframes } from "@emotion/core"
-import { WindowLocation } from "@reach/router"
+} from "react-transition-group";
+import styled from "@emotion/styled";
+import { keyframes } from "@emotion/core";
+import { WindowLocation } from "@reach/router";
 
 const fadeIn = keyframes`
   0% {
@@ -19,7 +19,7 @@ const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-`
+`;
 
 const fadeOut = keyframes`
   0% {
@@ -30,7 +30,7 @@ const fadeOut = keyframes`
     display: none;
     opacity: 0;
   }
-`
+`;
 
 const hideLoading = keyframes`
   0% {
@@ -49,7 +49,7 @@ const hideLoading = keyframes`
     display: none;
     opacity: 0;
   }
-`
+`;
 
 const Wrapper = styled.div`
   &.entering {
@@ -65,7 +65,7 @@ const Wrapper = styled.div`
   &.exiting {
     animation: ${fadeOut} 0.8s linear 0s 1 forwards;
   }
-`
+`;
 
 const Loading = styled.div`
   display: none;
@@ -84,14 +84,14 @@ const Loading = styled.div`
     pointer-events: none;
     animation: ${hideLoading} 2.5s linear 0s 1 forwards;
   }
-`
+`;
 
 const Transition = ({
   children,
   location,
 }: {
-  children: React.ReactNode
-  location: WindowLocation
+  children: React.ReactNode;
+  location: WindowLocation;
 }) => (
   <TransitionGroup>
     <ReactTransition
@@ -119,6 +119,6 @@ const Transition = ({
       )}
     </ReactTransition>
   </TransitionGroup>
-)
+);
 
-export default Transition
+export default Transition;

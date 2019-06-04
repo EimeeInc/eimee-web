@@ -1,25 +1,25 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
-import Link from "@/components/Atom/Link"
+import * as React from "react";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
+import Link from "@/components/Atom/Link";
 
 type DefinitionBlockProps = {
-  to?: string
-  blank?: boolean
-} & React.HTMLAttributes<HTMLDivElement>
+  to?: string;
+  blank?: boolean;
+} & React.HTMLAttributes<HTMLDivElement>;
 
 type ImageProps = {
-  src: string
-  top?: boolean
-} & React.HTMLAttributes<HTMLDivElement>
+  src: string;
+  top?: boolean;
+} & React.HTMLAttributes<HTMLDivElement>;
 
-type TitleProps = {} & React.HTMLAttributes<HTMLDivElement>
+type TitleProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
-type BodyProps = {} & React.HTMLAttributes<HTMLParagraphElement>
+type BodyProps = {} & React.HTMLAttributes<HTMLParagraphElement>;
 
 type PublsihDateProps = {
-  dateTime: Date
-} & React.ImgHTMLAttributes<HTMLTimeElement>
+  dateTime: Date;
+} & React.ImgHTMLAttributes<HTMLTimeElement>;
 
 const Wrapper = styled.div`
   display: flex;
@@ -71,28 +71,28 @@ const Wrapper = styled.div`
       margin-top: 10px;
     `}
   }
-`
+`;
 
 const Footer = styled.div`
   min-height: 70px;
   padding: 15px;
   font-size: 1.5rem;
   background-color: #f0cd6c;
-`
+`;
 
 const Time = styled.time`
   display: block;
   color: #ffffff;
   font-weight: bold;
-`
+`;
 
-const Title = styled.div<TitleProps>``
+const Title = styled.div<TitleProps>``;
 
 const ImageWrapper = styled.div`
   flex: auto;
   position: relative;
   width: 100%;
-`
+`;
 
 const Image = styled.div<ImageProps>`
   position: absolute;
@@ -140,7 +140,7 @@ const Image = styled.div<ImageProps>`
     transform: translateX(0);
     transition: transform 0.3s, opacity 0.3s;
   }
-`
+`;
 
 const BodyWrapper = styled.div`
   position: absolute;
@@ -155,26 +155,26 @@ const BodyWrapper = styled.div`
     opacity: 1;
     transition: opacity 0.3s 0.3s;
   }
-`
+`;
 
 const Body = styled.p<BodyProps>`
   line-height: 1.6;
   font-size: 1.6rem;
   color: #ffffff;
-`
+`;
 
 const StyledLink = styled(Link)`
   display: inline-block;
   margin-top: 10px;
   font-size: 1.4rem;
   color: #4fbcfb;
-`
+`;
 
 const isReactElement = <T extends {}>(
-  value: any
-): value is React.ReactElement<T> => value && typeof value.type === "function"
+  value: any,
+): value is React.ReactElement<T> => value && typeof value.type === "function";
 const isReactNodeArray = (value: any): value is React.ReactNodeArray =>
-  value && value.length && value.find
+  value && value.length && value.find;
 
 const DefinitionBlock = ({
   to,
@@ -185,27 +185,27 @@ const DefinitionBlock = ({
   const Title =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.Title
+        x => isReactElement(x) && x.type === DefinitionBlock.Title,
       )) ||
-    null
+    null;
   const Body =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.Body
+        x => isReactElement(x) && x.type === DefinitionBlock.Body,
       )) ||
-    null
+    null;
   const Image =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.Image
+        x => isReactElement(x) && x.type === DefinitionBlock.Image,
       )) ||
-    null
+    null;
   const PublsihDate =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.PublsihDate
+        x => isReactElement(x) && x.type === DefinitionBlock.PublsihDate,
       )) ||
-    null
+    null;
 
   return (
     <Wrapper {...props}>
@@ -223,12 +223,12 @@ const DefinitionBlock = ({
         {Title}
       </Footer>
     </Wrapper>
-  )
-}
+  );
+};
 
 DefinitionBlock.Image = ({ src, top = false, ...props }: ImageProps) => (
   <Image src={src} top={top} {...props} />
-)
+);
 
 DefinitionBlock.PublsihDate = ({ dateTime, ...props }: PublsihDateProps) => (
   <Time
@@ -236,14 +236,14 @@ DefinitionBlock.PublsihDate = ({ dateTime, ...props }: PublsihDateProps) => (
     {...props}
   >{`${dateTime.getFullYear()}.${dateTime.getMonth() +
     1}.${dateTime.getDate()}`}</Time>
-)
+);
 
 DefinitionBlock.Title = ({ children, ...props }: TitleProps) => (
   <Title {...props}>{children}</Title>
-)
+);
 
 DefinitionBlock.Body = ({ children, ...props }: BodyProps) => (
   <Body {...props}>{children}</Body>
-)
+);
 
-export default DefinitionBlock
+export default DefinitionBlock;

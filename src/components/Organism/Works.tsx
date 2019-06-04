@@ -1,7 +1,7 @@
-import * as React from "react"
-import DoubleQuote from "@/components/Atom/DoubleQuote"
-import FadeInEnteringCard from "@/components/Atom/FadeInEnteringCard"
-import DefinitionBlock from "@/components/Molecule/DefinitionBlock"
+import * as React from "react";
+import DoubleQuote from "@/components/Atom/DoubleQuote";
+import FadeInEnteringCard from "@/components/Atom/FadeInEnteringCard";
+import DefinitionBlock from "@/components/Molecule/DefinitionBlock";
 
 const Works = () => (
   <>
@@ -48,6 +48,6 @@ const Works = () => (
       </DefinitionBlock>
     </FadeInEnteringCard>
   </>
-)
+);
 
-export default Works
+export default Works;

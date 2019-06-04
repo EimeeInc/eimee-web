@@ -1,18 +1,18 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
-import Link from "@/components/Atom/Link"
+import * as React from "react";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
+import Link from "@/components/Atom/Link";
 
 type DefinitionBlockProps = {
-  to?: string
-  blank?: boolean
-} & React.HTMLAttributes<HTMLDivElement>
+  to?: string;
+  blank?: boolean;
+} & React.HTMLAttributes<HTMLDivElement>;
 
-type ImageProps = {} & React.ImgHTMLAttributes<HTMLImageElement>
+type ImageProps = {} & React.ImgHTMLAttributes<HTMLImageElement>;
 
-type HeaderProps = {} & React.HTMLAttributes<HTMLDivElement>
+type HeaderProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
-type BodyProps = {} & React.HTMLAttributes<HTMLDivElement>
+type BodyProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
 const Wrapper = styled.div`
   display: flex;
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
   ${media.lessThan("md")`
     flex-direction: column;
   `}
-`
+`;
 
 const Image = styled.img<ImageProps>`
   flex: none;
@@ -41,7 +41,7 @@ const Image = styled.img<ImageProps>`
   ${media.lessThan("md")`
     width: 100%;
   `}
-`
+`;
 
 const TextContainer = styled.div`
   flex: auto;
@@ -53,7 +53,7 @@ const TextContainer = styled.div`
     margin-top: 30px;
     margin-left: 0;
   `}
-`
+`;
 
 const Header = styled.div<HeaderProps>`
 display: inline-block;
@@ -78,7 +78,7 @@ display: inline-block;
     margin-bottom: 17px;
     font-size: 1.9rem;
   `}
-`
+`;
 
 const Body = styled.div<BodyProps>`
   font-size: 1.7rem;
@@ -92,7 +92,7 @@ const Body = styled.div<BodyProps>`
   ${media.lessThan("sm")`
     font-size: 1.5rem;
   `}
-`
+`;
 
 const TextLink = styled(Link)`
   display: inline-block;
@@ -115,7 +115,7 @@ const TextLink = styled(Link)`
     background-repeat: no-repeat;
     transform: translateY(-50%);
   }
-`
+`;
 
 const ImageLink = styled(Link)`
   flex: none;
@@ -123,7 +123,7 @@ const ImageLink = styled(Link)`
   ${media.lessThan("md")`
     width: 100%;
   `}
-`
+`;
 
 const HeaderLink = styled(Link)`
   color: inherit;
@@ -132,13 +132,13 @@ const HeaderLink = styled(Link)`
   &:hover {
     color: inherit;
   }
-`
+`;
 
 const isReactElement = <T extends {}>(
-  value: any
-): value is React.ReactElement<T> => value && typeof value.type === "function"
+  value: any,
+): value is React.ReactElement<T> => value && typeof value.type === "function";
 const isReactNodeArray = (value: any): value is React.ReactNodeArray =>
-  value && value.length && value.find
+  value && value.length && value.find;
 
 const DefinitionBlock = ({
   to,
@@ -146,25 +146,25 @@ const DefinitionBlock = ({
   children,
   ...props
 }: DefinitionBlockProps) => {
-  const LinkProps = { to, blank }
+  const LinkProps = { to, blank };
   const Image =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.Image
+        x => isReactElement(x) && x.type === DefinitionBlock.Image,
       )) ||
-    null
+    null;
   const Header =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.Header
+        x => isReactElement(x) && x.type === DefinitionBlock.Header,
       )) ||
-    null
+    null;
   const Body =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.Body
+        x => isReactElement(x) && x.type === DefinitionBlock.Body,
       )) ||
-    null
+    null;
 
   return (
     <Wrapper {...props}>
@@ -175,17 +175,17 @@ const DefinitionBlock = ({
         {to && <TextLink {...LinkProps}>{to}</TextLink>}
       </TextContainer>
     </Wrapper>
-  )
-}
+  );
+};
 
-DefinitionBlock.Image = ({ ...props }: ImageProps) => <Image {...props} />
+DefinitionBlock.Image = ({ ...props }: ImageProps) => <Image {...props} />;
 
 DefinitionBlock.Header = ({ children, ...props }: HeaderProps) => (
   <Header {...props}>{children}</Header>
-)
+);
 
 DefinitionBlock.Body = ({ children, ...props }: BodyProps) => (
   <Body {...props}>{children}</Body>
-)
+);
 
-export default DefinitionBlock
+export default DefinitionBlock;

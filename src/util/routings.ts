@@ -6,15 +6,15 @@ type Pages =
   | "office"
   | "staff"
   | "recruit"
-  | "contact"
+  | "contact";
 
 type Routings = {
   [T in Pages]: {
-    location: string
-    parent: Pages | null
-    label: string
+    location: string;
+    parent: Pages | null;
+    label: string;
   }
-}
+};
 
 const routings: Routings = {
   top: {
@@ -57,6 +57,6 @@ const routings: Routings = {
     parent: "top",
     label: "お問い合わせ",
   },
-}
+};
 
-export default routings
+export default routings;

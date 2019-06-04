@@ -1,7 +1,7 @@
-import * as React from "react"
-import NewsBlock from "@/components/Molecule/NewsBlock"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
+import * as React from "react";
+import NewsBlock from "@/components/Molecule/NewsBlock";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
   `}
-`
+`;
 
 const Spacer = styled.div`
   display: none;
@@ -55,7 +55,7 @@ const Spacer = styled.div`
       display: none;
     `}
   }
-`
+`;
 
 const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <Wrapper {...props}>
@@ -97,6 +97,6 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
     </NewsBlock>
     <Spacer />
   </Wrapper>
-)
+);
 
-export default News
+export default News;

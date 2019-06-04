@@ -1,7 +1,7 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
-import Link from "@/components/Atom/Link"
+import * as React from "react";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
+import Link from "@/components/Atom/Link";
 
 const StyledLink = styled(Link)`
   width: 80px;
@@ -21,10 +21,10 @@ const StyledLink = styled(Link)`
     width: 60px;
     height: 60px;
   `}
-`
+`;
 
 const HomeButton = ({ className }: { className?: string }) => (
   <StyledLink className={className} to="/" />
-)
+);
 
-export default HomeButton
+export default HomeButton;

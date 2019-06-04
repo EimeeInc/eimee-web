@@ -1,6 +1,6 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
+import * as React from "react";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -19,13 +19,13 @@ const Wrapper = styled.div`
     max-width: calc(100% - 20px);
     min-width: 320px;
   `}
-`
+`;
 
 const PageContentsWrapper = ({
   children,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <Wrapper {...props}>{children}</Wrapper>
-)
+);
 
-export default PageContentsWrapper
+export default PageContentsWrapper;

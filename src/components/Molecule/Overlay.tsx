@@ -1,10 +1,10 @@
-import * as React from "react"
-import classnames from "classnames"
-import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
-import routings from "@/util/routings"
-import Link from "@/components/Atom/Link"
+import * as React from "react";
+import classnames from "classnames";
+import OverlayContext, { initOverlayStore } from "@/contexts/Overlay";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
+import routings from "@/util/routings";
+import Link from "@/components/Atom/Link";
 
 const Wrapper = styled.div`
   position: fixed;
@@ -22,7 +22,7 @@ const Wrapper = styled.div`
     transform: scale(0.9);
     pointer-events: none;
   }
-`
+`;
 
 const List = styled.ul`
   display: flex;
@@ -41,7 +41,7 @@ const List = styled.ul`
   ${media.lessThan("md")`
   padding: 60px;
   `}
-`
+`;
 
 const ListItem = styled.li`
   flex-grow: 1;
@@ -49,7 +49,7 @@ const ListItem = styled.li`
   ${media.greaterThan("md", "landscape")`
     width: 50%;
   `}
-`
+`;
 
 const StyledLink = styled(Link)`
   display: flex;
@@ -70,11 +70,11 @@ const StyledLink = styled(Link)`
   ${media.lessThan("md")`
     font-size: 2.5rem;
   `}
-`
+`;
 
 const Overlay = ({ className }: { className?: string }) => {
   const overlayContext =
-    React.useContext(OverlayContext) || initOverlayStore(false)
+    React.useContext(OverlayContext) || initOverlayStore(false);
 
   return (
     <Wrapper
@@ -88,7 +88,7 @@ const Overlay = ({ className }: { className?: string }) => {
         ))}
       </List>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Overlay
+export default Overlay;

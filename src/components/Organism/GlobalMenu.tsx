@@ -1,17 +1,17 @@
-import * as React from "react"
-import Overlay from "@/components/Molecule/Overlay"
-import OverlayButton from "@/components/Atom/OverlayButton"
-import HomeButton from "@/components/Atom/HomeButton"
-import OverlayContext, { initOverlayStore } from "@/contexts/Overlay"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
+import * as React from "react";
+import Overlay from "@/components/Molecule/Overlay";
+import OverlayButton from "@/components/Atom/OverlayButton";
+import HomeButton from "@/components/Atom/HomeButton";
+import OverlayContext, { initOverlayStore } from "@/contexts/Overlay";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
 
 const StyledHomeButton = styled(HomeButton)`
   position: fixed;
   top: 0;
   left: 0;
   z-index: 150;
-`
+`;
 
 const StyledOverlayButton = styled(OverlayButton)`
   position: fixed;
@@ -25,14 +25,14 @@ const StyledOverlayButton = styled(OverlayButton)`
     width: 60px;
     height: 60px;
   `}
-`
+`;
 
 const StyledOverlay = styled(Overlay)`
   z-index: 150;
-`
+`;
 
 const Header = ({ className }: { className?: string }) => {
-  const overlayStore = initOverlayStore(false)
+  const overlayStore = initOverlayStore(false);
 
   return (
     <header className={className}>
@@ -42,7 +42,7 @@ const Header = ({ className }: { className?: string }) => {
         <StyledOverlay />
       </OverlayContext.Provider>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

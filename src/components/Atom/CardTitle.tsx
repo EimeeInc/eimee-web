@@ -1,7 +1,7 @@
-import * as React from "react"
-import classnames from "classnames"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
+import * as React from "react";
+import classnames from "classnames";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,18 +26,18 @@ const Wrapper = styled.div`
       font-size: 7rem;
     `}
   }
-`
+`;
 
 type CardTitleProps = {
-  children: React.ReactNode
-  large?: boolean
-  className?: string
-}
+  children: React.ReactNode;
+  large?: boolean;
+  className?: string;
+};
 
 const CardTitle = ({ children, large = false, className }: CardTitleProps) => (
   <Wrapper className={classnames(className, { large })}>
     <span>{children}</span>
   </Wrapper>
-)
+);
 
-export default CardTitle
+export default CardTitle;

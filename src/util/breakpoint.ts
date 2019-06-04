@@ -3,22 +3,22 @@ export const breakpoints = {
   md: 768,
   lg: 1024,
   xl: 1440,
-}
+};
 
-export type Breakpoint = keyof typeof breakpoints
-export type BreakpointRange = Breakpoint | "over"
+export type Breakpoint = keyof typeof breakpoints;
+export type BreakpointRange = Breakpoint | "over";
 
-export type Orientation = "none" | "portrait" | "landscape"
+export type Orientation = "none" | "portrait" | "landscape";
 
 const makeQuery = (strings: TemplateStringsArray, ...keys: any[]) => {
-  const args = [strings, keys]
+  const args = [strings, keys];
   const query = [...args[0]]
     .map((_, i) => args.map(x => x[i]))
     .map(x => x.join(""))
-    .join("")
+    .join("");
 
-  return query
-}
+  return query;
+};
 
 export const lessThan = (bp: Breakpoint, orient: Orientation = "none") => (
   strings: TemplateStringsArray,
@@ -27,7 +27,7 @@ export const lessThan = (bp: Breakpoint, orient: Orientation = "none") => (
   orient !== "none" ? ` and (orientation: ${orient})` : ""
 } {
   ${makeQuery(strings, keys)}
-}`
+}`;
 
 export const greaterThan = (bp: Breakpoint, orient: Orientation = "none") => (
   strings: TemplateStringsArray,
@@ -36,9 +36,9 @@ export const greaterThan = (bp: Breakpoint, orient: Orientation = "none") => (
   orient !== "none" ? ` and (orientation: ${orient})` : ""
 } {
   ${makeQuery(strings, keys)}
-}`
+}`;
 
 export default {
   lessThan,
   greaterThan,
-}
+};

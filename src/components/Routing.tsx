@@ -1,14 +1,14 @@
-import * as React from "react"
-import RoutingContext from "@/contexts/Routing"
+import * as React from "react";
+import RoutingContext from "@/contexts/Routing";
 
 const Routing = ({ path }: { path: string }) => {
-  const routingContext = React.useContext(RoutingContext)
+  const routingContext = React.useContext(RoutingContext);
 
   if (routingContext) {
-    routingContext.update(path)
+    routingContext.update(path);
   }
 
-  return <></>
-}
+  return <></>;
+};
 
-export default Routing
+export default Routing;

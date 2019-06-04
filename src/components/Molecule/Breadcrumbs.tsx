@@ -1,8 +1,8 @@
-import * as React from "react"
-import classnames from "classnames"
-import { Link } from "gatsby"
-import styled from "@emotion/styled"
-import routings from "@/util/routings"
+import * as React from "react";
+import classnames from "classnames";
+import { Link } from "gatsby";
+import styled from "@emotion/styled";
+import routings from "@/util/routings";
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   border-bottom: solid 1px #efefef;
   color: #505050;
   background-color: #f1f1f1;
-`
+`;
 
 const Label = styled.span`
   display: flex;
@@ -25,7 +25,7 @@ const Label = styled.span`
   &:not(.isRoot) {
     padding-left: 24px;
   }
-`
+`;
 
 const StyledLink = styled(Link)`
   color: #0b69a0;
@@ -36,12 +36,12 @@ const StyledLink = styled(Link)`
   &:hover {
     background-color: #fccf88;
   }
-`
+`;
 
 type BreadcrumbProps = {
-  name: keyof typeof routings | null
-  isCurrent?: boolean
-}
+  name: keyof typeof routings | null;
+  isCurrent?: boolean;
+};
 
 const Breadcrumb = ({ name, isCurrent = false }: BreadcrumbProps) =>
   name !== null ? (
@@ -59,19 +59,19 @@ const Breadcrumb = ({ name, isCurrent = false }: BreadcrumbProps) =>
         </StyledLink>
       )}
     </>
-  ) : null
+  ) : null;
 
 type BreadcrumbsProps = {
-  name?: keyof typeof routings
-  className?: string
-}
+  name?: keyof typeof routings;
+  className?: string;
+};
 
 const Breadcrumbs = ({ name = "top", className }: BreadcrumbsProps) => (
   <Wrapper className={className}>
     <Breadcrumb name={name} isCurrent />
   </Wrapper>
-)
+);
 
-export { Breadcrumb, Breadcrumbs }
+export { Breadcrumb, Breadcrumbs };
 
-export default Breadcrumbs
+export default Breadcrumbs;

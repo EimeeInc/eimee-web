@@ -1,10 +1,10 @@
-import * as React from "react"
-import Helmet from "@/components/Helmet"
-import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock"
-import PageContentsWrapper from "@/components/Atom/PageContentsWrapper"
-import CardTitle from "@/components/Atom/CardTitle"
-import News from "@/components/Organism/News"
-import Breadcrumbs from "@/components/Molecule/Breadcrumbs"
+import * as React from "react";
+import Helmet from "@/components/Helmet";
+import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
+import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
+import CardTitle from "@/components/Atom/CardTitle";
+import News from "@/components/Organism/News";
+import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 
 const IndexPage = () => (
   <>
@@ -21,6 +21,6 @@ const IndexPage = () => (
       <News />
     </PageContentsWrapper>
   </>
-)
+);
 
-export default IndexPage
+export default IndexPage;

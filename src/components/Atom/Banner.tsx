@@ -1,13 +1,13 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import Link from "@/components/Atom/Link"
+import * as React from "react";
+import styled from "@emotion/styled";
+import Link from "@/components/Atom/Link";
 
 type BannerProps = {
-  src?: string
-  alt?: string
-  to?: string
-  blank?: boolean
-} & React.HTMLAttributes<HTMLAnchorElement>
+  src?: string;
+  alt?: string;
+  to?: string;
+  blank?: boolean;
+} & React.HTMLAttributes<HTMLAnchorElement>;
 
 const StyledLink = styled(Link)<BannerProps>`
   opacity: 1;
@@ -16,9 +16,9 @@ const StyledLink = styled(Link)<BannerProps>`
   &:hover {
     opacity: 0.7;
   }
-`
+`;
 
-const Image = styled.img``
+const Image = styled.img``;
 
 const Banner = ({
   src,
@@ -34,6 +34,6 @@ const Banner = ({
     </StyledLink>
   ) : (
     <></>
-  )
+  );
 
-export default Banner
+export default Banner;

@@ -1,4 +1,4 @@
-import styled from "@emotion/styled"
+import styled from "@emotion/styled";
 
 const DoubleQuote = styled.span`
   &:before {
@@ -12,6 +12,6 @@ const DoubleQuote = styled.span`
     font-family: "Sawarabi Gothic", sans-serif;
     font-weight: bold;
   }
-`
+`;
 
-export default DoubleQuote
+export default DoubleQuote;

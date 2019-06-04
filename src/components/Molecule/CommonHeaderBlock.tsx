@@ -1,27 +1,27 @@
-import * as React from "react"
-import styled from "@emotion/styled"
-import media from "@/util/breakpoint"
+import * as React from "react";
+import styled from "@emotion/styled";
+import media from "@/util/breakpoint";
 
 type IBackgroundImage = {
-  src: string
-}
+  src: string;
+};
 
 type WrapperProps = {
-  color: string
-}
+  color: string;
+};
 
 type CommonHeaderBlockProps = {
-  title: string
-  ruby: string
+  title: string;
+  ruby: string;
 } & WrapperProps &
   React.HTMLAttributes<HTMLDivElement> &
-  IBackgroundImage
+  IBackgroundImage;
 
-type ImageProps = {} & React.HTMLAttributes<HTMLDivElement> & IBackgroundImage
+type ImageProps = {} & React.HTMLAttributes<HTMLDivElement> & IBackgroundImage;
 
-type TitleProps = {} & React.HTMLAttributes<HTMLDivElement>
+type TitleProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
-type RubyProps = {} & React.HTMLAttributes<HTMLDivElement>
+type RubyProps = {} & React.HTMLAttributes<HTMLDivElement>;
 
 const Wrapper = styled.div<WrapperProps>`
   display: flex;
@@ -38,7 +38,7 @@ const Wrapper = styled.div<WrapperProps>`
   & > * {
     flex: none;
   }
-`
+`;
 
 const Image = styled.div<ImageProps>`
   width: 50%;
@@ -51,7 +51,7 @@ const Image = styled.div<ImageProps>`
   ${media.lessThan("lg")`
     display: none;
   `}
-`
+`;
 
 const PlainBlock = styled.div<IBackgroundImage>`
   display: flex;
@@ -81,7 +81,7 @@ const PlainBlock = styled.div<IBackgroundImage>`
       content: none;
     }
   `}
-`
+`;
 
 const TextContainer = styled.div`
   display: flex;
@@ -112,7 +112,7 @@ const TextContainer = styled.div`
     margin-left: 5px;
     margin-right: 5px;
   `}
-`
+`;
 
 const Title = styled.div<TitleProps>`
   margin-bottom: 5px;
@@ -129,7 +129,7 @@ const Title = styled.div<TitleProps>`
   ${media.lessThan("md")`
     font-size: 5rem;
   `}
-`
+`;
 
 const Ruby = styled.div<RubyProps>`
   font-size: 2.5rem;
@@ -146,7 +146,7 @@ const Ruby = styled.div<RubyProps>`
   ${media.lessThan("md")`
     font-size: 2.1rem;
   `}
-`
+`;
 
 const CommonHeaderBlock = ({
   title,
@@ -166,7 +166,7 @@ const CommonHeaderBlock = ({
       </PlainBlock>
       <Image src={src} />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default CommonHeaderBlock
+export default CommonHeaderBlock;

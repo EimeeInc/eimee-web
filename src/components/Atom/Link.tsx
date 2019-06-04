@@ -36,8 +36,6 @@ const Link = ({
   const from = routingContext ? routingContext.current : "/";
   const isSameRouting = to === from;
 
-  if (!blank) console.log(isSameRouting, to, from);
-
   return to ? (
     blank ? (
       <AnchorLink href={to} target="_blank" {...props}>

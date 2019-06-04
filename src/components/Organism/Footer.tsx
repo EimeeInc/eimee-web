@@ -11,7 +11,7 @@ const Wrapper = styled.footer`
   padding: 50px 60px;
 
   ${media.lessThan("md")`
-    padding: 30px 0;
+    padding: 30px 5px;
   `}
 `
 

@@ -3,8 +3,10 @@ import Helmet from "@/components/Helmet";
 import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
 import CardTitle from "@/components/Atom/CardTitle";
-import News from "@/components/Organism/News";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
+import AboutConcept from "@/components/Organism/AboutConcept";
+import AboutCEO from "@/components/Organism/AboutCEO";
+import Works from "@/components/Organism/Works";
 
 const IndexPage = () => (
   <>
@@ -17,8 +19,10 @@ const IndexPage = () => (
     />
     <Breadcrumbs name="about" />
     <PageContentsWrapper>
-      <CardTitle large>About</CardTitle>
-      <News />
+      <AboutConcept />
+      <CardTitle>事業内容</CardTitle>
+      <Works />
+      <AboutCEO />
     </PageContentsWrapper>
   </>
 );

@@ -69,7 +69,7 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
         dateTime={new Date("2017-03-30T00:00:00.000+09:00")}
       />
     </NewsBlock>
-    <NewsBlock to="https://eimee.co.jp/" blank>
+    <NewsBlock to="/" title="https://eimee.co.jp/">
       <NewsBlock.Title>Eimeeサイトリニューアル</NewsBlock.Title>
       <NewsBlock.Body>EimeeWebサイトをリニューアルしました。</NewsBlock.Body>
       <NewsBlock.Image src="/assets/img/ph_news_eimee.jpg" />

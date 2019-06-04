@@ -6,6 +6,7 @@ import Link from "@/components/Atom/Link";
 type DefinitionBlockProps = {
   to?: string;
   blank?: boolean;
+  title?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 type ImageProps = {
@@ -179,6 +180,7 @@ const isReactNodeArray = (value: any): value is React.ReactNodeArray =>
 const DefinitionBlock = ({
   to,
   blank,
+  title,
   children,
   ...props
 }: DefinitionBlockProps) => {
@@ -214,7 +216,7 @@ const DefinitionBlock = ({
         <BodyWrapper>
           {Body}
           <StyledLink to={to} blank={blank}>
-            {to}
+            {title ? title : to}
           </StyledLink>
         </BodyWrapper>
       </ImageWrapper>

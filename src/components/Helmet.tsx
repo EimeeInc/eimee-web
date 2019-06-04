@@ -59,7 +59,7 @@ export default ({
   const metaDescription = description || site.siteMetadata.description
 
   const selectedTitle = title
-    ? `${site.siteMetadata.title} | ${title}`
+    ? `${title} | ${site.siteMetadata.title}`
     : site.siteMetadata.title
 
   return (

@@ -4,7 +4,7 @@ import media from "@/util/breakpoint";
 import { isReactElement, isReactNodeArray } from "@/util/is"
 import Link from "@/components/Atom/Link";
 
-type DefinitionBlockProps = {
+type PictureBlockProps = {
   to?: string;
   blank?: boolean;
 } & React.HTMLAttributes<HTMLDivElement>;
@@ -135,29 +135,29 @@ const HeaderLink = styled(Link)`
   }
 `;
 
-const DefinitionBlock = ({
+const PictureBlock = ({
   to,
   blank,
   children,
   ...props
-}: DefinitionBlockProps) => {
+}: PictureBlockProps) => {
   const LinkProps = { to, blank };
   const Image =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.Image,
+        x => isReactElement(x) && x.type === PictureBlock.Image,
       )) ||
     null;
   const Header =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.Header,
+        x => isReactElement(x) && x.type === PictureBlock.Header,
       )) ||
     null;
   const Body =
     (isReactNodeArray(children) &&
       children.find(
-        x => isReactElement(x) && x.type === DefinitionBlock.Body,
+        x => isReactElement(x) && x.type === PictureBlock.Body,
       )) ||
     null;
 
@@ -173,14 +173,14 @@ const DefinitionBlock = ({
   );
 };
 
-DefinitionBlock.Image = ({ ...props }: ImageProps) => <Image {...props} />;
+PictureBlock.Image = ({ ...props }: ImageProps) => <Image {...props} />;
 
-DefinitionBlock.Header = ({ children, ...props }: HeaderProps) => (
+PictureBlock.Header = ({ children, ...props }: HeaderProps) => (
   <Header {...props}>{children}</Header>
 );
 
-DefinitionBlock.Body = ({ children, ...props }: BodyProps) => (
+PictureBlock.Body = ({ children, ...props }: BodyProps) => (
   <Body {...props}>{children}</Body>
 );
 
-export default DefinitionBlock;
+export default PictureBlock;

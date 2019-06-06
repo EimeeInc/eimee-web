@@ -8,6 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   width: 100%;
   height: 30px;
+  margin-bottom: 20px;
   border-top: solid 1px #efefef;
   border-bottom: solid 1px #efefef;
   color: #505050;

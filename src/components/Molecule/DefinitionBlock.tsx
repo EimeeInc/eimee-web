@@ -1,6 +1,7 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
+import { isReactElement, isReactNodeArray } from "@/util/is"
 import Link from "@/components/Atom/Link";
 
 type DefinitionBlockProps = {
@@ -133,12 +134,6 @@ const HeaderLink = styled(Link)`
     color: inherit;
   }
 `;
-
-const isReactElement = <T extends {}>(
-  value: any,
-): value is React.ReactElement<T> => value && typeof value.type === "function";
-const isReactNodeArray = (value: any): value is React.ReactNodeArray =>
-  value && value.length && value.find;
 
 const DefinitionBlock = ({
   to,

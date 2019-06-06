@@ -2,9 +2,11 @@ import * as React from "react";
 import Helmet from "@/components/Helmet";
 import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
-import CardTitle from "@/components/Atom/CardTitle";
 import News from "@/components/Organism/News";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
+import Tab from "@/components/Molecule/Tab";
+
+type NewsTabState = "notification" | "pressRelease";
 
 const IndexPage = () => (
   <>
@@ -17,8 +19,27 @@ const IndexPage = () => (
     />
     <Breadcrumbs name="news" />
     <PageContentsWrapper>
-      <CardTitle large>NEWS</CardTitle>
-      <News />
+      <Tab<NewsTabState> selected="notification">
+        <Tab.Menu<NewsTabState>>
+        {
+          ({ Menu }) => (
+            <>
+              <Menu tag="notification">
+                お知らせ
+              </Menu>
+              <Menu tag="pressRelease">
+                プレスリリース
+              </Menu>
+            </>
+          )
+        }
+        </Tab.Menu>
+        <Tab.Body<NewsTabState> tag="notification">
+          <News />
+        </Tab.Body>
+        <Tab.Body<NewsTabState> tag="pressRelease">
+        </Tab.Body>
+      </Tab>
     </PageContentsWrapper>
   </>
 );

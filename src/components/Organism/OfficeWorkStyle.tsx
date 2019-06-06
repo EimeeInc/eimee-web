@@ -1,6 +1,6 @@
 import * as React from "react";
 import FadeInEnteringCard from "@/components/Atom/FadeInEnteringCard";
-import DefinitionBlock from "@/components/Molecule/DefinitionBlock";
+import DefinitionBlock from "@/components/Molecule/PictureBlock";
 import DoubleQuote from "../Atom/DoubleQuote";
 
 const Works = () => (

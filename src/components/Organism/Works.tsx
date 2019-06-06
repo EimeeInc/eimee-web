@@ -1,7 +1,7 @@
 import * as React from "react";
 import DoubleQuote from "@/components/Atom/DoubleQuote";
 import FadeInEnteringCard from "@/components/Atom/FadeInEnteringCard";
-import DefinitionBlock from "@/components/Molecule/DefinitionBlock";
+import DefinitionBlock from "@/components/Molecule/PictureBlock";
 
 const Works = () => (
   <>

@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import FadeInEnteringCard from "@/components/Atom/FadeInEnteringCard";
-import DefinitionBlock from "@/components/Molecule/DefinitionBlock";
+import DefinitionBlock from "@/components/Molecule/PictureBlock";
 
 const Wrapper = styled.div`
   margin: 50px 0;

@@ -23,7 +23,9 @@ const CompanySummary = () => (
       <DefinitionBlock.Header>所在地</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>本社</StyledLine>
-        <StyledLine>〒135-0064 東京都江東区青海2-7-4 the SOHO 401</StyledLine>
+        <StyledLine>
+          &#12306;135-0064 東京都江東区青海2-7-4 the SOHO 401
+        </StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>

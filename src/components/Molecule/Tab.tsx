@@ -55,7 +55,7 @@ const StyledMenuListItem = styled.div`
     font-size: 1.7rem;
   `}
 
-  &:not(:first-child) {
+  &:not(:first-of-type) {
     margin-left: 30px;
 
     ${media.lessThan("sm")`
@@ -117,8 +117,8 @@ const Tab = <T extends string>({ className, children, selected }: TabProps<T>) =
       <MenuList>
         {MenuItem}
       </MenuList>
-      {Bodies.map(Body => (
-        <BodyWrapper className={classnames({ selected: Body.props.tag === current })}>
+      {Bodies.map((Body, index) => (
+        <BodyWrapper className={classnames({ selected: Body.props.tag === current })} key={index}>
           {Body}
         </BodyWrapper>
       ))}

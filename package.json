@@ -5,12 +5,14 @@
   "version": "0.1.0",
   "author": "EimeeInc <eimee@eimee.co.jp>",
   "dependencies": {
+    "aws-sdk": "^2.470.0",
     "gatsby": "^2.7.1"
   },
   "devDependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.11",
     "@types/classnames": "^2.2.7",
+    "@types/node": "^12.0.7",
     "@types/react-helmet": "^5.0.8",
     "@types/react-transition-group": "^2.9.1",
     "@types/styled-components": "^4.1.15",

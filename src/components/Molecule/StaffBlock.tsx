@@ -55,6 +55,7 @@ const StyledBody = styled.div<BodyProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   padding: 50px 15px 35px 15px;
   font-size: 1.6rem;
   line-height: 1.8;
@@ -63,6 +64,17 @@ const StyledBody = styled.div<BodyProps>`
   background-repeat: no-repeat;
   background-size: 170px auto;
   background-position: center 20px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -9px;
+    left: calc(50% - 9px);
+    transform: rotate(45deg);
+    background-color: inherit;
+  }
 `;
 
 const StaffBlock = ({ src, alt, children, ...props }: StaffBlockProps) => {

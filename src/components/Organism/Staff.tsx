@@ -105,47 +105,50 @@ const Staff = ({
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
   <Wrapper {...props}>
-    <StaffBlock src="/assets/img/ph_staff_ceo.png" alt="engineer">
+    <StaffBlock src="/assets/img/ph_staff_ceo.png" alt="タケモト">
       <StaffBlock.Header job="CEO・企画・営業">タケモト</StaffBlock.Header>
       <StaffBlock.Body>みんなが楽しめるサービスを作る</StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_engineer.png" alt="engineer">
+    <StaffBlock src="/assets/img/ph_staff_engineer.png" alt="Engineerの父">
       <StaffBlock.Header job="チーフエンジニア">Engineerの父</StaffBlock.Header>
       <StaffBlock.Body>
         細部にまでこだわったクオリティの高いモノをチーム一丸となって作り上げる
       </StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_director.png" alt="engineer">
+    <StaffBlock src="/assets/img/ph_staff_director.png" alt="BOSS">
       <StaffBlock.Header job="Webディレクター">BOSS</StaffBlock.Header>
       <StaffBlock.Body>みんなに愛されるものを創造する</StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_other.png" alt="engineer">
+    <StaffBlock src="/assets/img/ph_staff_other.png" alt="姐さん">
       <StaffBlock.Header job="企画・ライター">姐さん</StaffBlock.Header>
       <StaffBlock.Body>
         正しい情報、有益な情報を皆に与えられる会社を目指す
       </StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_designer01.png" alt="engineer">
+    <StaffBlock src="/assets/img/ph_staff_designer01.png" alt="夢の国の仏">
       <StaffBlock.Header job="Webデザイナー">夢の国の仏</StaffBlock.Header>
       <StaffBlock.Body>世に変化を与えられるものを作る</StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_planning01.png" alt="engineer">
+    <StaffBlock src="/assets/img/ph_staff_planning01.png" alt="微笑みの山口">
       <StaffBlock.Header job="企画">微笑みの山口</StaffBlock.Header>
       <StaffBlock.Body>世にないアイデアを形にする</StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_planning02.png" alt="engineer">
+    <StaffBlock src="/assets/img/ph_staff_planning02.png" alt="静かなる文豪">
       <StaffBlock.Header job="企画">静かなる文豪</StaffBlock.Header>
       <StaffBlock.Body>楽しいを世界に届けたい</StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_engineer02.png" alt="engineer">
+    <StaffBlock
+      src="/assets/img/ph_staff_engineer02.png"
+      alt="もじゃもじゃ男爵"
+    >
       <StaffBlock.Header job="エンジニア">もじゃもじゃ男爵</StaffBlock.Header>
       <StaffBlock.Body>誰かの役に立つものを作りたい</StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_engineer03.png" alt="engineer">
+    <StaffBlock src="/assets/img/ph_staff_engineer03.png" alt="肉大臣">
       <StaffBlock.Header job="エンジニア">肉大臣</StaffBlock.Header>
       <StaffBlock.Body>みんなに頼られるエンジニアを目指す</StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_engineer04.png" alt="engineer">
+    <StaffBlock src="/assets/img/ph_staff_engineer04.png" alt="tk">
       <StaffBlock.Header job="エンジニア">tk</StaffBlock.Header>
       <StaffBlock.Body>可能性の中から最適解を模索していきたい</StaffBlock.Body>
     </StaffBlock>

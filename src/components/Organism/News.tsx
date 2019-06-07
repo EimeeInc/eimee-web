@@ -1,8 +1,8 @@
 import * as React from "react";
-import NewsBlock from "@/components/Molecule/NewsBlock";
 import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
 import { Spacer4Way as Spacer } from "@/components/Atom/Spacer";
+import NewsBlock from "@/components/Molecule/NewsBlock";
 
 const Wrapper = styled.div`
   display: flex;

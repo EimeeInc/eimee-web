@@ -5,6 +5,7 @@ import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 import Tab from "@/components/Molecule/Tab";
 import CompanySummary from "@/components/Organism/CompanySummary";
+import CompanyHistory from "@/components/Organism/CompanyHistory";
 
 type CompanyTabState = "summary" | "history";
 
@@ -31,7 +32,9 @@ const IndexPage = () => (
         <Tab.Body<CompanyTabState> tag="summary">
           <CompanySummary />
         </Tab.Body>
-        <Tab.Body<CompanyTabState> tag="history" />
+        <Tab.Body<CompanyTabState> tag="history">
+          <CompanyHistory />
+        </Tab.Body>
       </Tab>
     </PageContentsWrapper>
   </>

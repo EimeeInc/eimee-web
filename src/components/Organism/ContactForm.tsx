@@ -5,7 +5,7 @@ import FormBlock from "@/components/Molecule/FormBlock";
 
 type ContactFormProps = {
   onBeforeSend?: (blob: Blob) => boolean;
-  onSend: (blob: Blob) => void;
+  onSend: (eve: React.FormEvent<HTMLFormElement>, blob: Blob) => void;
 } & React.HTMLAttributes<HTMLFormElement>;
 
 const Wrapper = styled.form`
@@ -105,7 +105,9 @@ const ContactForm = ({
   const [tel, setTel] = React.useState("");
   const [message, setMessage] = React.useState("");
 
-  const submitHandler = () => {
+  const submitHandler = async (eve: React.FormEvent<HTMLFormElement>) => {
+    eve.preventDefault();
+
     const blob = new Blob(
       [
         JSON.stringify(
@@ -124,13 +126,23 @@ const ContactForm = ({
       { type: "text/plain" },
     );
 
-    if (onBeforeSend && !onBeforeSend(blob)) return;
+    try {
+      if (onBeforeSend && (await !onBeforeSend(blob))) {
+        throw "canceled";
+      }
+    } catch (err) {
+      if (err instanceof Error) {
+        console.error(err);
+      }
 
-    onSend(blob);
+      return;
+    }
+
+    onSend(eve, blob);
   };
 
   return (
-    <Wrapper {...props}>
+    <Wrapper onSubmit={submitHandler} {...props}>
       <FormBlock src="/assets/img/contact_icon_select.png" alt="reason">
         <FormBlock.Header required>お問い合わせ項目</FormBlock.Header>
         <FormBlock.Body>
@@ -217,7 +229,7 @@ const ContactForm = ({
           />
         </FormBlock.Body>
       </FormBlock>
-      <StyledButton onSubmit={submitHandler}>送信内容を確認する</StyledButton>
+      <StyledButton>送信内容を確認する</StyledButton>
     </Wrapper>
   );
 };

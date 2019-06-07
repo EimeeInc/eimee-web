@@ -2,8 +2,6 @@ import * as React from "react";
 import styled from "@emotion/styled";
 import classnames from "classnames";
 import media from "@/util/breakpoint";
-import { isArrayLike } from "@/util/is";
-import Link from "@/components/Atom/Link";
 
 type HistoryBlockProps = {
   src: string;
@@ -110,29 +108,6 @@ const Body = styled.div`
     width: 100%;
     height: 100%;
     border-radius: 5px;
-  }
-`;
-
-const TextLink = styled(Link)`
-  display: inline-block;
-  position: relative;
-  margin-top: 15px;
-  margin-left: 30px;
-
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    width: 30px;
-    height: 30px;
-    pointer-events: none;
-    background-image: url(/assets/img/ico_internet.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    transform: translateY(-50%);
   }
 `;
 

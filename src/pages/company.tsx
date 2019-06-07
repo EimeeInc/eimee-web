@@ -2,9 +2,9 @@ import * as React from "react";
 import Helmet from "@/components/Helmet";
 import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
-import News from "@/components/Organism/News";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 import Tab from "@/components/Molecule/Tab";
+import CompanySummary from "@/components/Organism/CompanySummary";
 
 type CompanyTabState = "summary" | "history";
 
@@ -35,7 +35,7 @@ const IndexPage = () => (
         }
         </Tab.Menu>
         <Tab.Body<CompanyTabState> tag="summary">
-          <News />
+          <CompanySummary />
         </Tab.Body>
         <Tab.Body<CompanyTabState> tag="history">
         </Tab.Body>

@@ -38,7 +38,7 @@
     "build": "gatsby build",
     "dev": "gatsby develop",
     "start": "gatsby serve",
-    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "format": "prettier --write ./*.{js,json} {src,static}/**/*.{css,js,ts,jsx,tsx}",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
@@ -54,7 +54,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,jsx,tsx,json}": [
+    "*.{css,js,ts,jsx,tsx,json}": [
       "prettier --write",
       "git add"
     ]

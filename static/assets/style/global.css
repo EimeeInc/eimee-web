@@ -1,6 +1,7 @@
 body {
   min-width: 320px;
   color: #292f33;
-  font-family: "Montserrat", "Noto Sans JP", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-family: "Montserrat", "Noto Sans JP", "ヒラギノ角ゴ Pro",
+    "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
   background-color: #fcfcfc;
 }

@@ -2,9 +2,12 @@ import * as React from "react";
 import Helmet from "@/components/Helmet";
 import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
-import CardTitle from "@/components/Atom/CardTitle";
-import News from "@/components/Organism/News";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
+import Tab from "@/components/Molecule/Tab";
+import RecruitFreshSummary from "@/components/Organism/RecruitFreshSummary";
+import RecruitCareerSummary from "@/components/Organism/RecruitCareerSummary";
+
+type RecruitTabState = "fresh" | "career";
 
 const IndexPage = () => (
   <>
@@ -17,8 +20,22 @@ const IndexPage = () => (
     />
     <Breadcrumbs name="recruit" />
     <PageContentsWrapper>
-      <CardTitle large>About</CardTitle>
-      <News />
+      <Tab<RecruitTabState> selected="fresh">
+        <Tab.Menu<RecruitTabState>>
+          {({ Menu }) => (
+            <>
+              <Menu tag="fresh">フレッシュ採用</Menu>
+              <Menu tag="career">キャリア採用</Menu>
+            </>
+          )}
+        </Tab.Menu>
+        <Tab.Body<RecruitTabState> tag="fresh">
+          <RecruitFreshSummary />
+        </Tab.Body>
+        <Tab.Body<RecruitTabState> tag="career">
+          <RecruitCareerSummary />
+        </Tab.Body>
+      </Tab>
     </PageContentsWrapper>
   </>
 );

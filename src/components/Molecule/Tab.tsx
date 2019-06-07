@@ -70,16 +70,18 @@ const StyledMenuListItem = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
+    opacity: 0;
     transform: scaleY(0);
     transform-origin: center top;
     background-color: #3b3b3b;
-    transition: transform 0.3s;
+    transition: opacity 0.3s, transform 0.3s;
   }
 
   &:hover {
     color: #fcfcfc;
 
     &:before {
+      opacity: 1;
       transform: scaleY(1);
     }
   }
@@ -107,15 +109,19 @@ const MenuListItem = <T extends string>({ current, setCurrent }: Store<T>) => ({
   tag,
   children,
   ...props
-}: MenuListItemProps<T>) => (
-  <StyledMenuListItem
-    className={classnames(className, { selected: tag === current })}
-    onClick={() => setCurrent(tag)}
-    {...props}
-  >
-    <TextWrapper>{children}</TextWrapper>
-  </StyledMenuListItem>
-);
+}: MenuListItemProps<T>) => {
+  const selected = tag === current;
+
+  return (
+    <StyledMenuListItem
+      className={classnames(className, { selected })}
+      onClick={() => setCurrent(tag)}
+      {...props}
+    >
+      <TextWrapper>{children}</TextWrapper>
+    </StyledMenuListItem>
+  );
+};
 
 const Tab = <T extends string>({
   className,
@@ -123,12 +129,11 @@ const Tab = <T extends string>({
   selected,
 }: TabProps<T>) => {
   const [current, setCurrent] = React.useState<T>(selected);
-  const Menu = children.find(x => x.type === Tab.Menu) as React.ReactElement<
-    MenuProps<T>
-  >;
-  const MenuItem =
-    Menu &&
-    Menu.props.children({ Menu: MenuListItem<T>({ current, setCurrent }) });
+  const MenuElement = children.find(
+    x => x.type === Tab.Menu,
+  ) as React.ReactElement<MenuProps<T>>;
+  const Menu = MenuListItem<T>({ current, setCurrent });
+  const MenuItem = MenuElement && MenuElement.props.children({ Menu });
   const Bodies = children.filter(
     x => x.type === Tab.Body,
   ) as React.ReactElement<BodyProps<T>>[];

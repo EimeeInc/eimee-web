@@ -2,6 +2,7 @@ import * as React from "react";
 import NewsBlock from "@/components/Molecule/NewsBlock";
 import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
+import { Spacer4Way as Spacer } from "@/components/Atom/Spacer";
 
 const Wrapper = styled.div`
   display: flex;
@@ -19,41 +20,51 @@ const Wrapper = styled.div`
     flex-direction: column;
     align-items: center;
   `}
-`;
 
-const Spacer = styled.div`
-  display: none;
-  flex: auto;
-
-  &:nth-of-type(4n),
-  &:nth-of-type(4n-1),
-  &:nth-of-type(4n-2) {
-    display: block;
+  & > * {
+    width: calc(100% / 4 - 10px);
 
     ${media.lessThan("xl")`
-      display: none;
+      width: calc(100% / 3 - 5px);
     `}
-  }
 
-  &:nth-of-type(3n),
-  &:nth-of-type(3n-1) {
-    ${media.lessThan("xl")`
-      display: block;
-    `}
+    &:nth-of-type(n+4) {
+      ${media.lessThan("xl")`
+        margin-top: 10px;
+      `}
+
+      ${media.lessThan("lg")`
+        margin-top: 0;
+      `}
+    }
 
     ${media.lessThan("lg")`
-      display: none;
+      width: calc(100% / 2 - 20px);
     `}
-  }
 
-  &:nth-of-type(2n) {
-    ${media.lessThan("lg")`
-      display: block;
+    &:nth-of-type(n+3) {
+      ${media.lessThan("lg")`
+        margin-top: 10px;
+      `}
+
+      ${media.lessThan("sm")`
+        margin-top: 0;
+      `}
+    }
+
+    ${media.lessThan("md")`
+      width: calc(100% / 2 - 5px);
     `}
 
     ${media.lessThan("sm")`
-      display: none;
+      width: 90%;
     `}
+
+    &:not(:first-of-type) {
+      ${media.lessThan("sm")`
+        margin-top: 10px;
+      `}
+    }
   }
 `;
 

@@ -26,53 +26,19 @@ type PublsihDateProps = {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: calc(100% / 4 - 10px);
   height: 250px;
 
-  ${media.lessThan("xl")`
-    width: calc(100% / 3 - 5px);
-  `}
-
-  &:nth-of-type(n+4) {
-    ${media.lessThan("xl")`
-      margin-top: 10px;
-    `}
-
-    ${media.lessThan("lg")`
-      margin-top: 0;
-    `}
-  }
-
   ${media.lessThan("lg")`
-    width: calc(100% / 2 - 20px);
     height: 280px;
   `}
 
-  &:nth-of-type(n+3) {
-    ${media.lessThan("lg")`
-      margin-top: 10px;
-    `}
-
-    ${media.lessThan("sm")`
-      margin-top: 0;
-    `}
-  }
-
   ${media.lessThan("md")`
-    width: calc(100% / 2 - 5px);
     height: 250px;
   `}
 
   ${media.lessThan("sm")`
-    width: 90%;
     height: 280px;
   `}
-
-  &:not(:first-of-type) {
-    ${media.lessThan("sm")`
-      margin-top: 10px;
-    `}
-  }
 `;
 
 const Footer = styled.div`

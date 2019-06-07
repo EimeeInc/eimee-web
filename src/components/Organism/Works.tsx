@@ -1,11 +1,16 @@
 import * as React from "react";
+import styled from "@emotion/styled";
 import DoubleQuote from "@/components/Atom/DoubleQuote";
 import FadeInEnteringCard from "@/components/Atom/FadeInEnteringCard";
 import PictureBlock from "@/components/Molecule/PictureBlock";
 
+const StyledFadeInEnteringCard = styled(FadeInEnteringCard)`
+  margin-bottom: 60px;
+`;
+
 const Works = () => (
   <>
-    <FadeInEnteringCard>
+    <StyledFadeInEnteringCard>
       <PictureBlock to="https://kuchikomu.jp/" blank>
         <PictureBlock.Header>
           <DoubleQuote>クチコム</DoubleQuote>
@@ -18,8 +23,8 @@ const Works = () => (
           alt="kuchikomu"
         />
       </PictureBlock>
-    </FadeInEnteringCard>
-    <FadeInEnteringCard>
+    </StyledFadeInEnteringCard>
+    <StyledFadeInEnteringCard>
       <PictureBlock to="https://クレジットカードおすすめ比較.net/" blank>
         <PictureBlock.Header>
           <DoubleQuote>クレジットカードヒカキュー</DoubleQuote>
@@ -29,8 +34,8 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image src="/assets/img/ph_works_credit.jpg" alt="hikaq" />
       </PictureBlock>
-    </FadeInEnteringCard>
-    <FadeInEnteringCard>
+    </StyledFadeInEnteringCard>
+    <StyledFadeInEnteringCard>
       <PictureBlock>
         <PictureBlock.Header>
           <DoubleQuote>リスティング広告代行</DoubleQuote>
@@ -43,7 +48,7 @@ const Works = () => (
           alt="listing advertisement"
         />
       </PictureBlock>
-    </FadeInEnteringCard>
+    </StyledFadeInEnteringCard>
   </>
 );
 

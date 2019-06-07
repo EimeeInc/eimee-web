@@ -4,7 +4,6 @@ import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
 
 const Wrapper = styled.div`
-  margin-bottom: 60px;
   opacity: 0;
 
   &.isVisible {

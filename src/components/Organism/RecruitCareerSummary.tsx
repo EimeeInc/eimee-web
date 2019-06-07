@@ -5,7 +5,7 @@ import DefinitionCard from "@/components/Atom/DefinitionCard";
 
 const StyledLine = styled.p``;
 
-const RecruitFreshSummary = () => (
+const RecruitCareerSummary = () => (
   <DefinitionCard>
     <DefinitionBlock>
       <DefinitionBlock.Header>職種</DefinitionBlock.Header>
@@ -129,4 +129,4 @@ const RecruitFreshSummary = () => (
   </DefinitionCard>
 );
 
-export default RecruitFreshSummary;
+export default RecruitCareerSummary;

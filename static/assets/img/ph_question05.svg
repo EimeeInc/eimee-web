@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 900 750" style="enable-background:new 0 0 900 750;" xml:space="preserve">
+<style type="text/css">
+	.st0{display:none;}
+	.st1{display:inline;fill:#CCCCCC;}
+	.st2{fill:none;stroke:#F8B62D;stroke-width:15;stroke-miterlimit:10;}
+	.st3{fill:#F8B62D;stroke:#F8B62D;stroke-width:5;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#F8B62D;stroke-width:5;stroke-miterlimit:10;}
+	.st5{fill:#4C4C4C;}
+	.st6{font-family:'HGMaruGothicMPRO';}
+	.st7{font-size:31.4154px;}
+	.st8{opacity:0.6;fill-rule:evenodd;clip-rule:evenodd;fill:#FBB03B;}
+</style>
+<g id="背景" class="st0">
+	<rect x="-0.1" y="-0.1" class="st1" width="900" height="750"/>
+</g>
+<g id="レーダー">
+	<g>
+		<g>
+			<ellipse class="st2" cx="459.9" cy="374.9" rx="288.5" ry="288.4"/>
+			<g>
+				<g>
+					<line class="st2" x1="459.9" y1="86.5" x2="459.9" y2="100.9"/>
+					<line class="st2" x1="748.4" y1="374.9" x2="734" y2="374.9"/>
+					<line class="st2" x1="459.9" y1="663.2" x2="459.9" y2="648.8"/>
+					<line class="st2" x1="171.4" y1="374.9" x2="185.8" y2="374.9"/>
+				</g>
+			</g>
+		</g>
+		<g>
+			<line class="st3" x1="459.9" y1="374.9" x2="459.9" y2="86.5"/>
+			<g>
+				<g>
+					<line class="st3" x1="452.7" y1="333.7" x2="467.1" y2="333.7"/>
+					<line class="st3" x1="452.7" y1="292.5" x2="467.1" y2="292.5"/>
+					<line class="st3" x1="452.7" y1="251.3" x2="467.1" y2="251.3"/>
+					<line class="st3" x1="452.7" y1="210.1" x2="467.1" y2="210.1"/>
+					<line class="st4" x1="452.7" y1="168.9" x2="467.1" y2="168.9"/>
+					<line class="st4" x1="452.7" y1="127.7" x2="467.1" y2="127.7"/>
+					<line class="st4" x1="452.7" y1="86.5" x2="467.1" y2="86.5"/>
+				</g>
+			</g>
+			<g>
+				<line class="st3" x1="459.9" y1="374.9" x2="748.4" y2="374.9"/>
+				<g>
+					<g>
+						<line class="st3" x1="501.1" y1="367.6" x2="501.1" y2="382.1"/>
+						<line class="st3" x1="542.3" y1="367.6" x2="542.3" y2="382.1"/>
+						<line class="st3" x1="583.5" y1="367.6" x2="583.5" y2="382.1"/>
+						<line class="st3" x1="624.7" y1="367.6" x2="624.7" y2="382.1"/>
+						<line class="st4" x1="666" y1="367.6" x2="666" y2="382.1"/>
+						<line class="st4" x1="707.2" y1="367.6" x2="707.2" y2="382.1"/>
+						<line class="st4" x1="748.4" y1="367.6" x2="748.4" y2="382.1"/>
+					</g>
+				</g>
+			</g>
+			<g>
+				<line class="st3" x1="459.9" y1="374.9" x2="459.9" y2="663.2"/>
+				<g>
+					<g>
+						<line class="st3" x1="467.1" y1="416.1" x2="452.7" y2="416.1"/>
+						<line class="st3" x1="467.1" y1="457.3" x2="452.7" y2="457.3"/>
+						<line class="st4" x1="467.1" y1="498.5" x2="452.7" y2="498.5"/>
+						<line class="st4" x1="467.1" y1="539.7" x2="452.7" y2="539.7"/>
+						<line class="st4" x1="467.1" y1="580.9" x2="452.7" y2="580.9"/>
+						<line class="st4" x1="467.1" y1="622.1" x2="452.7" y2="622.1"/>
+						<line class="st4" x1="467.1" y1="663.2" x2="452.7" y2="663.2"/>
+					</g>
+				</g>
+			</g>
+			<g>
+				<line class="st3" x1="459.9" y1="374.9" x2="171.4" y2="374.9"/>
+				<g>
+					<g>
+						<line class="st3" x1="418.7" y1="382.1" x2="418.7" y2="367.6"/>
+						<line class="st3" x1="377.5" y1="382.1" x2="377.5" y2="367.6"/>
+						<line class="st3" x1="336.2" y1="382.1" x2="336.2" y2="367.6"/>
+						<line class="st4" x1="295" y1="382.1" x2="295" y2="367.6"/>
+						<line class="st4" x1="253.8" y1="382.1" x2="253.8" y2="367.6"/>
+						<line class="st4" x1="212.6" y1="382.1" x2="212.6" y2="367.6"/>
+						<line class="st4" x1="171.4" y1="382.1" x2="171.4" y2="367.6"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 399.9235 725.8535)" class="st5 st6 st7">テキパキ</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 372.9238 59.3945)" class="st5 st6 st7">アットホーム</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 774.9235 385.8535)" class="st5 st6 st7">穏やか</text>
+	</g>
+	<g>
+		<text transform="matrix(1 0 0 1 28.9235 385.8535)" class="st5 st6 st7">ハツラツ</text>
+	</g>
+</g>
+<g id="チャート">
+	<polygon class="st8" points="460,498 625,375 460,128 373,375 	"/>
+</g>
+<g id="ガイド" class="st0">
+</g>
+</svg>

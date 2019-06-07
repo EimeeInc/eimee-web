@@ -1,11 +1,17 @@
 import * as React from "react";
+import styled from "@emotion/styled";
 import FadeInEnteringCard from "@/components/Atom/FadeInEnteringCard";
 import PictureBlock from "@/components/Molecule/PictureBlock";
 import DoubleQuote from "../Atom/DoubleQuote";
 
+const StyledFadeInEnteringCard = styled(FadeInEnteringCard)`
+  margin-top: 60px;
+  margin-bottom: 60px;
+`;
+
 const Works = () => (
   <>
-    <FadeInEnteringCard>
+    <StyledFadeInEnteringCard>
       <PictureBlock>
         <PictureBlock.Header>
           ビジネスを円滑に進めるための機能的かつ象徴的なフロントロビー
@@ -16,8 +22,8 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image src="/assets/img/ph_office_lobby.jpg" alt="lobby" />
       </PictureBlock>
-    </FadeInEnteringCard>
-    <FadeInEnteringCard>
+    </StyledFadeInEnteringCard>
+    <StyledFadeInEnteringCard>
       <PictureBlock>
         <PictureBlock.Header>
           嬉しいドリンク飲み放題☆♪美味しいお菓子もおつまみOK
@@ -30,8 +36,8 @@ const Works = () => (
           alt="sweets"
         />
       </PictureBlock>
-    </FadeInEnteringCard>
-    <FadeInEnteringCard>
+    </StyledFadeInEnteringCard>
+    <StyledFadeInEnteringCard>
       <PictureBlock>
         <PictureBlock.Header>
           ロケ地としても人気が高いお洒落なバーで至福のひと時を
@@ -42,8 +48,8 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image src="/assets/img/ph_office_bar.jpg" alt="bar" />
       </PictureBlock>
-    </FadeInEnteringCard>
-    <FadeInEnteringCard>
+    </StyledFadeInEnteringCard>
+    <StyledFadeInEnteringCard>
       <PictureBlock>
         <PictureBlock.Header>
           フィットネスジム・シャワールーム完備
@@ -53,8 +59,8 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image src="/assets/img/ph_office_gym.jpg" alt="gym" />
       </PictureBlock>
-    </FadeInEnteringCard>
-    <FadeInEnteringCard>
+    </StyledFadeInEnteringCard>
+    <StyledFadeInEnteringCard>
       <PictureBlock>
         <PictureBlock.Header>
           東京湾オーシャンビュー、お台場シティビューを存分に堪能
@@ -67,8 +73,8 @@ const Works = () => (
           alt="ocean view"
         />
       </PictureBlock>
-    </FadeInEnteringCard>
-    <FadeInEnteringCard>
+    </StyledFadeInEnteringCard>
+    <StyledFadeInEnteringCard>
       <PictureBlock>
         <PictureBlock.Header>
           お台場の海風を感じられる屋上でのんびり
@@ -83,7 +89,7 @@ const Works = () => (
           alt="rooftop"
         />
       </PictureBlock>
-    </FadeInEnteringCard>
+    </StyledFadeInEnteringCard>
   </>
 );
 

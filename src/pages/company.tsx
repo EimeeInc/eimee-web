@@ -21,24 +21,17 @@ const IndexPage = () => (
     <PageContentsWrapper>
       <Tab<CompanyTabState> selected="summary">
         <Tab.Menu<CompanyTabState>>
-        {
-          ({ Menu }) => (
+          {({ Menu }) => (
             <>
-              <Menu tag="summary">
-                会社概要
-              </Menu>
-              <Menu tag="history">
-                沿革
-              </Menu>
+              <Menu tag="summary">会社概要</Menu>
+              <Menu tag="history">沿革</Menu>
             </>
-          )
-        }
+          )}
         </Tab.Menu>
         <Tab.Body<CompanyTabState> tag="summary">
           <CompanySummary />
         </Tab.Body>
-        <Tab.Body<CompanyTabState> tag="history">
-        </Tab.Body>
+        <Tab.Body<CompanyTabState> tag="history" />
       </Tab>
     </PageContentsWrapper>
   </>

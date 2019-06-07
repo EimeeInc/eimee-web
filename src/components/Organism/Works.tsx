@@ -27,10 +27,7 @@ const Works = () => (
         <PictureBlock.Body>
           クレジットカードおすすめ比較「ヒカキュー」とは、日本国内で発行されている数百種類のクレジットカードを紹介するサイト。ヒカキューは、数あるクレジットカード比較サイトの中でも、自分にピッタリの1枚を簡単に見つけ出せるという特徴があります。国内最大級の掲載件数を誇りながらも、カード全てに解説が付いている点も大きな特徴。また、クレジットカードにまつわるホットなニュースを発信しています。
         </PictureBlock.Body>
-        <PictureBlock.Image
-          src="/assets/img/ph_works_credit.jpg"
-          alt="hikaq"
-        />
+        <PictureBlock.Image src="/assets/img/ph_works_credit.jpg" alt="hikaq" />
       </PictureBlock>
     </FadeInEnteringCard>
     <FadeInEnteringCard>

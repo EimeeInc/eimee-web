@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
 
 type DefinitionBlockProps = {
-  children: React.ReactElement[]
+  children: React.ReactElement[];
 } & React.HTMLAttributes<HTMLDivElement>;
 
 type HeaderProps = {} & React.HTMLAttributes<HTMLDivElement>;
@@ -42,21 +42,18 @@ const StyledBody = styled.div<BodyProps>`
   line-height: 1.8;
 `;
 
-const DefinitionBlock = ({
-  children,
-  ...props
-}: DefinitionBlockProps) => {
-  const Header = children.find(x => x.type === DefinitionBlock.Header) as React.ReactElement<HeaderProps>;
-  const Body = children.find(x => x.type === DefinitionBlock.Body) as React.ReactElement<BodyProps>;
+const DefinitionBlock = ({ children, ...props }: DefinitionBlockProps) => {
+  const Header = children.find(
+    x => x.type === DefinitionBlock.Header,
+  ) as React.ReactElement<HeaderProps>;
+  const Body = children.find(
+    x => x.type === DefinitionBlock.Body,
+  ) as React.ReactElement<BodyProps>;
 
   return (
     <Wrapper {...props}>
-      <StyledHeader>
-        {Header}
-      </StyledHeader>
-      <StyledBody>
-        {Body}
-      </StyledBody>
+      <StyledHeader>{Header}</StyledHeader>
+      <StyledBody>{Body}</StyledBody>
     </Wrapper>
   );
 };

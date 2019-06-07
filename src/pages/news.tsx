@@ -21,24 +21,17 @@ const IndexPage = () => (
     <PageContentsWrapper>
       <Tab<NewsTabState> selected="notification">
         <Tab.Menu<NewsTabState>>
-        {
-          ({ Menu }) => (
+          {({ Menu }) => (
             <>
-              <Menu tag="notification">
-                お知らせ
-              </Menu>
-              <Menu tag="pressRelease">
-                プレスリリース
-              </Menu>
+              <Menu tag="notification">お知らせ</Menu>
+              <Menu tag="pressRelease">プレスリリース</Menu>
             </>
-          )
-        }
+          )}
         </Tab.Menu>
         <Tab.Body<NewsTabState> tag="notification">
           <News />
         </Tab.Body>
-        <Tab.Body<NewsTabState> tag="pressRelease">
-        </Tab.Body>
+        <Tab.Body<NewsTabState> tag="pressRelease" />
       </Tab>
     </PageContentsWrapper>
   </>

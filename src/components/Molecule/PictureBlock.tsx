@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
-import { isReactElement, isReactNodeArray } from "@/util/is"
+import { isReactElement, isReactNodeArray } from "@/util/is";
 import Link from "@/components/Atom/Link";
 
 type PictureBlockProps = {
@@ -135,18 +135,11 @@ const HeaderLink = styled(Link)`
   }
 `;
 
-const PictureBlock = ({
-  to,
-  blank,
-  children,
-  ...props
-}: PictureBlockProps) => {
+const PictureBlock = ({ to, blank, children, ...props }: PictureBlockProps) => {
   const LinkProps = { to, blank };
   const Image =
     (isReactNodeArray(children) &&
-      children.find(
-        x => isReactElement(x) && x.type === PictureBlock.Image,
-      )) ||
+      children.find(x => isReactElement(x) && x.type === PictureBlock.Image)) ||
     null;
   const Header =
     (isReactNodeArray(children) &&
@@ -156,9 +149,7 @@ const PictureBlock = ({
     null;
   const Body =
     (isReactNodeArray(children) &&
-      children.find(
-        x => isReactElement(x) && x.type === PictureBlock.Body,
-      )) ||
+      children.find(x => isReactElement(x) && x.type === PictureBlock.Body)) ||
     null;
 
   return (

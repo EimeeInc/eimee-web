@@ -4,28 +4,30 @@ import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
 
 type Store<T> = {
-  current: T
-  setCurrent: (current: T) => void
-}
+  current: T;
+  setCurrent: (current: T) => void;
+};
 
 type TabProps<T> = {
-  selected: T
-  children: React.ReactElement[]
+  selected: T;
+  children: React.ReactElement[];
 } & React.HTMLAttributes<HTMLDivElement>;
 
 type MenuProps<T> = {
-  children: MenuChildren<T>
+  children: MenuChildren<T>;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-type MenuChildren<T> = (config: { Menu: (props: MenuListItemProps<T>) => JSX.Element }) => JSX.Element
+type MenuChildren<T> = (config: {
+  Menu: (props: MenuListItemProps<T>) => JSX.Element;
+}) => JSX.Element;
 
 type BodyProps<T> = {
-  tag: T
+  tag: T;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 type MenuListItemProps<T> = {
-  tag: T
-} & React.HTMLAttributes<HTMLDivElement>
+  tag: T;
+} & React.HTMLAttributes<HTMLDivElement>;
 
 const Wrapper = styled.div``;
 
@@ -90,7 +92,7 @@ const StyledMenuListItem = styled.div`
 
 const TextWrapper = styled.span`
   position: relative;
-`
+`;
 
 const BodyWrapper = styled.div`
   display: none;
@@ -100,25 +102,45 @@ const BodyWrapper = styled.div`
   }
 `;
 
-const MenuListItem = <T extends string>({ current, setCurrent }: Store<T>) => ({ className, tag, children, ...props }: MenuListItemProps<T>) => (
-  <StyledMenuListItem className={classnames(className, { selected: tag === current })} onClick={() => setCurrent(tag)} { ...props}>
+const MenuListItem = <T extends string>({ current, setCurrent }: Store<T>) => ({
+  className,
+  tag,
+  children,
+  ...props
+}: MenuListItemProps<T>) => (
+  <StyledMenuListItem
+    className={classnames(className, { selected: tag === current })}
+    onClick={() => setCurrent(tag)}
+    {...props}
+  >
     <TextWrapper>{children}</TextWrapper>
   </StyledMenuListItem>
-)
+);
 
-const Tab = <T extends string>({ className, children, selected }: TabProps<T>) => {
+const Tab = <T extends string>({
+  className,
+  children,
+  selected,
+}: TabProps<T>) => {
   const [current, setCurrent] = React.useState<T>(selected);
-  const Menu = children.find((x) => x.type === Tab.Menu) as React.ReactElement<MenuProps<T>>;
-  const MenuItem = Menu && Menu.props.children({ Menu: MenuListItem<T>({current, setCurrent}) });
-  const Bodies = children.filter((x) => x.type === Tab.Body) as React.ReactElement<BodyProps<T>>[];
+  const Menu = children.find(x => x.type === Tab.Menu) as React.ReactElement<
+    MenuProps<T>
+  >;
+  const MenuItem =
+    Menu &&
+    Menu.props.children({ Menu: MenuListItem<T>({ current, setCurrent }) });
+  const Bodies = children.filter(
+    x => x.type === Tab.Body,
+  ) as React.ReactElement<BodyProps<T>>[];
 
   return (
     <Wrapper className={className}>
-      <MenuList>
-        {MenuItem}
-      </MenuList>
+      <MenuList>{MenuItem}</MenuList>
       {Bodies.map((Body, index) => (
-        <BodyWrapper className={classnames({ selected: Body.props.tag === current })} key={index}>
+        <BodyWrapper
+          className={classnames({ selected: Body.props.tag === current })}
+          key={index}
+        >
           {Body}
         </BodyWrapper>
       ))}
@@ -126,9 +148,8 @@ const Tab = <T extends string>({ className, children, selected }: TabProps<T>) =
   );
 };
 
-Tab.Menu = <T extends string>({ children }: MenuProps<T>) => <>{children}</>
+Tab.Menu = <T extends string>({ children }: MenuProps<T>) => <>{children}</>;
 
 Tab.Body = <T extends string>({ children }: BodyProps<T>) => <>{children}</>;
 
 export default Tab;
-

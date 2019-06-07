@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
-import { isReactElement, isReactNodeArray } from "@/util/is"
+import { isReactElement, isReactNodeArray } from "@/util/is";
 import Link from "@/components/Atom/Link";
 
 type DefinitionBlockProps = {

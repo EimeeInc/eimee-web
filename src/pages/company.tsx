@@ -2,10 +2,12 @@ import * as React from "react";
 import Helmet from "@/components/Helmet";
 import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
+import CardTitle from "@/components/Atom/CardTitle";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 import Tab from "@/components/Molecule/Tab";
 import CompanySummary from "@/components/Organism/CompanySummary";
 import CompanyHistory from "@/components/Organism/CompanyHistory";
+import CompanyAccess from "@/components/Organism/CompanyAccess";
 
 type CompanyTabState = "summary" | "history";
 
@@ -36,6 +38,8 @@ const IndexPage = () => (
           <CompanyHistory />
         </Tab.Body>
       </Tab>
+      <CardTitle>アクセス</CardTitle>
+      <CompanyAccess />
     </PageContentsWrapper>
   </>
 );

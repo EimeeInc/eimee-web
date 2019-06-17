@@ -43,7 +43,7 @@ const SubCard = styled.div`
 `;
 
 const SubCardBody = styled.div`
-  margin-bottom: 1em;
+  margin-bottom: 1.1em;
   line-height: 1.8;
   font-size: 1.5rem;
 `;

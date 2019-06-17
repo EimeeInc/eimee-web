@@ -4,6 +4,10 @@ import media from "@/util/breakpoint";
 import Icon from "@/components/Atom/Icon";
 import SubCardTitle from "@/components/Atom/SubCardTitle";
 
+type HeaderIconProps = {
+  src: string;
+} & React.HTMLAttributes<HTMLSpanElement>;
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
@@ -49,23 +53,17 @@ const StyledLine = styled.p`
   align-items: center;
 `;
 
-const TrainIcon = ({
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => (
-  <Icon src="/assets/img/ico_train.png" size="3rem" {...props} />
+const HeaderIcon = ({ src, children, ...props }: HeaderIconProps) => (
+  <Icon src={src} size="3rem" {...props} />
 );
-const CityBusIcon = ({
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => (
-  <Icon src="/assets/img/ico_bus.png" size="3rem" {...props} />
+const TrainIcon = (props: React.HTMLAttributes<HTMLSpanElement>) => (
+  <HeaderIcon src="/assets/img/ico_train.png" {...props} />
 );
-const TimeBusIcon = ({
-  children,
-  ...props
-}: React.HTMLAttributes<HTMLSpanElement>) => (
-  <Icon src="/assets/img/ico_bus_time.png" size="3rem" {...props} />
+const CityBusIcon = (props: React.HTMLAttributes<HTMLSpanElement>) => (
+  <HeaderIcon src="/assets/img/ico_bus.png" {...props} />
+);
+const TimeBusIcon = (props: React.HTMLAttributes<HTMLSpanElement>) => (
+  <HeaderIcon src="/assets/img/ico_bus_time.png" {...props} />
 );
 const WalkIcon = ({
   children,

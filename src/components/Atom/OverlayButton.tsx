@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   background-color: #f5f5f5;
 
   &:hover {
-    opacity: 0.4;
+    opacity: 0.7;
     transition-duration: 0.4s;
   }
 

@@ -33,13 +33,13 @@ const IndexPage = () => (
         </Tab.Menu>
         <Tab.Body<CompanyTabState> tag="summary">
           <CompanySummary />
+          <CardTitle>アクセス</CardTitle>
+          <CompanyAccess />
         </Tab.Body>
         <Tab.Body<CompanyTabState> tag="history">
           <CompanyHistory />
         </Tab.Body>
       </Tab>
-      <CardTitle>アクセス</CardTitle>
-      <CompanyAccess />
     </PageContentsWrapper>
   </>
 );

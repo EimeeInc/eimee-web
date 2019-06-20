@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://agitated-babbage-9aebb5.netlify.com/* https://eimee.co.jp/:splat 301!

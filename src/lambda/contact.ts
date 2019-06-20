@@ -1,7 +1,5 @@
 import { APIGatewayProxyHandler } from "aws-lambda";
 import axios from "axios";
-import maybe from "eimee-util/maybe";
-import heredoc from "eimee-util/heredoc";
 
 const handler: APIGatewayProxyHandler = (eve, ctx, callback) => {
   const isDev = process.env.NODE_ENV === "development";
@@ -50,11 +48,14 @@ const handler: APIGatewayProxyHandler = (eve, ctx, callback) => {
       }),
     });
 
-  const json = maybe(() => JSON.parse(eve.body || ""), {});
+  const body = (() => {
+    try {
+      return JSON.stringify(JSON.parse(eve.body || "") || {}, null, "  ");
+    } catch (err) {
+      return {};
+    }
+  })();
 
-  if (json[0]) return;
-
-  const body = JSON.stringify(json[1], null, "  ");
   const url = process.env.SLACK_CONTACT_WEBHOOK_URL;
 
   if (!url)
@@ -69,15 +70,17 @@ const handler: APIGatewayProxyHandler = (eve, ctx, callback) => {
       }),
     });
 
+  const text = `
+環境: ${process.env.NODE_ENV}
+内容:
+${body}
+  `.trim();
+
   axios
     .post(
       url,
       {
-        text: heredoc`
-      環境: ${process.env.NODE_ENV}
-      内容:
-      ${body}
-    `,
+        text,
       },
       {
         headers: {

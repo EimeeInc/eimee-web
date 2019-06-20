@@ -6,7 +6,8 @@
   "author": "EimeeInc <eimee@eimee.co.jp>",
   "dependencies": {
     "axios": "^0.19.0",
-    "gatsby": "^2.7.1"
+    "gatsby": "^2.7.1",
+    "netlify-lambda": "^1.4.13"
   },
   "devDependencies": {
     "@emotion/core": "^10.0.10",
@@ -27,7 +28,6 @@
     "gatsby-plugin-typescript": "^2.0.13",
     "husky": "^2.3.0",
     "lint-staged": "^8.1.7",
-    "netlify-lambda": "^1.4.13",
     "prettier": "^1.17.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

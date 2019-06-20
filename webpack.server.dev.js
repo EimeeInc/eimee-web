@@ -4,6 +4,8 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
+process.env.NODE_ENV = "development";
+
 config.mode = process.env.NODE_ENV;
 config.plugins = config.plugins || [];
 config.plugins.push(

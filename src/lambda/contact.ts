@@ -55,7 +55,7 @@ const handler: APIGatewayProxyHandler = (eve, ctx, callback) => {
   if (json[0]) return;
 
   const body = JSON.stringify(json[1], null, "  ");
-  const url = process.env.SLACK_WEBHOOK_URL;
+  const url = process.env.SLACK_CONTACT_WEBHOOK_URL;
 
   if (!url)
     return callback(null, {

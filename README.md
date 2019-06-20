@@ -10,3 +10,11 @@
     - (各自SSHの設定は済ませておいてください)
 1. `npm install`
 1. `npm run dev`
+
+# 環境変数
+
+開発環境では `.env` をルートディレクトリに配置することで、環境変数を設定することが出来ます
+
+## SLACK_CONTACT_WEBHOOK_URL
+
+- contactフォーム送信先のSlackチャンネルに向けたwebhookのurlを指定します

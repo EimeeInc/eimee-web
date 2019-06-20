@@ -3,9 +3,18 @@ import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
 import FormBlock from "@/components/Molecule/FormBlock";
 
+export type FormData = {
+  reason: string;
+  company: string;
+  name: string;
+  mail: string;
+  tel: string;
+  message: string;
+};
+
 type ContactFormProps = {
-  onBeforeSend?: (blob: Blob) => boolean;
-  onSend: (eve: React.FormEvent<HTMLFormElement>, blob: Blob) => void;
+  onBeforeSend?: (data: FormData) => boolean;
+  onSend: (eve: React.FormEvent<HTMLFormElement>, data: FormData) => void;
 } & React.HTMLAttributes<HTMLFormElement>;
 
 const Wrapper = styled.form`
@@ -109,26 +118,17 @@ const ContactForm = ({
   const submitHandler = async (eve: React.FormEvent<HTMLFormElement>) => {
     eve.preventDefault();
 
-    const blob = new Blob(
-      [
-        JSON.stringify(
-          {
-            reason,
-            company,
-            name,
-            mail,
-            tel,
-            message,
-          },
-          null,
-          4,
-        ),
-      ],
-      { type: "text/plain" },
-    );
+    const formData: FormData = {
+      reason,
+      company,
+      name,
+      mail,
+      tel,
+      message,
+    };
 
     try {
-      if (onBeforeSend && (await !onBeforeSend(blob))) {
+      if (onBeforeSend && (await !onBeforeSend(formData))) {
         throw "canceled";
       }
     } catch (err) {
@@ -139,7 +139,7 @@ const ContactForm = ({
       return;
     }
 
-    onSend(eve, blob);
+    onSend(eve, formData);
   };
 
   return (
@@ -181,7 +181,7 @@ const ContactForm = ({
         <FormBlock.Body>
           <StyledInput
             type="text"
-            name="name01"
+            name="name"
             placeholder="エイミー 太郎"
             value={name}
             onChange={eve => setName(eve.currentTarget.value)}

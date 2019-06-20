@@ -2,36 +2,36 @@ import * as React from "react";
 import Helmet from "@/components/Helmet";
 import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
-import ContactForm from "@/components/Organism/ContactForm";
+import ContactForm, { FormData } from "@/components/Organism/ContactForm";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
-import * as AWS from "aws-sdk";
-
-AWS.config.region = "ap-northeast-1";
-AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-  IdentityPoolId: "ap-northeast-1:b64d1e47-4acb-48ca-b45c-25d63255f524",
-});
+import axios from "axios";
 
 const onBeforeSend = () =>
   window.confirm("この内容で送信しても良いですか？") || false;
 
-const onSubmit = async (eve: React.FormEvent<HTMLFormElement>, blob: Blob) => {
-  if (process.env.NODE_ENV === "development") return;
+const onSubmit = async (
+  eve: React.FormEvent<HTMLFormElement>,
+  data: FormData,
+) => {
+  const isDev = process.env.NODE_ENV === "development";
+  const origin = isDev ? "http://localhost:9000" : "https://eimee.co.jp";
 
-  try {
-    const s3 = new AWS.S3();
+  const result = await axios.post(
+    `${origin}/.netlify/functions/contact/`,
+    data,
+    {
+      responseType: "json",
+      headers: {
+        "content-type": "application/json",
+        "x-requested-with": "XMLHttpRequest",
+      },
+    },
+  );
 
-    await s3
-      .putObject({
-        Key: `uploads/${Date.now()}.txt`,
-        Bucket: "eimee.co.jp",
-        ContentType: "text/plain",
-        Body: blob,
-        ACL: "authenticated-read",
-      })
-      .promise();
-  } catch (err) {
-    alert(`Upload Failed: ${err.message}`);
-  }
+  window.alert("お問い合わせありがとうございました。");
+  location.reload();
+
+  console.log(result);
 };
 
 const IndexPage = () => (

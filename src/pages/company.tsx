@@ -13,7 +13,13 @@ type CompanyTabState = "summary" | "history";
 
 const IndexPage = () => (
   <>
-    <Helmet title="会社概要" canonical="/company/" />
+    <Helmet
+      title="会社概要"
+      canonical="/company/"
+      link={[
+        { rel: "preload", href: "/assets/img/ph_top_company.jpg", as: "image" },
+      ]}
+    />
     <CommonHeaderBlock
       title="Company"
       ruby="会社概要"

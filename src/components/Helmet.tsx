@@ -26,6 +26,7 @@ type HelmetProps = Partial<{
     name: string;
     content: string;
   }[];
+  link: React.LinkHTMLAttributes<HTMLLinkElement>[];
   keywords: string[];
   title: string;
   canonical: string;
@@ -35,6 +36,7 @@ export default ({
   description,
   lang = "ja",
   meta = [],
+  link = [],
   keywords = [],
   title,
   canonical = "/",
@@ -116,7 +118,7 @@ export default ({
         ...site.siteMetadata.css.map(x =>
           typeof x === "string" ? { rel: "stylesheet", href: x } : x,
         ),
-      ]}
+      ].concat(link)}
       script={[
         ...(site.siteMetadata.script || []).map(x =>
           typeof x === "string" ? { src: x } : x,

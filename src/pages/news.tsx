@@ -10,7 +10,13 @@ type NewsTabState = "notification" | "pressRelease";
 
 const IndexPage = () => (
   <>
-    <Helmet title="ニュース" canonical="/news/" />
+    <Helmet
+      title="ニュース"
+      canonical="/news/"
+      link={[
+        { rel: "preload", href: "/assets/img/ph_top_news.jpg", as: "image" },
+      ]}
+    />
     <CommonHeaderBlock
       title="News"
       ruby="ニュース"

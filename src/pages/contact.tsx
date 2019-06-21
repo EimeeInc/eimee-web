@@ -36,7 +36,13 @@ const onSubmit = async (
 
 const IndexPage = () => (
   <>
-    <Helmet title="お問い合わせ" canonical="/contact/" />
+    <Helmet
+      title="お問い合わせ"
+      canonical="/contact/"
+      link={[
+        { rel: "preload", href: "/assets/img/ph_top_contact.jpg", as: "image" },
+      ]}
+    />
     <CommonHeaderBlock
       title="Contact"
       ruby="お問い合わせ"

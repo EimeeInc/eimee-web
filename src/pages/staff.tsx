@@ -9,7 +9,7 @@ import CardTitle from "@/components/Atom/CardTitle";
 
 const IndexPage = () => (
   <>
-    <Helmet title="スタッフ紹介" />
+    <Helmet title="スタッフ紹介" canonical="/staff/" />
     <CommonHeaderBlock
       title="Staff"
       ruby="スタッフ紹介"

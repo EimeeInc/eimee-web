@@ -10,7 +10,7 @@ type NewsTabState = "notification" | "pressRelease";
 
 const IndexPage = () => (
   <>
-    <Helmet title="ニュース" />
+    <Helmet title="ニュース" canonical="/news/" />
     <CommonHeaderBlock
       title="News"
       ruby="ニュース"

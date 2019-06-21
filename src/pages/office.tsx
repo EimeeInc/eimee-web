@@ -7,7 +7,7 @@ import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 
 const IndexPage = () => (
   <>
-    <Helmet title="ワークスタイル" />
+    <Helmet title="ワークスタイル" canonical="/office/" />
     <CommonHeaderBlock
       title="Work Style"
       ruby="ワークスタイル"

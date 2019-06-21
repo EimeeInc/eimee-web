@@ -4,6 +4,7 @@ import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 import Tab from "@/components/Molecule/Tab";
+import RecruitImageList from "@/components/Organism/RecruitImageList";
 import RecruitFreshSummary from "@/components/Organism/RecruitFreshSummary";
 import RecruitCareerSummary from "@/components/Organism/RecruitCareerSummary";
 
@@ -30,9 +31,11 @@ const IndexPage = () => (
           )}
         </Tab.Menu>
         <Tab.Body<RecruitTabState> tag="fresh">
+          <RecruitImageList mode="fresh" />
           <RecruitFreshSummary />
         </Tab.Body>
         <Tab.Body<RecruitTabState> tag="career">
+          <RecruitImageList mode="career" />
           <RecruitCareerSummary />
         </Tab.Body>
       </Tab>

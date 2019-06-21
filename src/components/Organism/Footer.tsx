@@ -141,7 +141,7 @@ const Copylight = styled.p`
 `;
 
 const Footer = ({ className }: { className?: string }) => {
-  const src = "/assets/img/fun_to_share_1_sp1.png";
+  const src = "/assets/img/fun_to_share.png";
 
   return (
     <Wrapper className={className}>

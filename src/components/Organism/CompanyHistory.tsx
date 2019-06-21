@@ -68,7 +68,7 @@ const CompanyHistory = () => (
     </HistoryBlock>
     <HorizontalLine />
     <HistoryBlock
-      src="/assets/img/company_history08.jpg"
+      src="/assets/img/company_history08.png"
       alt="history08"
       to="https://kuchikomu.jp/"
       blank

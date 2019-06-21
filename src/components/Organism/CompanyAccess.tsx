@@ -86,7 +86,7 @@ const CompanyAccess = () => (
       </SubCardTitle>
       <SubCardBody>
         <StyledLine>
-          「船の科学館」駅
+          「東京国際クルーズターミナル」駅
           <WalkIcon />
           徒歩5分
         </StyledLine>

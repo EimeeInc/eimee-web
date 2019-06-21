@@ -13,7 +13,7 @@ type CompanyTabState = "summary" | "history";
 
 const IndexPage = () => (
   <>
-    <Helmet title="会社概要" />
+    <Helmet title="会社概要" canonical="/company/" />
     <CommonHeaderBlock
       title="Company"
       ruby="会社概要"

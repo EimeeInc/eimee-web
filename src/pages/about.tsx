@@ -10,7 +10,7 @@ import Works from "@/components/Organism/Works";
 
 const IndexPage = () => (
   <>
-    <Helmet title="私たちについて" />
+    <Helmet title="私たちについて" canonical="/about/" />
     <CommonHeaderBlock
       title="About"
       ruby="私たちについて"

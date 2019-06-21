@@ -11,7 +11,7 @@ type RecruitTabState = "fresh" | "career";
 
 const IndexPage = () => (
   <>
-    <Helmet title="採用情報" />
+    <Helmet title="採用情報" canonical="/recruit/" />
     <CommonHeaderBlock
       title="Recruit"
       ruby="採用情報"

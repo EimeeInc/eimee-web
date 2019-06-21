@@ -36,7 +36,7 @@ const onSubmit = async (
 
 const IndexPage = () => (
   <>
-    <Helmet title="お問い合わせ" />
+    <Helmet title="お問い合わせ" canonical="/contact/" />
     <CommonHeaderBlock
       title="Contact"
       ruby="お問い合わせ"

@@ -10,7 +10,13 @@ import Works from "@/components/Organism/Works";
 
 const IndexPage = () => (
   <>
-    <Helmet title="私たちについて" canonical="/about/" />
+    <Helmet
+      title="私たちについて"
+      canonical="/about/"
+      link={[
+        { rel: "preload", href: "/assets/img/ph_top_about.jpg", as: "image" },
+      ]}
+    />
     <CommonHeaderBlock
       title="About"
       ruby="私たちについて"

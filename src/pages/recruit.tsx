@@ -12,7 +12,13 @@ type RecruitTabState = "fresh" | "career";
 
 const IndexPage = () => (
   <>
-    <Helmet title="採用情報" canonical="/recruit/" />
+    <Helmet
+      title="採用情報"
+      canonical="/recruit/"
+      link={[
+        { rel: "preload", href: "/assets/img/ph_top_recruit.jpg", as: "image" },
+      ]}
+    />
     <CommonHeaderBlock
       title="Recruit"
       ruby="採用情報"

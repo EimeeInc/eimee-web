@@ -9,7 +9,14 @@ import TopRecruitBanner from "@/components/Organism/TopRecruitBanner";
 
 const IndexPage = () => (
   <>
-    <Helmet />
+    <Helmet
+      link={[
+        { rel: "preload", href: "/assets/img/ph_top1.jpg", as: "image" },
+        { rel: "preload", href: "/assets/img/ph_top2.jpg", as: "image" },
+        { rel: "preload", href: "/assets/img/ph_top3.jpg", as: "image" },
+        { rel: "preload", href: "/assets/img/ph_top4.jpg", as: "image" },
+      ]}
+    />
     <TopHeader />
     <PageContentsWrapper>
       <CardTitle large>WORKS</CardTitle>

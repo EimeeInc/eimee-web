@@ -7,7 +7,13 @@ import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 
 const IndexPage = () => (
   <>
-    <Helmet title="ワークスタイル" canonical="/office/" />
+    <Helmet
+      title="ワークスタイル"
+      canonical="/office/"
+      link={[
+        { rel: "preload", href: "/assets/img/ph_top_office.jpg", as: "image" },
+      ]}
+    />
     <CommonHeaderBlock
       title="Work Style"
       ruby="ワークスタイル"

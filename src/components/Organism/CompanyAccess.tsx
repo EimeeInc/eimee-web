@@ -62,9 +62,6 @@ const TrainIcon = (props: React.HTMLAttributes<HTMLSpanElement>) => (
 const CityBusIcon = (props: React.HTMLAttributes<HTMLSpanElement>) => (
   <HeaderIcon src="/assets/img/ico_bus.png" {...props} />
 );
-const TimeBusIcon = (props: React.HTMLAttributes<HTMLSpanElement>) => (
-  <HeaderIcon src="/assets/img/ico_bus_time.png" {...props} />
-);
 const WalkIcon = ({
   children,
   ...props
@@ -105,17 +102,6 @@ const CompanyAccess = () => (
           「日本科学未来館前」バス停
           <WalkIcon />
           徒歩1分
-        </StyledLine>
-      </SubCardBody>
-      <SubCardTitle>
-        <TimeBusIcon />
-        「タイム24ビル」行き平日無料循環バス
-      </SubCardTitle>
-      <SubCardBody>
-        <StyledLine>
-          「タイム24ビル」バス停
-          <WalkIcon />
-          徒歩5分
         </StyledLine>
       </SubCardBody>
     </SubCard>

@@ -25,27 +25,16 @@ const Works = () => (
       </PictureBlock>
     </StyledFadeInEnteringCard>
     <StyledFadeInEnteringCard>
-      <PictureBlock to="https://クレジットカードおすすめ比較.net/" blank>
+      <PictureBlock to="https://chazine.jp/" blank>
         <PictureBlock.Header>
-          <DoubleQuote>クレジットカードヒカキュー</DoubleQuote>
+          <DoubleQuote>CHAzine</DoubleQuote>
         </PictureBlock.Header>
         <PictureBlock.Body>
-          クレジットカードおすすめ比較「ヒカキュー」とは、日本国内で発行されている数百種類のクレジットカードを紹介するサイト。ヒカキューは、数あるクレジットカード比較サイトの中でも、自分にピッタリの1枚を簡単に見つけ出せるという特徴があります。国内最大級の掲載件数を誇りながらも、カード全てに解説が付いている点も大きな特徴。また、クレジットカードにまつわるホットなニュースを発信しています。
-        </PictureBlock.Body>
-        <PictureBlock.Image src="/assets/img/ph_works_credit.jpg" alt="hikaq" />
-      </PictureBlock>
-    </StyledFadeInEnteringCard>
-    <StyledFadeInEnteringCard>
-      <PictureBlock>
-        <PictureBlock.Header>
-          <DoubleQuote>リスティング広告代行</DoubleQuote>
-        </PictureBlock.Header>
-        <PictureBlock.Body>
-          リスティング広告運用代行・コンサルティングを承ります。少額資金で始められるインターネット広告は中小企業等の宣伝媒体として、ターゲットとする顧客層へ的確に情報提供できる効果的な配信方法。Yahoo!プロモーション広告正規代理店としての経験豊富な実績に基づき、貴社の利益率を上昇させる仕組みを分かりやすく提案します。
+          CHAzineは「シーンに最適なお茶が見つかる」をコンセプトにしたお茶専門のレビューブログです。仕事の合間に飲むお茶、ご飯と一緒に飲むお茶、夜寝る前に飲むお茶など、それぞれのシーンに最適なお茶を紹介しています。レビュー記事を書いているのは当社のライターです。実際に商品を試飲して、ほっと一息つきながら記事を作成しています。あなたもシーンに合ったお茶を見つけて、ほっと一息ついてみませんか？
         </PictureBlock.Body>
         <PictureBlock.Image
-          src="/assets/img/ph_works_listing.jpg"
-          alt="listing advertisement"
+          src="/assets/img/ph_works_chazine.jpg"
+          alt="chazine"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>

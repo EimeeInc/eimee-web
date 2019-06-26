@@ -29,6 +29,14 @@ const Layout = ({
   const mediaQueryStore = initMediaQueryStore("sm");
   const routingStore = initRoutingStore(location.pathname);
 
+  React.useEffect(() => {
+    console.info(
+      "ソースコード公開中！",
+      "https://github.com/EimeeInc/eimee-web/",
+      "Issue, Pull Request 大歓迎です！",
+    );
+  }, []);
+
   return (
     <MediaQueryContext.Provider value={mediaQueryStore}>
       <MediaQuery />

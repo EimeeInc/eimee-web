@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 
 const StyledBanner = styled(Banner)`
   display: block;
+  width: 100%;
   border: 1px solid #efefef;
 `;
 

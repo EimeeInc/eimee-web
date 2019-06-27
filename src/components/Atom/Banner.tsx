@@ -18,7 +18,10 @@ const StyledLink = styled(Link)<BannerProps>`
   }
 `;
 
-const Image = styled.img``;
+const Image = styled.img`
+  width: 100%;
+  vertical-align: bottom;
+`;
 
 const Banner = ({
   src,

@@ -68,10 +68,10 @@ const StyledBody = styled.div<BodyProps>`
   &:before {
     content: "";
     position: absolute;
-    width: 18px;
-    height: 18px;
     top: -9px;
     left: calc(50% - 9px);
+    width: 18px;
+    height: 18px;
     transform: rotate(45deg);
     background-color: inherit;
   }

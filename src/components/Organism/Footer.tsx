@@ -70,6 +70,7 @@ const List = styled.ul`
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
   min-width: 300px;
   height: 100%;
   margin: 0 10px;
@@ -126,6 +127,10 @@ const StyledLink = styled(Link)`
 const FooterBanner = styled(Banner)`
   margin-left: 60px;
 
+  & > img {
+    width: auto;
+  }
+
   ${media.lessThan("xl")`
   margin-left: 30px;
 `}
@@ -162,12 +167,14 @@ const Footer = ({ className }: { className?: string }) => {
             </ListItem>
           ))}
         </List>
-        <FooterBanner
-          src={src}
-          alt="funtoshare"
-          to="http://funtoshare.env.go.jp/"
-          blank
-        />
+        <div>
+          <FooterBanner
+            src={src}
+            alt="funtoshare"
+            to="http://funtoshare.env.go.jp/"
+            blank
+          />
+        </div>
       </FlexWrapper>
       <Copylight>&#169; 2017 Eimee Inc.</Copylight>
     </Wrapper>

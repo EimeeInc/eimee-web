@@ -52,6 +52,8 @@ const hideLoading = keyframes`
 `;
 
 const Wrapper = styled.div`
+  position: relative;
+
   &.entering {
     display: none;
     position: absolute;

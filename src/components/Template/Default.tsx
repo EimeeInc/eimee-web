@@ -8,6 +8,8 @@ import Routing from "@/components/Routing";
 import GlobalMenu from "@/components/Organism/GlobalMenu";
 import Footer from "@/components/Organism/Footer";
 import { LocationContext } from "@reach/router";
+import displayConsoleBranding from "@/mixins/displayDrandingConsole";
+import { initGtag, updatePagePath } from "@/mixins/gtag";
 
 const PageWrapper = styled.main`
   display: flex;
@@ -29,13 +31,11 @@ const Layout = ({
   const mediaQueryStore = initMediaQueryStore("sm");
   const routingStore = initRoutingStore(location.pathname);
 
+  React.useEffect(displayConsoleBranding, []);
+  React.useEffect(initGtag, []);
   React.useEffect(() => {
-    console.info(
-      "ソースコード公開中！",
-      "https://github.com/EimeeInc/eimee-web/",
-      "Issue, Pull Request 大歓迎です！",
-    );
-  }, []);
+    updatePagePath(location);
+  }, [location.pathname]);
 
   return (
     <MediaQueryContext.Provider value={mediaQueryStore}>

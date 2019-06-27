@@ -18,3 +18,8 @@
 ## SLACK_CONTACT_WEBHOOK_URL
 
 - contactフォーム送信先のSlackチャンネルに向けたwebhookのurlを指定します
+
+## GATSBY_GOOGLE_ANALYTICS_UA
+
+- Google Analyticsで指定するUAです
+- 例) UA-xxxxxxxx-x

@@ -14,7 +14,7 @@ export const initGtag = () => {
 };
 
 export const updatePagePath = (location: Location) => {
-  gtag("config", process.env.GOOGLE_ANALYTICS_UA, {
+  gtag("config", process.env.GATSBY_GOOGLE_ANALYTICS_UA, {
     page_path: location.pathname,
   });
 };

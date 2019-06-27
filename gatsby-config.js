@@ -10,7 +10,7 @@ module.exports = {
       "https://polyfill.io/v3/polyfill.min.js?features=IntersectionObserverEntry%2CIntersectionObserver",
       !isDev &&
         `https://www.googletagmanager.com/gtag/js?id=${
-          process.env.GOOGLE_ANALYTICS_UA
+          process.env.GATSBY_GOOGLE_ANALYTICS_UA
         }`,
     ].filter(x => x),
     css: [

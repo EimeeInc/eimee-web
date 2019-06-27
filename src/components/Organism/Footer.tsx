@@ -70,6 +70,7 @@ const List = styled.ul`
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
   min-width: 300px;
   height: 100%;
   margin: 0 10px;

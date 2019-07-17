@@ -6,7 +6,8 @@ type Pages =
   | "office"
   | "staff"
   | "recruit"
-  | "contact";
+  | "contact"
+  | "policy";
 
 type Routings = {
   [T in Pages]: {
@@ -56,6 +57,11 @@ const routings: Routings = {
     location: "/contact/",
     parent: "top",
     label: "お問い合わせ",
+  },
+  policy: {
+    location: "/policy/",
+    parent: "top",
+    label: "個人情報保護方針",
   },
 };
 

@@ -176,7 +176,7 @@ const Footer = ({ className }: { className?: string }) => {
           />
         </div>
       </FlexWrapper>
-      <Copylight>&#169; 2017 Eimee Inc.</Copylight>
+      <Copylight>&#169; 2019 Eimee Inc.</Copylight>
     </Wrapper>
   );
 };

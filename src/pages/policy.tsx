@@ -18,8 +18,8 @@ const IndexPage = () => (
     <CommonHeaderBlock
       title="Policy"
       ruby="個人情報保護方針"
-      color="#5a5a5a"
-      src="/assets/img/ph_top_about.jpg"
+      color="#e8974c"
+      src="/assets/img/ph_top_policy.jpg"
     />
     <Breadcrumbs name="policy" />
     <PageContentsWrapper>

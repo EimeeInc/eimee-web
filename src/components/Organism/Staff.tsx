@@ -115,16 +115,6 @@ const Staff = ({
         細部にまでこだわったクオリティの高いモノをチーム一丸となって作り上げる
       </StaffBlock.Body>
     </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_director.png" alt="BOSS">
-      <StaffBlock.Header job="Webディレクター">BOSS</StaffBlock.Header>
-      <StaffBlock.Body>みんなに愛されるものを創造する</StaffBlock.Body>
-    </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_other.png" alt="姐さん">
-      <StaffBlock.Header job="企画・ライター">姐さん</StaffBlock.Header>
-      <StaffBlock.Body>
-        正しい情報、有益な情報を皆に与えられる会社を目指す
-      </StaffBlock.Body>
-    </StaffBlock>
     <StaffBlock src="/assets/img/ph_staff_designer01.png" alt="夢の国の仏">
       <StaffBlock.Header job="Webデザイナー">夢の国の仏</StaffBlock.Header>
       <StaffBlock.Body>世に変化を与えられるものを作る</StaffBlock.Body>
@@ -147,10 +137,6 @@ const Staff = ({
     <StaffBlock src="/assets/img/ph_staff_engineer03.png" alt="肉大臣">
       <StaffBlock.Header job="エンジニア">肉大臣</StaffBlock.Header>
       <StaffBlock.Body>みんなに頼られるエンジニアを目指す</StaffBlock.Body>
-    </StaffBlock>
-    <StaffBlock src="/assets/img/ph_staff_engineer04.png" alt="tk">
-      <StaffBlock.Header job="エンジニア">tk</StaffBlock.Header>
-      <StaffBlock.Body>可能性の中から最適解を模索していきたい</StaffBlock.Body>
     </StaffBlock>
     <Spacer />
   </Wrapper>

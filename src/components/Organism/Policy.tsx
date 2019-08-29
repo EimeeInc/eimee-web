@@ -13,46 +13,47 @@ const Wrapper = styled.ul`
 `;
 const List = styled.li`
   width: 100%;
+
   &:nth-of-type(n + 2) {
     margin-top: 40px;
-  }ﾆ
+  }
 `;
 const Order = styled.ol`
-width: 100%;
-margin-top: 10px;
-padding: 0 15px;
-counter-reset: item;
+  width: 100%;
+  margin-top: 10px;
+  padding: 0 15px;
+  counter-reset: item;
 
-${media.lessThan("sm")`
+  ${media.lessThan("sm")`
     padding: 0;
   `}
 
-& > li {
-  width: 100%;
-  padding-left: 30px;
-  position: relative;
-  font-size: 1.6rem;
-  line-height: 2.2rem;
-  text-align: left;
+  & > li {
+    width: 100%;
+    padding-left: 30px;
+    position: relative;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    text-align: left;
 
-  ${media.lessThan("lg")`
-    font-size: 1.4rem;
-    line-height: 2rem;
-  `}
-  
-  &:nth-of-type(n + 2) {
-    margin-top: 10px;
+    ${media.lessThan("lg")`
+      font-size: 1.4rem;
+      line-height: 2rem;
+    `}
+
+    &:nth-of-type(n + 2) {
+      margin-top: 10px;
+    }
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      letter-spacing: 0.2rem;
+      counter-increment: item;
+      content: "(" counter(item) ")";
+    }
   }
-  
-  &:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    letter-spacing: 0.2rem;
-    counter-increment: item;
-    content: '('counter(item)')';
-  }
-}ﾆ
 `;
 const Heading = styled.h2`
   width: 100%;

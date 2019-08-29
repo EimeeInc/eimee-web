@@ -22,7 +22,7 @@ const IndexPage = () => (
       color="#ffa588"
       src="/assets/img/ph_top_staff.jpg"
     />
-    <Breadcrumbs name="staff" />
+    {/* <Breadcrumbs name="staff" /> */}
     <PageContentsWrapper>
       <Staff />
       <CardTitle large>Q&amp;A</CardTitle>

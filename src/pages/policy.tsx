@@ -12,7 +12,7 @@ const IndexPage = () => (
       title="個人情報保護方針"
       canonical="/policy/"
       link={[
-        { rel: "preload", href: "/assets/img/ph_top_about.jpg", as: "image" },
+        { rel: "preload", href: "/assets/img/ph_top_policy.jpg", as: "image" },
       ]}
     />
     <CommonHeaderBlock

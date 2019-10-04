@@ -11,15 +11,15 @@ const StyledFadeInEnteringCard = styled(FadeInEnteringCard)`
 const Works = () => (
   <>
     <StyledFadeInEnteringCard>
-      <PictureBlock to="https://kuchikomu.jp/" blank>
+      <PictureBlock to="https://elchika.com/" blank>
         <PictureBlock.Header>
-          <DoubleQuote>クチコム</DoubleQuote>
+          <DoubleQuote>elchika</DoubleQuote>
         </PictureBlock.Header>
         <PictureBlock.Body>
-          みんなが選ぶ、本当にいいもの「クチコム」は、ユーザーの口コミのみでお店やサービスを評価するサイトです。評価の高い口コミが残り、評価の低い口コミは削除されるという今までになかったシステムを搭載しています。ユーザーが評価したそのままの情報を提供するため、これまでの世にあふれたサイトとは一線を画すサイトとして、ユーザーへ真の情報を提供します。
+          elchikaは、IoTや電子工作に特化したナレッジ共有サービスです。ハードウェアに関するプログラミングや電子回路などのノウハウを投稿することができます。電子工作に関する情報を検索したい人や知識をアウトプットしたい人におすすめです。電子工作の知識や経験、習熟の度合いに関わらず、ユーザー同士がフラットに交流できる場として、電子工作を楽しむ全ての人の創作活動をサポートしています。
         </PictureBlock.Body>
         <PictureBlock.Image
-          src="/assets/img/ph_works_kuchikomu.jpg"
+          src="/assets/img/ph_works_elchika.jpg"
           alt="kuchikomu"
         />
       </PictureBlock>
@@ -35,6 +35,20 @@ const Works = () => (
         <PictureBlock.Image
           src="/assets/img/ph_works_chazine.jpg"
           alt="chazine"
+        />
+      </PictureBlock>
+    </StyledFadeInEnteringCard>
+    <StyledFadeInEnteringCard>
+      <PictureBlock to="https://kuchikomu.jp/" blank>
+        <PictureBlock.Header>
+          <DoubleQuote>クチコム</DoubleQuote>
+        </PictureBlock.Header>
+        <PictureBlock.Body>
+          みんなが選ぶ、本当にいいもの「クチコム」は、ユーザーの口コミのみでお店やサービスを評価するサイトです。評価の高い口コミが残り、評価の低い口コミは削除されるという今までになかったシステムを搭載しています。ユーザーが評価したそのままの情報を提供するため、これまでの世にあふれたサイトとは一線を画すサイトとして、ユーザーへ真の情報を提供します。
+        </PictureBlock.Body>
+        <PictureBlock.Image
+          src="/assets/img/ph_works_kuchikomu.jpg"
+          alt="kuchikomu"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>

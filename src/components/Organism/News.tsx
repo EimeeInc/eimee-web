@@ -79,7 +79,7 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
       </NewsBlock.Body>
       <NewsBlock.Image src="/assets/img/ph_news_elchika.jpg" />
       <NewsBlock.PublsihDate
-        dateTime={new Date("2019-10-30T00:00:00.000+09:00")}
+        dateTime={new Date("2019-10-07T00:00:00.000+09:00")}
       />
     </NewsBlock>
     <NewsBlock to="https://chazine.jp/" blank>

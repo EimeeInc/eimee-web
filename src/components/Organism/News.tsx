@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
-import { Spacer4Way as Spacer } from "@/components/Atom/Spacer";
 import NewsBlock from "@/components/Molecule/NewsBlock";
+import NewsSpacer from "@/components/Molecule/NewsSpacer";
 
 const Wrapper = styled.div`
   display: flex;
@@ -90,7 +90,8 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
         dateTime={new Date("2017-01-24T00:00:00.000+09:00")}
       />
     </NewsBlock>
-    <Spacer />
+    <NewsSpacer />
+    <NewsSpacer />
   </Wrapper>
 );
 

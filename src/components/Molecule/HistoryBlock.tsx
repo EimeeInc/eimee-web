@@ -42,8 +42,7 @@ const TextContainer = styled.div`
 const Header = styled.time`
   display: inline-block;
   margin-bottom: 10px;
-  color: #5fb7f1;
-  font-weight: bold;
+  color: #aaaaaa;
 
   ${media.lessThan("xl")`
     margin-bottom: 7px;

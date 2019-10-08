@@ -29,7 +29,7 @@ const CompanyHistory = () => (
     <HorizontalLine />
     <HistoryBlock>
       <HistoryBlock.Header
-        dateTime={new Date("2012-11-01T00:00:00.000+09:00")}
+        dateTime={new Date("2012-11-21T00:00:00.000+09:00")}
       />
       <HistoryBlock.Body>
         <StyledLine>クレジットカード比較サイト「ヒカキュー」を開始</StyledLine>
@@ -56,7 +56,7 @@ const CompanyHistory = () => (
     <HorizontalLine />
     <HistoryBlock>
       <HistoryBlock.Header
-        dateTime={new Date("2017-03-01T00:00:00.000+09:00")}
+        dateTime={new Date("2017-03-30T00:00:00.000+09:00")}
       />
       <HistoryBlock.Body>
         <StyledLine>
@@ -67,7 +67,7 @@ const CompanyHistory = () => (
     <HorizontalLine />
     <HistoryBlock>
       <HistoryBlock.Header
-        dateTime={new Date("2019-04-01T00:00:00.000+09:00")}
+        dateTime={new Date("2019-04-19T00:00:00.000+09:00")}
       />
       <HistoryBlock.Body>
         <StyledLine>お茶で彩る生活マガジン「CHAzine」を開始</StyledLine>
@@ -76,7 +76,7 @@ const CompanyHistory = () => (
     <HorizontalLine />
     <HistoryBlock>
       <HistoryBlock.Header
-        dateTime={new Date("2019-10-01T00:00:00.000+09:00")}
+        dateTime={new Date("2019-10-07T00:00:00.000+09:00")}
       />
       <HistoryBlock.Body>
         <StyledLine>電子工作ナレッジ共有サイト「elchika」を開始</StyledLine>

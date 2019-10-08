@@ -29,7 +29,6 @@ const Spacer = styled.div`
 
   ${media.lessThan("lg")`
     height: 280px;
-    display: none;
   `}
 
   ${media.lessThan("md")`

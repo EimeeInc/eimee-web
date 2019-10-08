@@ -5,16 +5,10 @@ import { isArrayLike } from "@/util/is";
 import Link from "@/components/Atom/Link";
 
 type HistoryBlockProps = {
-  src: string;
-  alt: string;
-  to?: string;
-  blank?: boolean;
   children:
     | [React.ReactElement<HeaderProps>, React.ReactElement<BodyProps>]
     | React.ReactElement<BodyProps>;
 } & React.HTMLAttributes<HTMLDivElement>;
-
-type ImageProps = {} & React.ImgHTMLAttributes<HTMLImageElement>;
 
 type HeaderProps = {
   dateTime: Date;
@@ -26,17 +20,6 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: flex-start;
-`;
-
-const Image = styled.img<ImageProps>`
-  flex: none;
-  width: 210px;
-  border: 2px solid #efefef;
-  pointer-events: none;
-
-  ${media.lessThan("md")`
-    width: 120px;
-  `}
 `;
 
 const TextContainer = styled.div`
@@ -94,15 +77,7 @@ const TextLink = styled(Link)`
   }
 `;
 
-const HistoryBlock = ({
-  src,
-  alt,
-  to,
-  blank,
-  children,
-  ...props
-}: HistoryBlockProps) => {
-  const LinkProps = { to, blank };
+const HistoryBlock = ({ children, ...props }: HistoryBlockProps) => {
   const HeaderContents = isArrayLike(children)
     ? (children[0] as React.ReactElement<HeaderProps>)
     : null;
@@ -111,16 +86,14 @@ const HistoryBlock = ({
     : children) as React.ReactElement<BodyProps>;
   const date = HeaderContents ? HeaderContents.props.dateTime : null;
   const dateStr = date
-    ? `${date.getFullYear()}.${date.getMonth() + 1}.${date.getDate()}`
+    ? `${date.getFullYear()}年${date.getMonth() + 1}月`
     : null;
 
   return (
     <Wrapper {...props}>
-      <Image src={src} alt={alt} />
       <TextContainer>
         {date && <Header dateTime={date.toISOString()}>{dateStr}</Header>}
         <Body>{BodyContents}</Body>
-        {to && <TextLink {...LinkProps}>{to}</TextLink>}
       </TextContainer>
     </Wrapper>
   );

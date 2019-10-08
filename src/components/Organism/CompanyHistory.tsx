@@ -16,70 +16,70 @@ const HorizontalLine = styled.hr`
 
 const CompanyHistory = () => (
   <Wrapper>
-    <HistoryBlock src="/assets/img/company_history01.png" alt="history01">
-      <HistoryBlock.Body>
-        <StyledLine>CEOの誕生</StyledLine>
-        <StyledLine>体重：3100g</StyledLine>
-        <StyledLine>身長：47.5cm</StyledLine>
-      </HistoryBlock.Body>
-    </HistoryBlock>
-    <HorizontalLine />
-    <HistoryBlock src="/assets/img/company_history02.png" alt="history02">
+    <HistoryBlock>
       <HistoryBlock.Header
         dateTime={new Date("2012-10-01T00:00:00.000+09:00")}
       />
       <HistoryBlock.Body>
-        <StyledLine>大人になったので会社を設立</StyledLine>
-      </HistoryBlock.Body>
-    </HistoryBlock>
-    <HorizontalLine />
-    <HistoryBlock
-      src="/assets/img/company_history03.png"
-      alt="history03"
-      to="https://クレジットカードおすすめ比較.net/"
-      blank
-    >
-      <HistoryBlock.Header
-        dateTime={new Date("2012-11-21T00:00:00.000+09:00")}
-      />
-      <HistoryBlock.Body>
-        <StyledLine>クレジットカードhikaQをリリース</StyledLine>
-      </HistoryBlock.Body>
-    </HistoryBlock>
-    <HorizontalLine />
-    <HistoryBlock src="/assets/img/company_history06.png" alt="history06">
-      <HistoryBlock.Header
-        dateTime={new Date("2016-04-01T00:00:00.000+09:00")}
-      />
-      <HistoryBlock.Body>
         <StyledLine>
-          オフィスを移転(引っ越し業者を待ちきれなかったCEOはPCだけを持って引っ越しを済ませていた)
+          ダブルアールシステムズ株式会社を愛知県名古屋市に設立
         </StyledLine>
       </HistoryBlock.Body>
     </HistoryBlock>
     <HorizontalLine />
-    <HistoryBlock src="/assets/img/company_history07.png" alt="history07">
+    <HistoryBlock>
       <HistoryBlock.Header
-        dateTime={new Date("2017-01-26T00:00:00.000+09:00")}
+        dateTime={new Date("2012-11-01T00:00:00.000+09:00")}
       />
       <HistoryBlock.Body>
-        <StyledLine>エイミーWebサイトリニューアル</StyledLine>
+        <StyledLine>クレジットカード比較サイト「ヒカキュー」を開始</StyledLine>
       </HistoryBlock.Body>
     </HistoryBlock>
     <HorizontalLine />
-    <HistoryBlock
-      src="/assets/img/company_history08.png"
-      alt="history08"
-      to="https://kuchikomu.jp/"
-      blank
-    >
+    <HistoryBlock>
       <HistoryBlock.Header
-        dateTime={new Date("2017-03-30T00:00:00.000+09:00")}
+        dateTime={new Date("2014-12-01T00:00:00.000+09:00")}
+      />
+      <HistoryBlock.Body>
+        <StyledLine>本社を東京都江東区に移転</StyledLine>
+      </HistoryBlock.Body>
+    </HistoryBlock>
+    <HorizontalLine />
+    <HistoryBlock>
+      <HistoryBlock.Header
+        dateTime={new Date("2016-08-01T00:00:00.000+09:00")}
+      />
+      <HistoryBlock.Body>
+        <StyledLine>エイミー株式会社に商号変更</StyledLine>
+      </HistoryBlock.Body>
+    </HistoryBlock>
+    <HorizontalLine />
+    <HistoryBlock>
+      <HistoryBlock.Header
+        dateTime={new Date("2017-03-01T00:00:00.000+09:00")}
       />
       <HistoryBlock.Body>
         <StyledLine>
-          ユーザーとお店が繋がる次世代総合口コミSNS「クチコム」をリリース
+          ユーザーとお店が繋がる口コミSNS「クチコム」を開始
         </StyledLine>
+      </HistoryBlock.Body>
+    </HistoryBlock>
+    <HorizontalLine />
+    <HistoryBlock>
+      <HistoryBlock.Header
+        dateTime={new Date("2019-04-01T00:00:00.000+09:00")}
+      />
+      <HistoryBlock.Body>
+        <StyledLine>お茶で彩る生活マガジン「CHAzine」を開始</StyledLine>
+      </HistoryBlock.Body>
+    </HistoryBlock>
+    <HorizontalLine />
+    <HistoryBlock>
+      <HistoryBlock.Header
+        dateTime={new Date("2019-10-01T00:00:00.000+09:00")}
+      />
+      <HistoryBlock.Body>
+        <StyledLine>電子工作ナレッジ共有サイト「elchika」を開始</StyledLine>
       </HistoryBlock.Body>
     </HistoryBlock>
   </Wrapper>

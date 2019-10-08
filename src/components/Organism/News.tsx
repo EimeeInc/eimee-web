@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
-import { Spacer4Way as Spacer } from "@/components/Atom/Spacer";
 import NewsBlock from "@/components/Molecule/NewsBlock";
+import NewsSpacer from "@/components/Molecule/NewsSpacer";
 
 const Wrapper = styled.div`
   display: flex;
@@ -82,26 +82,6 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
         dateTime={new Date("2019-10-07T00:00:00.000+09:00")}
       />
     </NewsBlock>
-    <NewsBlock to="https://chazine.jp/" blank>
-      <NewsBlock.Title>お茶で彩る生活マガジンCHAzineをリリース</NewsBlock.Title>
-      <NewsBlock.Body>
-        お茶で彩る生活マガジン配信サイト「CHAzine」をリリースしました。
-      </NewsBlock.Body>
-      <NewsBlock.Image src="/assets/img/ph_news_chazine.jpg" />
-      <NewsBlock.PublsihDate
-        dateTime={new Date("2019-04-19T00:00:00.000+09:00")}
-      />
-    </NewsBlock>
-    <NewsBlock to="https://kuchikomu.jp/" blank>
-      <NewsBlock.Title>次世代総合口コミSNSクチコムをリリース</NewsBlock.Title>
-      <NewsBlock.Body>
-        ユーザーとお店が繋がる次世代総合口コミSNS「クチコム」をリリースしました。
-      </NewsBlock.Body>
-      <NewsBlock.Image src="/assets/img/ph_news_kuchikomu.jpg" />
-      <NewsBlock.PublsihDate
-        dateTime={new Date("2017-03-30T00:00:00.000+09:00")}
-      />
-    </NewsBlock>
     <NewsBlock to="/" title="https://eimee.co.jp/">
       <NewsBlock.Title>Eimeeサイトリニューアル</NewsBlock.Title>
       <NewsBlock.Body>EimeeWebサイトをリニューアルしました。</NewsBlock.Body>
@@ -110,7 +90,8 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
         dateTime={new Date("2017-01-24T00:00:00.000+09:00")}
       />
     </NewsBlock>
-    <Spacer />
+    <NewsSpacer />
+    <NewsSpacer />
   </Wrapper>
 );
 

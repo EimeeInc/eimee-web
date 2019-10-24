@@ -20,6 +20,7 @@ const NewsPR = () => (
       <PRBlock.Header dateTime={new Date("2019-10-07T00:00:00.000+09:00")} />
       <PRBlock.Body>
         <StyledLink
+          rel="noopener noreferrer"
           target="_blank"
           href="https://prtimes.jp/main/html/rd/p/000000002.000049176.html"
         >

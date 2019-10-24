@@ -8,7 +8,6 @@ const Text = styled.p`
 const Author = styled.p`
   margin-bottom: 100px;
   text-align: right;
-  font-weight: bold;
 `;
 
 const TopRecruitBanner = ({ className }: { className?: string }) => (

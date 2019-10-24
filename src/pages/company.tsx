@@ -33,7 +33,7 @@ const IndexPage = () => (
         <Tab.Menu<CompanyTabState>>
           {({ Menu }) => (
             <>
-              <Menu tag="ceo">会社概要</Menu>
+              <Menu tag="ceo">代表挨拶</Menu>
               <Menu tag="summary">会社概要</Menu>
               <Menu tag="history">沿革</Menu>
             </>

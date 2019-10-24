@@ -40,7 +40,7 @@ const IndexPage = () => (
           )}
         </Tab.Menu>
         <Tab.Body<CompanyTabState> tag="ceo">
-          <CardTitle>代表者挨拶</CardTitle>
+          <CardTitle>代表挨拶</CardTitle>
           <CompanyCEO />
         </Tab.Body>
         <Tab.Body<CompanyTabState> tag="summary">

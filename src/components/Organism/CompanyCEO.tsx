@@ -10,7 +10,7 @@ const Author = styled.p`
   text-align: right;
 `;
 
-const TopRecruitBanner = ({ className }: { className?: string }) => (
+const TopRecruitBanner = () => (
   <>
     <Text>
       私たちエイミーは、『みんなが輝く多様な未来を創る』というミッションを掲げるITベンチャーです。

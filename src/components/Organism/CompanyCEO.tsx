@@ -1,12 +1,5 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import FadeInEnteringCard from "@/components/Atom/FadeInEnteringCard";
-import PictureBlock from "@/components/Molecule/PictureBlock";
-
-const StyledFadeInEnteringCard = styled(FadeInEnteringCard)`
-  margin-top: 50px;
-  margin-bottom: 60px;
-`;
 
 const Text = styled.p`
   margin-bottom: 1em;

@@ -3,6 +3,7 @@ import Helmet from "@/components/Helmet";
 import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
 import News from "@/components/Organism/News";
+import NewsPR from "@/components/Organism/NewsPR";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 import Tab from "@/components/Molecule/Tab";
 
@@ -37,7 +38,9 @@ const IndexPage = () => (
         <Tab.Body<NewsTabState> tag="notification">
           <News />
         </Tab.Body>
-        <Tab.Body<NewsTabState> tag="pressRelease" />
+        <Tab.Body<NewsTabState> tag="pressRelease">
+          <NewsPR />
+        </Tab.Body>
       </Tab>
     </PageContentsWrapper>
   </>

@@ -8,8 +8,9 @@ import Tab from "@/components/Molecule/Tab";
 import CompanySummary from "@/components/Organism/CompanySummary";
 import CompanyHistory from "@/components/Organism/CompanyHistory";
 import CompanyAccess from "@/components/Organism/CompanyAccess";
+import CompanyCEO from "@/components/Organism/CompanyCEO";
 
-type CompanyTabState = "summary" | "history";
+type CompanyTabState = "ceo" | "summary" | "history";
 
 const IndexPage = () => (
   <>
@@ -28,15 +29,20 @@ const IndexPage = () => (
     />
     <Breadcrumbs name="company" />
     <PageContentsWrapper>
-      <Tab<CompanyTabState> selected="summary">
+      <Tab<CompanyTabState> selected="ceo">
         <Tab.Menu<CompanyTabState>>
           {({ Menu }) => (
             <>
+              <Menu tag="ceo">代表挨拶</Menu>
               <Menu tag="summary">会社概要</Menu>
               <Menu tag="history">沿革</Menu>
             </>
           )}
         </Tab.Menu>
+        <Tab.Body<CompanyTabState> tag="ceo">
+          <CardTitle>代表挨拶</CardTitle>
+          <CompanyCEO />
+        </Tab.Body>
         <Tab.Body<CompanyTabState> tag="summary">
           <CompanySummary />
           <CardTitle>アクセス</CardTitle>

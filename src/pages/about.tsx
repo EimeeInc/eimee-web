@@ -5,7 +5,6 @@ import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
 import CardTitle from "@/components/Atom/CardTitle";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 import AboutConcept from "@/components/Organism/AboutConcept";
-import AboutCEO from "@/components/Organism/AboutCEO";
 import Works from "@/components/Organism/Works";
 
 const IndexPage = () => (
@@ -28,7 +27,6 @@ const IndexPage = () => (
       <AboutConcept />
       <CardTitle>事業内容</CardTitle>
       <Works />
-      <AboutCEO />
     </PageContentsWrapper>
   </>
 );

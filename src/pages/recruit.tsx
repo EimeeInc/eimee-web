@@ -31,7 +31,7 @@ const IndexPage = () => (
         <Tab.Menu<RecruitTabState>>
           {({ Menu }) => (
             <>
-              <Menu tag="fresh">フレッシュ採用</Menu>
+              <Menu tag="fresh">新卒採用</Menu>
               <Menu tag="career">キャリア採用</Menu>
             </>
           )}

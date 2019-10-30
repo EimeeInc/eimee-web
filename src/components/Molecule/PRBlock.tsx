@@ -4,7 +4,7 @@ import media from "@/util/breakpoint";
 import { isArrayLike } from "@/util/is";
 import Link from "@/components/Atom/Link";
 
-type HistoryBlockProps = {
+type PRBlockProps = {
   children:
     | [React.ReactElement<HeaderProps>, React.ReactElement<BodyProps>]
     | React.ReactElement<BodyProps>;
@@ -76,7 +76,7 @@ const TextLink = styled(Link)`
   }
 `;
 
-const HistoryBlock = ({ children, ...props }: HistoryBlockProps) => {
+const PRBlock = ({ children, ...props }: PRBlockProps) => {
   const HeaderContents = isArrayLike(children)
     ? (children[0] as React.ReactElement<HeaderProps>)
     : null;
@@ -85,7 +85,7 @@ const HistoryBlock = ({ children, ...props }: HistoryBlockProps) => {
     : children) as React.ReactElement<BodyProps>;
   const date = HeaderContents ? HeaderContents.props.dateTime : null;
   const dateStr = date
-    ? `${date.getFullYear()}年${date.getMonth() + 1}月`
+    ? `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`
     : null;
 
   return (
@@ -98,8 +98,8 @@ const HistoryBlock = ({ children, ...props }: HistoryBlockProps) => {
   );
 };
 
-HistoryBlock.Header = ({ children }: HeaderProps) => <>{children}</>;
+PRBlock.Header = ({ children }: HeaderProps) => <>{children}</>;
 
-HistoryBlock.Body = ({ children }: BodyProps) => <>{children}</>;
+PRBlock.Body = ({ children }: BodyProps) => <>{children}</>;
 
-export default HistoryBlock;
+export default PRBlock;

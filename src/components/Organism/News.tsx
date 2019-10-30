@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "@emotion/styled";
 import media from "@/util/breakpoint";
-import { Spacer4Way as Spacer } from "@/components/Atom/Spacer";
 import NewsBlock from "@/components/Molecule/NewsBlock";
+import NewsSpacer from "@/components/Molecule/NewsSpacer";
 
 const Wrapper = styled.div`
   display: flex;
@@ -70,14 +70,16 @@ const Wrapper = styled.div`
 
 const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
   <Wrapper {...props}>
-    <NewsBlock to="https://kuchikomu.jp/" blank>
-      <NewsBlock.Title>次世代総合口コミSNSクチコムをリリース</NewsBlock.Title>
+    <NewsBlock to="https://elchika.com/" blank>
+      <NewsBlock.Title>
+        電子工作ナレッジ共有サイトelchikaをリリース
+      </NewsBlock.Title>
       <NewsBlock.Body>
-        ユーザーとお店が繋がる次世代総合口コミSNS「クチコム」をリリースしました。
+        電子工作専門のナレッジ共有サービス「elchika」をリリースしました。
       </NewsBlock.Body>
-      <NewsBlock.Image src="/assets/img/ph_news_kuchikomu.jpg" />
+      <NewsBlock.Image src="/assets/img/ph_news_elchika.jpg" />
       <NewsBlock.PublsihDate
-        dateTime={new Date("2017-03-30T00:00:00.000+09:00")}
+        dateTime={new Date("2019-10-07T00:00:00.000+09:00")}
       />
     </NewsBlock>
     <NewsBlock to="/" title="https://eimee.co.jp/">
@@ -88,25 +90,8 @@ const News = ({ children, ...props }: React.HTMLAttributes<HTMLDivElement>) => (
         dateTime={new Date("2017-01-24T00:00:00.000+09:00")}
       />
     </NewsBlock>
-    <NewsBlock>
-      <NewsBlock.Title>Yahoo!プロモーション広告正規代理店</NewsBlock.Title>
-      <NewsBlock.Body>
-        Yahoo!プロモーション広告正規代理店になりました。
-      </NewsBlock.Body>
-      <NewsBlock.Image src="/assets/img/ph_news_promotion.jpg" top />
-      <NewsBlock.PublsihDate
-        dateTime={new Date("2017-07-26T00:00:00.000+09:00")}
-      />
-    </NewsBlock>
-    <NewsBlock to="https://クレジットカードおすすめ比較.net/" blank>
-      <NewsBlock.Title>クレジットカードhikaQリリース</NewsBlock.Title>
-      <NewsBlock.Body>クレジットカードhikaQをリリースしました。</NewsBlock.Body>
-      <NewsBlock.Image src="/assets/img/ph_news_credit.jpg" top />
-      <NewsBlock.PublsihDate
-        dateTime={new Date("2012-11-21T00:00:00.000+09:00")}
-      />
-    </NewsBlock>
-    <Spacer />
+    <NewsSpacer />
+    <NewsSpacer />
   </Wrapper>
 );
 

@@ -4,9 +4,9 @@ type Pages =
   | "about"
   | "company"
   | "office"
-  | "staff"
   | "recruit"
-  | "contact";
+  | "contact"
+  | "policy";
 
 type Routings = {
   [T in Pages]: {
@@ -42,11 +42,6 @@ const routings: Routings = {
     parent: "top",
     label: "ワークスタイル",
   },
-  staff: {
-    location: "/staff/",
-    parent: "top",
-    label: "スタッフ紹介",
-  },
   recruit: {
     location: "/recruit/",
     parent: "top",
@@ -56,6 +51,11 @@ const routings: Routings = {
     location: "/contact/",
     parent: "top",
     label: "お問い合わせ",
+  },
+  policy: {
+    location: "/policy/",
+    parent: "top",
+    label: "個人情報保護方針",
   },
 };
 

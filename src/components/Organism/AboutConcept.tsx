@@ -11,13 +11,15 @@ const StyledFadeInEnteringCard = styled(FadeInEnteringCard)`
 const TopRecruitBanner = ({ className }: { className?: string }) => (
   <StyledFadeInEnteringCard className={className}>
     <PictureBlock>
-      <PictureBlock.Header>
-        Aiming at Small Richness
-        <br />
-        あなたの日々にほんの少しの豊かさを
-      </PictureBlock.Header>
+      <PictureBlock.Header>みんなが輝く多様な未来を創る</PictureBlock.Header>
       <PictureBlock.Body>
-        エイミーが開発しているサービスは、皆さんが生きていく上で必要不可欠なアイテムだとは言えません。しかしエイミーのサービスには、皆さんの日々の生活をほんの少し豊かにするための便利さ・快適さ・面白さという、たくさんのアイデアが詰まっています。このコーポレートスローガンには、「エイミーのサービスに触れる皆さんを、幸せで楽しい気持ちにしたい」という想いも込められています。また、目的・志を表す「Aiming(エイミング)」は、社名である「Eimee(エイミー)」の響きに通ずるものもあり、エイミーはこのスローガンを掲げました。
+        エイミーは、『みんなが輝く多様な未来を創る』をミッションに掲げています。
+        <br />
+        現代は、モノ・サービスがあふれる時代であり、多様な価値観が認められるはずの社会なのに、ふと世の中を見渡してみると、意外と古くからの固定概念がまかり通ってる気がしています。『温故』もちろん、そんなサービスも大切です。素晴らしいサービスもたくさんあります。『知新』だけど、今までに無いサービス。誰もが『輝ける』サービス。
+        <br />
+        そんな誰もが『輝ける』サービスを作り出す会社があってもいいのではないか？
+        <br />
+        そういった思いから、まだ誰も知らない斬新なアイデアで、時代のニーズに合わせたプロダクトを開発しています。
       </PictureBlock.Body>
       <PictureBlock.Image src="/assets/img/about_concept.jpg" alt="concept" />
     </PictureBlock>

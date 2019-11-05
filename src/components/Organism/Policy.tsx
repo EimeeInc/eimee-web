@@ -81,6 +81,7 @@ const Comment = styled.p`
   }
 `;
 const StyledLink = styled(Link)``;
+const ExternalLink = styled.a``;
 
 const Works = () => (
   <>
@@ -190,6 +191,39 @@ const Works = () => (
           当社の個人情報の取り扱いにつきましてご意見、ご質問がございましたら、
           <StyledLink to="/contact/">お問い合わせ</StyledLink>
           までご連絡いただきますよう、お願い申し上げます。
+        </Comment>
+      </List>
+      <List>
+        <Heading>Cookieと広告の配信</Heading>
+        <Comment>
+          当社サービスでは、サービス向上を目的として、Cookie（クッキー）を利用しています。Cookieとは、Webサイトの提供者がブラウザを通じてサイト利用者の通信機器に一時的にデータを記録しサイト利用者を識別する仕組みです。
+        </Comment>
+        <Comment>
+          利用者がクッキーの利用を希望しない場合は、サービスを閲覧するブラウザで設定できます。なお、当社サービスでは、クッキーの利用を前提としてサービスを提供しているため、クッキーを利用しない場合は当社サービスの一部が利用できなくなることがあります。
+          また、当社サービスでは、Googleなどの第三者配信事業者が提供する広告サービスを利用しています。これらは効果的な広告配信などを目的とする上でCookieを利用することがあります。第三者配信業者によるCookieの取得を中止したい場合には、以下の第三者配信業者のページにからCookie（クッキー）を無効化してください。
+        </Comment>
+        <Comment>
+          <ExternalLink
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://policies.google.com/technologies/ads?hl=ja"
+          >
+            Googleによる広告
+          </ExternalLink>
+          <br />
+          <ExternalLink
+            rel="noopener noreferrer"
+            target="_blank"
+            href="https://btoptout.yahoo.co.jp/optout/index.html"
+          >
+            Yahoo! JAPANによる広告
+          </ExternalLink>
+        </Comment>
+      </List>
+      <List>
+        <Heading>免責事項</Heading>
+        <Comment>
+          当社サービスが掲載する情報、コンテンツは可能な限り正確な情報を掲載するように努めていますが、情報が更新されていたり誤りがある場合があります。当社サービスの利用によって生じた不利益や損害について一切の責任を負いかねます。
         </Comment>
       </List>
     </Wrapper>

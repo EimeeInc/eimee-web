@@ -65,6 +65,14 @@ const Heading = styled.h2`
   text-align: left;
   border-bottom: solid 1px #e3e3e3;
 `;
+const SubTitle = styled.h3`
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.2rem;
+  text-align: left;
+`;
 const Comment = styled.p`
   width: 100%;
   font-size: 1.6rem;
@@ -138,7 +146,7 @@ const Works = () => (
           当社は、以下のいずれかに該当する場合を除き、利用目的の達成に必要な範囲を超えて個人情報を第三者へ開示または提供することはありません。
         </Comment>
         <Order>
-          <List>利用者の同意があるとき</List>
+          <List>ユーザーの同意があるとき</List>
           <List>法令等により認められたとき</List>
           <List>
             人の生命または身体もしくは財産の保護のために必要な場合で、ユーザーの同意を得るのが困難なとき
@@ -175,7 +183,7 @@ const Works = () => (
       <List>
         <Heading>個人情報の開示・訂正・削除要請</Heading>
         <Comment>
-          当社は、利用者が個人情報の利用目的の通知・開示・追加・削除・利用停止・消去・第三者提供の停止等の請求を行う場合には、個人情報保護法その他の日本の法令等に基づいて当社所定の方法で対応します。
+          当社は、ユーザーが個人情報の利用目的の通知・開示・追加・削除・利用停止・消去・第三者提供の停止等の請求を行う場合には、個人情報保護法その他の日本の法令等に基づいて当社所定の方法で対応します。
         </Comment>
       </List>
       <List>
@@ -190,6 +198,87 @@ const Works = () => (
           当社の個人情報の取り扱いにつきましてご意見、ご質問がございましたら、
           <StyledLink to="/contact/">お問い合わせ</StyledLink>
           までご連絡いただきますよう、お願い申し上げます。
+        </Comment>
+      </List>
+      <List>
+        <Heading>Cookieと広告の配信</Heading>
+        <Comment>
+          当社サービスでは、サービス向上を目的として、Cookie（クッキー）を利用しています。Cookieとは、Webサイトの提供者がブラウザを通じてユーザーの通信機器に一時的にデータを記録しユーザーを識別する仕組みです。
+        </Comment>
+        <Comment>
+          ユーザーがCookieの利用を希望しない場合は、サービスを閲覧するブラウザで設定できます。なお、当社サービスでは、Cookieの利用を前提としてサービスを提供しているため、Cookieを利用しない場合は当社サービスの一部が利用できなくなることがあります。
+          また、当社サービスでは、GoogleやTwitterなどの第三者配信事業者が提供する広告サービスを利用しています。これらは効果的な広告配信などを目的とする上でCookieを利用することがあります。第三者配信業者によるCookieの取得を中止したい場合には、以下の第三者配信業者のページにからCookie（クッキー）を無効化してください。
+        </Comment>
+        <SubTitle>Googleが提供するサービスの利用について</SubTitle>
+        <Comment>
+          当社は、当社サービスの利用状況に応じてGoogle
+          AdWords広告を表示します。また、当社サービスのサイトコンテンツの改善を目的に、Googleアナリティクスの下記に記載する広告向け機能を使ってアクセス情報を収集しています。収集した情報で個人を識別することはなく、サイトの利用動向を分析するために用いられます。
+        </Comment>
+        <Comment>
+          ・Google アナリティクス リマーケティング
+          <br />
+          ・Google ディスプレイネットワークの表示回数レポート
+          <br />
+          ・Google
+          アナリティクスのユーザーの分布とインタレストカテゴリに関するレポート
+          <br />
+          ・Google
+          アナリティクスを使用して広告Cookieと匿名IDを使ったデータを収集する統合的なサービス
+        </Comment>
+        <Comment>
+          詳細については
+          <StyledLink
+            rel="noopener noreferrer"
+            blank
+            to="http://www.google.com/analytics/terms/jp.html"
+          >
+            Googleアナリティクス利用規約
+          </StyledLink>
+          、およびGoogleアナリティクスの
+          <StyledLink
+            rel="noopener noreferrer"
+            blank
+            to="http://www.google.co.jp/policies/privacy/"
+          >
+            プライバシーポリシー
+          </StyledLink>
+          をご確認ください。 Googleの広告の設定やCookieの使用を無効にする際は
+          <StyledLink
+            rel="noopener noreferrer"
+            blank
+            to="https://policies.google.com/technologies/ads?hl=ja"
+          >
+            こちら
+          </StyledLink>
+          をご覧ください。
+        </Comment>
+        <SubTitle>
+          Twitterのコンバージョントラッキング、およびカスタムオーディエンスを利用した広告配信について
+        </SubTitle>
+        <Comment>
+          当社は、当社サービスの利用状況に応じて、TwitterおよびTwitterパートナー上で、ユーザーの興味関心をターゲティングした広告を表示します。詳細については
+          <StyledLink
+            rel="noopener noreferrer"
+            blank
+            to="https://business.twitter.com/ja/help/ads-policies/other-policy-requirements/policies-for-conversion-tracking-and-tailored-audiences.html"
+          >
+            コンバージョントラッキングとテイラードオーディエンスに関するポリシー
+          </StyledLink>
+          をご確認ください。広告に関するプライバシー設定については
+          <StyledLink
+            rel="noopener noreferrer"
+            blank
+            to="https://support.twitter.com/articles/20170405"
+          >
+            カスタマイズされた広告の表示設定
+          </StyledLink>
+          をご覧ください。
+        </Comment>
+      </List>
+      <List>
+        <Heading>免責事項</Heading>
+        <Comment>
+          当社サービスが掲載する情報、コンテンツは可能な限り正確な情報を掲載するように努めていますが、情報が更新されていたり誤りがある場合があります。当社サービスの利用によって生じた不利益や損害について一切の責任を負いかねます。
         </Comment>
       </List>
     </Wrapper>

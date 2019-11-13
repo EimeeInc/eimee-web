@@ -65,6 +65,14 @@ const Heading = styled.h2`
   text-align: left;
   border-bottom: solid 1px #e3e3e3;
 `;
+const SubTitle = styled.h3`
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.2rem;
+  text-align: left;
+`;
 const Comment = styled.p`
   width: 100%;
   font-size: 1.6rem;
@@ -201,23 +209,7 @@ const Works = () => (
           ユーザーがCookieの利用を希望しない場合は、サービスを閲覧するブラウザで設定できます。なお、当社サービスでは、Cookieの利用を前提としてサービスを提供しているため、Cookieを利用しない場合は当社サービスの一部が利用できなくなることがあります。
           また、当社サービスでは、GoogleやTwitterなどの第三者配信事業者が提供する広告サービスを利用しています。これらは効果的な広告配信などを目的とする上でCookieを利用することがあります。第三者配信業者によるCookieの取得を中止したい場合には、以下の第三者配信業者のページにからCookie（クッキー）を無効化してください。
         </Comment>
-        <Comment>
-          <StyledLink
-            rel="noopener noreferrer"
-            blank
-            to="https://policies.google.com/technologies/ads?hl=ja"
-          >
-            Googleが提供するサービスの利用について
-          </StyledLink>
-          <br />
-          <StyledLink
-            rel="noopener noreferrer"
-            blank
-            to="https://btoptout.yahoo.co.jp/optout/index.html"
-          >
-            Yahoo! JAPANによる広告
-          </StyledLink>
-        </Comment>
+        <SubTitle>Googleが提供するサービスの利用について</SubTitle>
         <Comment>
           当社は、当社サービスの利用状況に応じてGoogle
           AdWords広告を表示します。また、当社サービスのサイトコンテンツの改善を目的に、Googleアナリティクスの下記に記載する広告向け機能を使ってアクセス情報を収集しています。収集した情報で個人を識別することはなく、サイトの利用動向を分析するために用いられます。
@@ -260,11 +252,9 @@ const Works = () => (
           </StyledLink>
           をご覧ください。
         </Comment>
-      </List>
-      <List>
-        <Heading>
+        <SubTitle>
           Twitterのコンバージョントラッキング、およびカスタムオーディエンスを利用した広告配信について
-        </Heading>
+        </SubTitle>
         <Comment>
           当社は、当社サービスの利用状況に応じて、TwitterおよびTwitterパートナー上で、ユーザーの興味関心をターゲティングした広告を表示します。詳細については
           <StyledLink

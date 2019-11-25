@@ -88,6 +88,7 @@ const Comment = styled.p`
     margin-top: 10px;
   }
 `;
+
 const StyledLink = styled(Link)``;
 
 const Works = () => (
@@ -193,14 +194,6 @@ const Works = () => (
         </Comment>
       </List>
       <List>
-        <Heading>お問い合せ先</Heading>
-        <Comment>
-          当社の個人情報の取り扱いにつきましてご意見、ご質問がございましたら、
-          <StyledLink to="/contact/">お問い合わせ</StyledLink>
-          までご連絡いただきますよう、お願い申し上げます。
-        </Comment>
-      </List>
-      <List>
         <Heading>Cookieと広告の配信</Heading>
         <Comment>
           当社サービスでは、サービス向上を目的として、Cookie（クッキー）を利用しています。Cookieとは、Webサイトの提供者がブラウザを通じてユーザーの通信機器に一時的にデータを記録しユーザーを識別する仕組みです。
@@ -280,6 +273,19 @@ const Works = () => (
         <Comment>
           当社サービスが掲載する情報、コンテンツは可能な限り正確な情報を掲載するように努めていますが、情報が更新されていたり誤りがある場合があります。当社サービスの利用によって生じた不利益や損害について一切の責任を負いかねます。
         </Comment>
+      </List>
+      <List>
+        <Heading>お問い合せ先</Heading>
+        <Comment>
+          当社の個人情報の取り扱いにつきましてご意見、ご質問がございましたら、
+          <StyledLink to="/contact/">お問い合わせ</StyledLink>
+          までご連絡いただきますよう、お願い申し上げます。
+        </Comment>
+      </List>
+      <List>
+        <Comment>2019年8月29日　制定</Comment>
+        <Comment>2019年11月19日　改定</Comment>
+        <Comment>エイミー株式会社</Comment>
       </List>
     </Wrapper>
   </>

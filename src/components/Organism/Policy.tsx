@@ -284,7 +284,7 @@ const Works = () => (
       </List>
       <List>
         <Comment>2019年8月29日　制定</Comment>
-        <Comment>2019年11月19日　改定</Comment>
+        <Comment>2019年11月25日　改定</Comment>
         <Comment>エイミー株式会社</Comment>
       </List>
     </Wrapper>

@@ -3,7 +3,6 @@ type Pages =
   | "news"
   | "about"
   | "company"
-  | "office"
   | "recruit"
   | "contact"
   | "policy";
@@ -36,11 +35,6 @@ const routings: Routings = {
     location: "/company/",
     parent: "top",
     label: "会社概要",
-  },
-  office: {
-    location: "/office/",
-    parent: "top",
-    label: "ワークスタイル",
   },
   recruit: {
     location: "/recruit/",

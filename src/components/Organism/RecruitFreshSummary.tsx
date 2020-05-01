@@ -18,7 +18,8 @@ const RecruitFreshSummary = () => (
       <DefinitionBlock.Body>
         <StyledLine>本社</StyledLine>
         <StyledLine>
-          &#12306;135-0064 東京都江東区青海2-7-4 the SOHO 401
+          &#12306;105-0004 東京都港区新橋1-12-9 A-PLACE新橋駅前
+          ビジネスエアポート新橋
         </StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
@@ -136,7 +137,6 @@ const RecruitFreshSummary = () => (
       <DefinitionBlock.Body>
         <StyledLine>私服勤務</StyledLine>
         <StyledLine>健康診断</StyledLine>
-        <StyledLine>社屋内フィットネスジム・ビリヤード台あり</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>

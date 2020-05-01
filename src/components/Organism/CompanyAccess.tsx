@@ -59,9 +59,6 @@ const HeaderIcon = ({ src, children, ...props }: HeaderIconProps) => (
 const TrainIcon = (props: React.HTMLAttributes<HTMLSpanElement>) => (
   <HeaderIcon src="/assets/img/ico_train.png" {...props} />
 );
-const CityBusIcon = (props: React.HTMLAttributes<HTMLSpanElement>) => (
-  <HeaderIcon src="/assets/img/ico_bus.png" {...props} />
-);
 const WalkIcon = ({
   children,
   ...props
@@ -72,34 +69,23 @@ const WalkIcon = ({
 const CompanyAccess = () => (
   <Wrapper>
     <Map
-      src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3243.3924765263528!2d139.7729349156671!3d35.61804983020901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x601889ffac21ca29%3A0x9a2bbabe0f145d9b!2z44CSMTM1LTAwNjQg5p2x5Lqs6YO95rGf5p2x5Yy66Z2S5rW377yS5LiB55uu77yX4oiS77yUIO-9lO-9iO-9he-8s--8r--8qO-8rw!3m2!1d35.6180814!2d139.7751922!5e0!3m2!1sja!2sjp!4v1466660334184"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.384878809149!2d139.75689263388466!3d35.66752403643041!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b8022b7dc11%3A0xa501a12a8632ba87!2z44OT44K444ON44K544Ko44Ki44Od44O844OI5paw5qmLIOOCs-ODr-ODvOOCreODs-OCsOOCueODmuODvOOCuSDjgrfjgqfjgqLjgqrjg5XjgqPjgrkg44Os44Oz44K_44Or44Kq44OV44Kj44K5!5e0!3m2!1sja!2sjp!4v1588301673673!5m2!1sja!2sjp"
       frameBorder="0"
       allowFullScreen
     />
     <SubCard>
       <SubCardTitle>
         <TrainIcon />
-        東京臨海新交通ゆりかもめ
+        JR・東京メトロ銀座線
       </SubCardTitle>
       <SubCardBody>
         <StyledLine>
-          「東京国際クルーズターミナル」駅
+          JR「新橋」駅 銀座口
           <WalkIcon />
-          徒歩5分
+          徒歩1分
         </StyledLine>
         <StyledLine>
-          「テレコムセンター」駅
-          <WalkIcon />
-          徒歩5分
-        </StyledLine>
-      </SubCardBody>
-      <SubCardTitle>
-        <CityBusIcon />
-        都営バス海01系統
-      </SubCardTitle>
-      <SubCardBody>
-        <StyledLine>
-          「日本科学未来館前」バス停
+          東京メトロ「新橋」駅 5番出口
           <WalkIcon />
           徒歩1分
         </StyledLine>

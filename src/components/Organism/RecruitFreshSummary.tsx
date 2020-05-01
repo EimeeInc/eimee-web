@@ -137,7 +137,6 @@ const RecruitFreshSummary = () => (
       <DefinitionBlock.Body>
         <StyledLine>私服勤務</StyledLine>
         <StyledLine>健康診断</StyledLine>
-        <StyledLine>社屋内フィットネスジム・ビリヤード台あり</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>

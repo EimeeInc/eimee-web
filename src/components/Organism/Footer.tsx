@@ -155,8 +155,7 @@ const Footer = ({ className }: { className?: string }) => {
           <Logo src="/assets/img/logo_footer.png" alt="ロゴ" />
           <CompanyName>エイミー株式会社</CompanyName>
           <CompanyAddress>
-            &#12306;105-0004 東京都港区新橋1-12-9 A-PLACE新橋駅前
-            ビジネスエアポート新橋
+            &#12306;105-0004 東京都港区新橋1-12-9 A-PLACE新橋駅前 7F
           </CompanyAddress>
         </InfomationContainer>
         <List>

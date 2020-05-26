@@ -18,7 +18,10 @@ const Works = () => (
           JR新橋駅の徒歩1分圏内にあるため急な悪天候にも左右されることもなく通勤が可能です。
           事務所で業務を行うほか、施設内には落ち着いた雰囲気のコワーキングスペースもあり、それらを利用することも可能です。
         </PictureBlock.Body>
-        <PictureBlock.Image src="/assets/img/ph_office_lobby.jpg" alt="lobby" />
+        <PictureBlock.Image
+          src="/assets/img/ph_workstyle_office.jpg"
+          alt="lobby"
+        />
       </PictureBlock>
     </StyledFadeInEnteringCard>
     <StyledFadeInEnteringCard>
@@ -30,7 +33,7 @@ const Works = () => (
           朝や業務後に時間が多く取れるようにする社員も多く、プライベートの用事や家事に時間を充てるなど使い方は様々です。
         </PictureBlock.Body>
         <PictureBlock.Image
-          src="/assets/img/ph_office_sweets.jpg"
+          src="/assets/img/ph_workstyle_difference.jpg"
           alt="sweets"
         />
       </PictureBlock>
@@ -42,7 +45,10 @@ const Works = () => (
           新しく入社された方が安心して働けるように「年次有給休暇前借制度」を導入しています。
           入社後すぐ3日分の年次有給休暇の取得が可能なため、急な用事などにも柔軟に対応が可能です。
         </PictureBlock.Body>
-        <PictureBlock.Image src="/assets/img/ph_office_bar.jpg" alt="bar" />
+        <PictureBlock.Image
+          src="/assets/img/ph_workstyle_advance.jpg"
+          alt="bar"
+        />
       </PictureBlock>
     </StyledFadeInEnteringCard>
     <StyledFadeInEnteringCard>
@@ -55,7 +61,10 @@ const Works = () => (
           年間累計40時間を上限として1時間単位での有給休暇の取得が可能で、朝や夕方に用事がある為
           一時間だけお休みしたい時や昼に2時間だけ中抜けするなど、時間を有効活用して働くことができます。
         </PictureBlock.Body>
-        <PictureBlock.Image src="/assets/img/ph_office_gym.jpg" alt="gym" />
+        <PictureBlock.Image
+          src="/assets/img/ph_workstyle_timeoff.jpg"
+          alt="gym"
+        />
       </PictureBlock>
     </StyledFadeInEnteringCard>
     <StyledFadeInEnteringCard>
@@ -67,7 +76,7 @@ const Works = () => (
           2020年5月時点でほとんどの社員がテレワーク制度を利用しており、それぞれに合った環境での働き方を可能にしています。
         </PictureBlock.Body>
         <PictureBlock.Image
-          src="/assets/img/ph_office_view.jpg"
+          src="/assets/img/ph_workstyle_remotework.jpg"
           alt="ocean view"
         />
       </PictureBlock>
@@ -80,7 +89,7 @@ const Works = () => (
           業務中に昼休憩を取得する社員は在宅勤務・事務所勤務問わず利用可能で1人暮らしや家事に手が回りにくい社員にも重宝されています
         </PictureBlock.Body>
         <PictureBlock.Image
-          src="/assets/img/ph_office_rooftop.jpg"
+          src="/assets/img/ph_workstyle_ticketrestaurant.jpg"
           alt="rooftop"
         />
       </PictureBlock>
@@ -94,7 +103,7 @@ const Works = () => (
           また、社内外問わず参加を受け付けており、純粋にボードゲームを楽しむ一方でエイミーの持つ雰囲気を直接感じ取って貰うこともできます。
         </PictureBlock.Body>
         <PictureBlock.Image
-          src="/assets/img/ph_office_rooftop.jpg"
+          src="/assets/img/ph_workstyle_boardgame.jpg"
           alt="rooftop"
         />
       </PictureBlock>
@@ -107,7 +116,7 @@ const Works = () => (
           育児や介護のために短時間の勤務をしたり、週の半分を別の企業で働くなど様々な働き方に対し柔軟に対応できる体制を築いています。
         </PictureBlock.Body>
         <PictureBlock.Image
-          src="/assets/img/ph_office_rooftop.jpg"
+          src="/assets/img/ph_workstyle_variouswork.jpg"
           alt="rooftop"
         />
       </PictureBlock>

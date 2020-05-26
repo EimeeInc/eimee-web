@@ -20,7 +20,7 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image
           src="/assets/img/ph_workstyle_office.jpg"
-          alt="lobby"
+          alt="事務所コワーキングスペース"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>
@@ -34,7 +34,7 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image
           src="/assets/img/ph_workstyle_difference.jpg"
-          alt="sweets"
+          alt="時差出勤制度イメージ"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>
@@ -47,7 +47,7 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image
           src="/assets/img/ph_workstyle_advance.jpg"
-          alt="bar"
+          alt="年次有給休暇前借制度イメージ"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>
@@ -63,7 +63,7 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image
           src="/assets/img/ph_workstyle_timeoff.jpg"
-          alt="gym"
+          alt="1時間単位の年次有給休暇取得制度イメージ"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>
@@ -77,7 +77,7 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image
           src="/assets/img/ph_workstyle_remotework.jpg"
-          alt="ocean view"
+          alt="テレワーク制度イメージ"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>
@@ -90,13 +90,13 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image
           src="/assets/img/ph_workstyle_ticketrestaurant.jpg"
-          alt="rooftop"
+          alt="チケットレストラン券面"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>
     <StyledFadeInEnteringCard>
       <PictureBlock>
-        <PictureBlock.Header>ボードゲーム</PictureBlock.Header>
+        <PictureBlock.Header>ボードゲーム倶楽部</PictureBlock.Header>
         <PictureBlock.Body>
           社内同士の交流や論理的思考を養うことを目的として、ボードゲーム倶楽部を定期的に開催しております。
           ゲームの種類は様々で社員からのリクエストで新たにゲームを購入したり、個人で持ち寄って遊んだりとバラエティーに富んでいます。
@@ -104,7 +104,7 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image
           src="/assets/img/ph_workstyle_boardgame.jpg"
-          alt="rooftop"
+          alt="ボードゲーム倶楽部イメージ"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>
@@ -117,7 +117,7 @@ const Works = () => (
         </PictureBlock.Body>
         <PictureBlock.Image
           src="/assets/img/ph_workstyle_variouswork.jpg"
-          alt="rooftop"
+          alt="多様な働き方イメージ"
         />
       </PictureBlock>
     </StyledFadeInEnteringCard>

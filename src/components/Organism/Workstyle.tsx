@@ -86,7 +86,7 @@ const Works = () => (
         <PictureBlock.Header>昼食補助</PictureBlock.Header>
         <PictureBlock.Body>
           社員の健康と食生活を支えるために昼食補助としてコンビニやレストランで利用可能な『チケットレストラン』を導入しています。
-          在宅勤務・事務所勤務問わず、業務中に昼休憩を取得する社員全員が利用可能で、1人暮らしや家事に手が回りにくい社員にも重宝されています
+          在宅勤務・事務所勤務問わず、業務中に昼休憩を取得する社員全員が利用可能で、1人暮らしや家事に手が回りにくい社員にも重宝されています。
         </PictureBlock.Body>
         <PictureBlock.Image
           src="/assets/img/ph_workstyle_ticketrestaurant.jpg"

@@ -5,6 +5,7 @@
   "version": "0.2.0",
   "author": "EimeeInc <eimee@eimee.co.jp>",
   "dependencies": {
+    "@babel/runtime": "^7.10.4",
     "axios": "^0.19.0",
     "gatsby": "^2.23.19",
     "netlify-lambda": "^1.6.3",

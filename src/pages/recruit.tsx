@@ -5,10 +5,10 @@ import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 import Tab from "@/components/Molecule/Tab";
 import RecruitImageList from "@/components/Organism/RecruitImageList";
-import RecruitFreshSummary from "@/components/Organism/RecruitFreshSummary";
-import RecruitCareerSummary from "@/components/Organism/RecruitCareerSummary";
+import RecruitProductManagerSummary from "@/components/Organism/RecruitProductManagerSummary";
+import RecruitSystemEngineerSummary from "@/components/Organism/RecruitSystemEngineerSummary";
 
-type RecruitTabState = "fresh" | "career";
+type RecruitTabState = "pdm" | "se";
 
 const IndexPage = () => (
   <>
@@ -27,22 +27,22 @@ const IndexPage = () => (
     />
     <Breadcrumbs name="recruit" />
     <PageContentsWrapper>
-      <Tab<RecruitTabState> selected="fresh">
+      <Tab<RecruitTabState> selected="pdm">
         <Tab.Menu<RecruitTabState>>
           {({ Menu }) => (
             <>
-              <Menu tag="fresh">新卒採用</Menu>
-              <Menu tag="career">キャリア採用</Menu>
+              <Menu tag="pdm">elchika プロダクトマネージャー</Menu>
+              <Menu tag="se">elchika システムエンジニア（PL / PL候補）</Menu>
             </>
           )}
         </Tab.Menu>
-        <Tab.Body<RecruitTabState> tag="fresh">
-          <RecruitImageList mode="fresh" />
-          <RecruitFreshSummary />
+        <Tab.Body<RecruitTabState> tag="pdm">
+          <RecruitImageList mode="pdm" />
+          <RecruitProductManagerSummary />
         </Tab.Body>
-        <Tab.Body<RecruitTabState> tag="career">
-          <RecruitImageList mode="career" />
-          <RecruitCareerSummary />
+        <Tab.Body<RecruitTabState> tag="se">
+          <RecruitImageList mode="se" />
+          <RecruitSystemEngineerSummary />
         </Tab.Body>
       </Tab>
     </PageContentsWrapper>

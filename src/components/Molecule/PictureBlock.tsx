@@ -152,18 +152,6 @@ const PictureBlock = ({ to, blank, children, ...props }: PictureBlockProps) => {
       children.find(x => isReactElement(x) && x.type === PictureBlock.Body)) ||
     null;
 
-  console.log("■■■■■■■■■■■■■");
-  console.log(children[0].type === PictureBlock.Image);
-  console.log(children[1].type === PictureBlock.Image);
-  console.log(children[2].type === PictureBlock.Image);
-  console.log(children[0].type === PictureBlock.Header);
-  console.log(children[1].type === PictureBlock.Header);
-  console.log(children[2].type === PictureBlock.Header);
-  console.log(children[0].type === PictureBlock.Body);
-  console.log(children[1].type === PictureBlock.Body);
-  console.log(children[2].type === PictureBlock.Body);
-  console.log("■■■■■■■■■■■■■");
-
   return (
     <Wrapper {...props}>
       {to ? <ImageLink {...LinkProps}>{Image}</ImageLink> : Image}

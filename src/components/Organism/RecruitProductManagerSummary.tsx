@@ -11,7 +11,7 @@ const RecruitProductManagerSummary = () => (
       <DefinitionBlock.Header>募集背景</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          エイミー株式会社（以下エイミー）では、2020年10月7日に電子工作のナレッジ共有サイト『elchika』を開設いたしました。
+          エイミー株式会社（以下エイミー）では、2019年10月7日に電子工作のナレッジ共有サイト『elchika』を開設いたしました。
         </StyledLine>
         <StyledLine>
           <br />

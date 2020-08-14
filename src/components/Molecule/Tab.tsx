@@ -53,8 +53,9 @@ const StyledMenuListItem = styled.div`
   transition: color 0.3s, background-color 0.3s;
 
   ${media.lessThan("sm")`
-    height: 50px;
+    height: auto;
     font-size: 1.7rem;
+    padding: 10px 15px
   `}
 
   &:not(:first-of-type) {

@@ -89,10 +89,14 @@ const RecruitSystemEngineerSummary = () => (
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>
-      <DefinitionBlock.Header>
-        開発環境（主に使われている技術）
-      </DefinitionBlock.Header>
+      <DefinitionBlock.Header>開発環境</DefinitionBlock.Header>
       <DefinitionBlock.Body>
+        <StyledLine>
+          <b>主に使われている技術</b>
+        </StyledLine>
+        <StyledLine>
+          <br />
+        </StyledLine>
         <StyledLine>
           <b>言語</b>: JavaScript(ESNext), TypeScript
         </StyledLine>
@@ -112,13 +116,15 @@ const RecruitSystemEngineerSummary = () => (
           <b>インフラ</b>: GitHub, GCP(GKE, Storage, Container Registry, DNS,
           SQL, Memorystore, Functions, Scheduler), Kubernetes
         </StyledLine>
-      </DefinitionBlock.Body>
-    </DefinitionBlock>
-    <DefinitionBlock>
-      <DefinitionBlock.Header>
-        開発環境（使用頻度としては若干下がるが使われている技術）
-      </DefinitionBlock.Header>
-      <DefinitionBlock.Body>
+        <StyledLine>
+          <br />
+        </StyledLine>
+        <StyledLine>
+          <b>使用頻度としては若干下がるが使われている技術</b>
+        </StyledLine>
+        <StyledLine>
+          <br />
+        </StyledLine>
         <StyledLine>
           <b>言語</b>: HTML5, CSS3(SCSS, PostCSS)
         </StyledLine>
@@ -149,7 +155,7 @@ const RecruitSystemEngineerSummary = () => (
       <DefinitionBlock.Header>参考給与</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          年収420万 ～ 620万程度（賞与込み、残業代は別途全額支給）向かいます
+          年収420万 ～ 620万程度（賞与込み、残業代は別途全額支給）
           <br />
           ※評価制度参照
         </StyledLine>

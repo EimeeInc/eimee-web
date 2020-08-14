@@ -52,10 +52,10 @@ const StyledMenuListItem = styled.div`
   cursor: pointer;
   transition: color 0.3s, background-color 0.3s;
 
-  ${media.lessThan("sm")`
+  ${media.lessThan("xl")`
     height: auto;
     font-size: 1.7rem;
-    padding: 10px 15px
+    padding: 10px 15px;
   `}
 
   &:not(:first-of-type) {

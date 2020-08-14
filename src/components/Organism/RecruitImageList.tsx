@@ -21,13 +21,13 @@ const Image = styled.img`
 `;
 
 type RecruitImageListProps = {
-  mode: "fresh" | "career";
+  mode: "pdm" | "se";
 };
 
 const RecruitImageList = ({ mode }: RecruitImageListProps) => {
   return (
     <Wrapper>
-      {mode === "fresh" ? (
+      {mode === "pdm" ? (
         <>
           <Image src="/assets/img/recruit_engineer_ph.jpg" alt="エンジニア" />
           <Image src="/assets/img/recruit_designer_ph.jpg" alt="デザイナー" />

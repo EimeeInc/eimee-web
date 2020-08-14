@@ -30,7 +30,7 @@ const StyledHeader = styled.div<HeaderProps>`
   `}
 
   ${media.lessThan("sm")`
-    padding: 15px 0;
+    padding: 15px 10px;
     margin-bottom: 17px;
     font-size: 1.9rem;
   `}

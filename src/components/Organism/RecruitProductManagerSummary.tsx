@@ -5,7 +5,7 @@ import DefinitionCard from "@/components/Atom/DefinitionCard";
 
 const StyledLine = styled.p``;
 
-const RecruitFreshSummary = () => (
+const RecruitProductManagerSummary = () => (
   <DefinitionCard>
     <DefinitionBlock>
       <DefinitionBlock.Header>募集背景</DefinitionBlock.Header>
@@ -358,4 +358,4 @@ const RecruitFreshSummary = () => (
   </DefinitionCard>
 );
 
-export default RecruitFreshSummary;
+export default RecruitProductManagerSummary;

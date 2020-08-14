@@ -153,6 +153,7 @@ const RecruitSystemEngineerSummary = () => (
       <DefinitionBlock.Body>
         <StyledLine>
           ・年収420万 ～ 620万程度（賞与込み、残業代は別途全額支給）向かいます
+          <br />
           ※評価制度参照
         </StyledLine>
       </DefinitionBlock.Body>
@@ -160,7 +161,11 @@ const RecruitSystemEngineerSummary = () => (
     <DefinitionBlock>
       <DefinitionBlock.Header>給与の見直し</DefinitionBlock.Header>
       <DefinitionBlock.Body>
-        <StyledLine>・年2回（4月及び10月） ※評価制度参照</StyledLine>
+        <StyledLine>
+          ・年2回（4月及び10月）
+          <br />
+          ※評価制度参照
+        </StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>

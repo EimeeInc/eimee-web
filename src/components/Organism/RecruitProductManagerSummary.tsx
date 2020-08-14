@@ -308,20 +308,6 @@ const RecruitProductManagerSummary = () => (
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>
-      <DefinitionBlock.Header>選考フロー</DefinitionBlock.Header>
-      <DefinitionBlock.Body>
-        <StyledLine>
-          1.
-          メールにて履歴書(写真貼付・志望動機必須)、（職務経歴がある場合は）職務経歴書を送付
-        </StyledLine>
-        <StyledLine>2. 書類選考</StyledLine>
-        <StyledLine>3. 思考の傾向性を測るアセスメント実施</StyledLine>
-        <StyledLine>4. 面接（2-3回)</StyledLine>
-        <StyledLine>5. 社外価値算出（1次面接後）</StyledLine>
-        <StyledLine>6. 内定</StyledLine>
-      </DefinitionBlock.Body>
-    </DefinitionBlock>
-    <DefinitionBlock>
       <DefinitionBlock.Header>
         思考の傾向性を測るアセスメントについて
       </DefinitionBlock.Header>
@@ -337,6 +323,20 @@ const RecruitProductManagerSummary = () => (
         <StyledLine>
           新型コロナウィルス感染予防対策として、原則テレワーク勤務となっております。
         </StyledLine>
+      </DefinitionBlock.Body>
+    </DefinitionBlock>
+    <DefinitionBlock>
+      <DefinitionBlock.Header>選考フロー</DefinitionBlock.Header>
+      <DefinitionBlock.Body>
+        <StyledLine>
+          1.
+          メールにて履歴書(写真貼付・志望動機必須)、（職務経歴がある場合は）職務経歴書を送付
+        </StyledLine>
+        <StyledLine>2. 書類選考</StyledLine>
+        <StyledLine>3. 思考の傾向性を測るアセスメント実施</StyledLine>
+        <StyledLine>4. 面接（2-3回)</StyledLine>
+        <StyledLine>5. 社外価値算出（1次面接後）</StyledLine>
+        <StyledLine>6. 内定</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>

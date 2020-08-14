@@ -73,19 +73,18 @@ const RecruitSystemEngineerSummary = () => (
       <DefinitionBlock.Header>MUST要件</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・PG、SE等での開発経験（後述する開発環境下（主に使われている技術）のいずれかでの経験を有する）
+          PG、SE等での開発経験（後述する開発環境下（主に使われている技術）のいずれかでの経験を有する）
         </StyledLine>
-        <StyledLine>・各部署との調整、連携を積極的に行える方</StyledLine>
+        <StyledLine>各部署との調整、連携を積極的に行える方</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>
       <DefinitionBlock.Header>WANT要件</DefinitionBlock.Header>
       <DefinitionBlock.Body>
-        <StyledLine>・メンバー管理経験</StyledLine>
-        <StyledLine>・スケジュール管理経験</StyledLine>
+        <StyledLine>メンバー管理経験</StyledLine>
+        <StyledLine>スケジュール管理経験</StyledLine>
         <StyledLine>
-          ※
-          趣味の範囲でも電子工作を作るのが好き、若しくはIoT分野に興味がある方には、よりやりがいを感じることができる環境です。
+          ※趣味の範囲でも電子工作を作るのが好き、若しくはIoT分野に興味がある方には、よりやりがいを感じることができる環境です。
         </StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
@@ -95,22 +94,22 @@ const RecruitSystemEngineerSummary = () => (
       </DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・<b>言語</b>: JavaScript(ESNext), TypeScript
+          <b>言語</b>: JavaScript(ESNext), TypeScript
         </StyledLine>
         <StyledLine>
-          ・<b>フレームワーク</b>: Node.js, Vue.js
+          <b>フレームワーク</b>: Node.js, Vue.js
         </StyledLine>
         <StyledLine>
-          ・<b>DB</b>: PostgreSQL
+          <b>DB</b>: PostgreSQL
         </StyledLine>
         <StyledLine>
-          ・<b>コミュニケーション</b>: Slack
+          <b>コミュニケーション</b>: Slack
         </StyledLine>
         <StyledLine>
-          ・<b>開発ツール</b>: Git
+          <b>開発ツール</b>: Git
         </StyledLine>
         <StyledLine>
-          ・<b>インフラ</b>: GitHub, GCP(GKE, Storage, Container Registry, DNS,
+          <b>インフラ</b>: GitHub, GCP(GKE, Storage, Container Registry, DNS,
           SQL, Memorystore, Functions, Scheduler), Kubernetes
         </StyledLine>
       </DefinitionBlock.Body>
@@ -121,20 +120,20 @@ const RecruitSystemEngineerSummary = () => (
       </DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・<b>言語</b>: HTML5, CSS3(SCSS, PostCSS)
+          <b>言語</b>: HTML5, CSS3(SCSS, PostCSS)
         </StyledLine>
         <StyledLine>
-          ・<b>フレームワーク</b>: React(class-based, hooks), Storybook,
-          GatsbyJS, Webpack
+          <b>フレームワーク</b>: React(class-based, hooks), Storybook, GatsbyJS,
+          Webpack
         </StyledLine>
         <StyledLine>
-          ・<b>DB</b>: Redis
+          <b>DB</b>: Redis
         </StyledLine>
         <StyledLine>
-          ・<b>クライアント</b>: Electron
+          <b>クライアント</b>: Electron
         </StyledLine>
         <StyledLine>
-          ・<b>インフラ</b>: Netlify, GitHub(Pages, Actions, Packages), Algolia,
+          <b>インフラ</b>: Netlify, GitHub(Pages, Actions, Packages), Algolia,
           Mailgun, Cloudinary
         </StyledLine>
       </DefinitionBlock.Body>
@@ -142,17 +141,15 @@ const RecruitSystemEngineerSummary = () => (
     <DefinitionBlock>
       <DefinitionBlock.Header>雇用形態</DefinitionBlock.Header>
       <DefinitionBlock.Body>
-        <StyledLine>・正社員</StyledLine>
-        <StyledLine>
-          ・試用期間：3か月（試用期間終了後、時差出勤可能）
-        </StyledLine>
+        <StyledLine>正社員</StyledLine>
+        <StyledLine>試用期間：3か月（試用期間終了後、時差出勤可能）</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>
       <DefinitionBlock.Header>参考給与</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・年収420万 ～ 620万程度（賞与込み、残業代は別途全額支給）向かいます
+          年収420万 ～ 620万程度（賞与込み、残業代は別途全額支給）向かいます
           <br />
           ※評価制度参照
         </StyledLine>
@@ -162,7 +159,7 @@ const RecruitSystemEngineerSummary = () => (
       <DefinitionBlock.Header>給与の見直し</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・年2回（4月及び10月）
+          年2回（4月及び10月）
           <br />
           ※評価制度参照
         </StyledLine>
@@ -178,7 +175,7 @@ const RecruitSystemEngineerSummary = () => (
           <br />
         </StyledLine>
         <StyledLine>
-          ・市場価値を基準に、社内価値（社内においての評価）を加味して半年間の報酬を決定
+          市場価値を基準に、社内価値（社内においての評価）を加味して半年間の報酬を決定
         </StyledLine>
         <StyledLine>
           <br />
@@ -249,15 +246,15 @@ const RecruitSystemEngineerSummary = () => (
     <DefinitionBlock>
       <DefinitionBlock.Header>所定勤務時間</DefinitionBlock.Header>
       <DefinitionBlock.Body>
-        <StyledLine>・8H（9:00～18:00）</StyledLine>
-        <StyledLine>・時差出勤対象社員は、8:00～10:00の間で出勤可能</StyledLine>
+        <StyledLine>8H（9:00～18:00）</StyledLine>
+        <StyledLine>時差出勤対象社員は、8:00～10:00の間で出勤可能</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>
       <DefinitionBlock.Header>休日休暇</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・完全週休2日制（土日）、国民の祝日、GW休暇、夏季休暇、年末年始休暇
+          完全週休2日制（土日）、国民の祝日、GW休暇、夏季休暇、年末年始休暇
           <br />
           ※年間休日125日
         </StyledLine>
@@ -265,7 +262,7 @@ const RecruitSystemEngineerSummary = () => (
           <br />
         </StyledLine>
         <StyledLine>
-          ・年次有給休暇
+          年次有給休暇
           <br />
           ※一時間単位の取得可能（年間最大40h）
           <br />
@@ -274,34 +271,32 @@ const RecruitSystemEngineerSummary = () => (
         <StyledLine>
           <br />
         </StyledLine>
-        <StyledLine>・慶弔休暇</StyledLine>
+        <StyledLine>慶弔休暇</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>
       <DefinitionBlock.Header>保険</DefinitionBlock.Header>
       <DefinitionBlock.Body>
-        <StyledLine>
-          ・各種社会保険完備（雇用・労災・健康・厚生年金）
-        </StyledLine>
+        <StyledLine>各種社会保険完備（雇用・労災・健康・厚生年金）</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>
       <DefinitionBlock.Header>福利厚生</DefinitionBlock.Header>
       <DefinitionBlock.Body>
-        <StyledLine>・定期健康診断：年一回</StyledLine>
-        <StyledLine>・私服勤務可</StyledLine>
-        <StyledLine>・光熱費補助：5,000円（テレワーク社員のみ）</StyledLine>
+        <StyledLine>定期健康診断：年一回</StyledLine>
+        <StyledLine>私服勤務可</StyledLine>
+        <StyledLine>光熱費補助：5,000円（テレワーク社員のみ）</StyledLine>
         <StyledLine>
-          ・交通費全額支給：最大50,000円（事務所勤務社員のみ）
+          交通費全額支給：最大50,000円（事務所勤務社員のみ）
         </StyledLine>
-        <StyledLine>・時差出勤</StyledLine>
+        <StyledLine>時差出勤</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
     <DefinitionBlock>
       <DefinitionBlock.Header>受動喫煙対策に関する表示</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・事務所内完全禁煙（事務所所在地ビル内に喫煙所あり（現在新型コロナウィルス感染予防対策として閉鎖中
+          事務所内完全禁煙（事務所所在地ビル内に喫煙所あり（現在新型コロナウィルス感染予防対策として閉鎖中
         </StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
@@ -325,7 +320,7 @@ const RecruitSystemEngineerSummary = () => (
       </DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・このアセスメントは思考の傾向を事前に把握することで人的なトラブルやストレスを回避し、働き易い職場を形成することを目的として実施しており、採用の合否には影響ありません。
+          このアセスメントは思考の傾向を事前に把握することで人的なトラブルやストレスを回避し、働き易い職場を形成することを目的として実施しており、採用の合否には影響ありません。
         </StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
@@ -333,7 +328,7 @@ const RecruitSystemEngineerSummary = () => (
       <DefinitionBlock.Header>特記事項</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・新型コロナウィルス感染予防対策として、原則テレワーク勤務となっております。
+          新型コロナウィルス感染予防対策として、原則テレワーク勤務となっております。
         </StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
@@ -341,11 +336,9 @@ const RecruitSystemEngineerSummary = () => (
       <DefinitionBlock.Header>応募先</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          ・必要書類を添付の上、メール（recruit@eimee.co.jp）にてご応募ください。
+          必要書類を添付の上、メール（recruit@eimee.co.jp）にてご応募ください。
         </StyledLine>
-        <StyledLine>
-          ・書類選考の上、合否に関わらずご連絡いたします。
-        </StyledLine>
+        <StyledLine>書類選考の上、合否に関わらずご連絡いたします。</StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>
   </DefinitionCard>

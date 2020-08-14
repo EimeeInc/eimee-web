@@ -54,6 +54,7 @@ const StyledMenuListItem = styled.div`
 
   ${media.lessThan("xl")`
     height: auto;
+    min-height: 50px;
     font-size: 1.7rem;
     padding: 10px 15px;
   `}

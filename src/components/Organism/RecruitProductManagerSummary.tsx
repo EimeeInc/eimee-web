@@ -303,7 +303,7 @@ const RecruitProductManagerSummary = () => (
       <DefinitionBlock.Header>受動喫煙対策に関する表示</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          事務所内完全禁煙（事務所所在地ビル内に喫煙所あり（現在新型コロナウィルス感染予防対策として閉鎖中
+          事務所内完全禁煙（事務所所在地ビル内に喫煙所あり（現在新型コロナウィルス感染予防対策として閉鎖中））
         </StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>

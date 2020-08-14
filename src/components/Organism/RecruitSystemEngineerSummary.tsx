@@ -98,10 +98,11 @@ const RecruitSystemEngineerSummary = () => (
           <br />
         </StyledLine>
         <StyledLine>
-          <b>言語</b>: JavaScript(ESNext), TypeScript
+          <b>言語</b>: HTML5, CSS3(SCSS, PostCSS), JavaScript(ESNext),
+          TypeScript
         </StyledLine>
         <StyledLine>
-          <b>フレームワーク</b>: Node.js, Vue.js
+          <b>フレームワーク</b>: Node.js, Vue.js, Storybook, Webpack
         </StyledLine>
         <StyledLine>
           <b>DB</b>: PostgreSQL
@@ -113,8 +114,9 @@ const RecruitSystemEngineerSummary = () => (
           <b>開発ツール</b>: Git
         </StyledLine>
         <StyledLine>
-          <b>インフラ</b>: GitHub, GCP(GKE, Storage, Container Registry, DNS,
-          SQL, Memorystore, Functions, Scheduler), Kubernetes
+          <b>インフラ</b>: GitHub(Pages, Actions, Packages), GCP(GKE, Storage,
+          Container Registry, DNS, SQL, Memorystore, Functions, Scheduler),
+          Kubernetes, Algolia, Mailgun, Cloudinary
         </StyledLine>
         <StyledLine>
           <br />
@@ -126,11 +128,7 @@ const RecruitSystemEngineerSummary = () => (
           <br />
         </StyledLine>
         <StyledLine>
-          <b>言語</b>: HTML5, CSS3(SCSS, PostCSS)
-        </StyledLine>
-        <StyledLine>
-          <b>フレームワーク</b>: React(class-based, hooks), Storybook, GatsbyJS,
-          Webpack
+          <b>フレームワーク</b>: React(class-based, hooks), GatsbyJS
         </StyledLine>
         <StyledLine>
           <b>DB</b>: Redis
@@ -139,8 +137,7 @@ const RecruitSystemEngineerSummary = () => (
           <b>クライアント</b>: Electron
         </StyledLine>
         <StyledLine>
-          <b>インフラ</b>: Netlify, GitHub(Pages, Actions, Packages), Algolia,
-          Mailgun, Cloudinary
+          <b>インフラ</b>: Netlify
         </StyledLine>
       </DefinitionBlock.Body>
     </DefinitionBlock>

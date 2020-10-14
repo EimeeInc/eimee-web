@@ -156,7 +156,10 @@ const RecruitProductManagerSummary = () => (
       <DefinitionBlock.Header>参考給与</DefinitionBlock.Header>
       <DefinitionBlock.Body>
         <StyledLine>
-          年収600万 ～ 900万程度（賞与込み、残業代は別途全額支給）
+          年収350万 ～ 600万程度（賞与込み、残業代は別途全額支給）
+          <br />
+          ※何かしらのプロダクトマネージャーとして実績がある場合は、年収600万 ～
+          900万程度
           <br />
           ※評価制度参照
         </StyledLine>

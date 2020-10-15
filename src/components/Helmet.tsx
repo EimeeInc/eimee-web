@@ -58,7 +58,14 @@ export default ({
     `,
   );
 
-  const metaDescription = description || site.siteMetadata.description;
+  if (description) {
+    site.siteMetadata.description =
+      site.siteMetadata.description.slice(0, 69) +
+      "の" +
+      description +
+      "ページです。";
+  }
+  const metaDescription = site.siteMetadata.description;
 
   const selectedTitle = title
     ? `${title} | ${site.siteMetadata.title}`

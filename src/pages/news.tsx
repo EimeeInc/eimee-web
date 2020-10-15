@@ -12,7 +12,7 @@ type NewsTabState = "notification" | "pressRelease";
 const IndexPage = () => (
   <>
     <Helmet
-      description="ニュース"
+      description="日本のモノづくりを応援！！電子工作やハードウェア、IoTの知識の交流が行える『elchika(エルチカ)』を運営している、エイミー株式会社のニュースページです。"
       title="ニュース"
       canonical="/news/"
       link={[

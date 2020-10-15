@@ -8,7 +8,7 @@ import Workstyle from "@/components/Organism/Workstyle";
 const IndexPage = () => (
   <>
     <Helmet
-      description="ワークスタイル"
+      description="日本のモノづくりを応援！！電子工作やハードウェア、IoTの知識の交流が行える『elchika(エルチカ)』を運営している、エイミー株式会社のワークスタイルページです。"
       title="ワークスタイル"
       canonical="/workstyle/"
       link={[

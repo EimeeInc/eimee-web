@@ -10,7 +10,7 @@ import Works from "@/components/Organism/Works";
 const IndexPage = () => (
   <>
     <Helmet
-      description="私たちについて"
+      description="日本のモノづくりを応援！！電子工作やハードウェア、IoTの知識の交流が行える『elchika(エルチカ)』を運営している、エイミー株式会社の私たちについてのページです。"
       title="私たちについて"
       canonical="/about/"
       link={[

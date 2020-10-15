@@ -10,7 +10,6 @@ import TopRecruitBanner from "@/components/Organism/TopRecruitBanner";
 const IndexPage = () => (
   <>
     <Helmet
-      description="日本のモノづくりを応援！！電子工作やハードウェア、IoTの知識の交流が行える『elchika(エルチカ)』を運営している、エイミー株式会社のホームページです。"
       link={[
         { rel: "preload", href: "/assets/img/ph_top1.jpg", as: "image" },
         { rel: "preload", href: "/assets/img/ph_top2.jpg", as: "image" },

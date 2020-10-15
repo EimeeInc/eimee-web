@@ -3,6 +3,7 @@ const isDev = process.env.NODE_ENV === "development";
 module.exports = {
   siteMetadata: {
     title: `エイミー株式会社《 Eimee Inc. 》`,
+    description: `日本のモノづくりを応援！！電子工作やハードウェア、IoTの知識の交流が行える『elchika(エルチカ)』を運営している、エイミー株式会社のホームページです。`,
     author: `@EimeeInc`,
     baseUrl: "https://eimee.co.jp",
     script: [

@@ -8,6 +8,7 @@ import Workstyle from "@/components/Organism/Workstyle";
 const IndexPage = () => (
   <>
     <Helmet
+      description="ワークスタイル"
       title="ワークスタイル"
       canonical="/workstyle/"
       link={[

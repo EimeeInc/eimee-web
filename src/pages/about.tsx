@@ -10,6 +10,7 @@ import Works from "@/components/Organism/Works";
 const IndexPage = () => (
   <>
     <Helmet
+      description="私たちについて"
       title="私たちについて"
       canonical="/about/"
       link={[

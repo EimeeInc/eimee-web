@@ -15,6 +15,7 @@ type CompanyTabState = "ceo" | "summary" | "history";
 const IndexPage = () => (
   <>
     <Helmet
+      description="会社概要"
       title="会社概要"
       canonical="/company/"
       link={[

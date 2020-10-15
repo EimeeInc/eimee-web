@@ -12,6 +12,7 @@ type NewsTabState = "notification" | "pressRelease";
 const IndexPage = () => (
   <>
     <Helmet
+      description="ニュース"
       title="ニュース"
       canonical="/news/"
       link={[

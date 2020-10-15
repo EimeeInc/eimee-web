@@ -37,6 +37,7 @@ const onSubmit = async (
 const IndexPage = () => (
   <>
     <Helmet
+      description="お問い合わせ"
       title="お問い合わせ"
       canonical="/contact/"
       link={[

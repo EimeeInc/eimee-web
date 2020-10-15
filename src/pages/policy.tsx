@@ -9,6 +9,7 @@ import Policy from "@/components/Organism/Policy";
 const IndexPage = () => (
   <>
     <Helmet
+      description="個人情報保護方針"
       title="個人情報保護方針"
       canonical="/policy/"
       link={[

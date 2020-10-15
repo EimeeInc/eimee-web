@@ -3,7 +3,7 @@ const isDev = process.env.NODE_ENV === "development";
 module.exports = {
   siteMetadata: {
     title: `エイミー株式会社《 Eimee Inc. 》`,
-    description: `クレジットカード一括比較サイト【hikaQ(ヒカキュー)】を運営する「エイミー株式会社」です。皆さんの日々を豊かにする便利なアイデア・サービスをお届けします。Yahoo!プロモーション広告正規代理店｜東京都江東区｜エイミー株式会社《 Eimee Inc. 》`,
+    description: `日本のモノづくりを応援！！電子工作やハードウェア、IoTの知識の交流が行える『elchika(エルチカ)』を運営している、エイミー株式会社のホームページです。`,
     author: `@EimeeInc`,
     baseUrl: "https://eimee.co.jp",
     script: [

@@ -9,6 +9,7 @@ import Policy from "@/components/Organism/Policy";
 const IndexPage = () => (
   <>
     <Helmet
+      description="日本のモノづくりを応援！！電子工作やハードウェア、IoTの知識の交流が行える『elchika(エルチカ)』を運営している、エイミー株式会社の個人情報保護方針ページです。"
       title="個人情報保護方針"
       canonical="/policy/"
       link={[

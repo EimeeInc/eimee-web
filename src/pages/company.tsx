@@ -15,6 +15,7 @@ type CompanyTabState = "ceo" | "summary" | "history";
 const IndexPage = () => (
   <>
     <Helmet
+      description="日本のモノづくりを応援！！電子工作やハードウェア、IoTの知識の交流が行える『elchika(エルチカ)』を運営している、エイミー株式会社の会社概要ページです。"
       title="会社概要"
       canonical="/company/"
       link={[

@@ -37,6 +37,7 @@ const onSubmit = async (
 const IndexPage = () => (
   <>
     <Helmet
+      description="日本のモノづくりを応援！！電子工作やハードウェア、IoTの知識の交流が行える『elchika(エルチカ)』を運営している、エイミー株式会社のお問い合わせページです。"
       title="お問い合わせ"
       canonical="/contact/"
       link={[

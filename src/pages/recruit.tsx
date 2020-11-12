@@ -5,6 +5,11 @@ import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
 import CardTitle from "@/components/Atom/CardTitle";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
 import RecruitSystemEngineerSummary from "@/components/Organism/RecruitSystemEngineerSummary";
+import styled from "@emotion/styled";
+
+const Wrapper = styled.div`
+  text-align: center;
+`;
 
 const IndexPage = () => (
   <>
@@ -24,7 +29,9 @@ const IndexPage = () => (
     />
     <Breadcrumbs name="recruit" />
     <PageContentsWrapper>
-      <CardTitle>elchika システムエンジニア（PL / PL候補）</CardTitle>
+      <Wrapper>
+        <CardTitle>elchika システムエンジニア（PL / PL候補）</CardTitle>
+      </Wrapper>
       <RecruitSystemEngineerSummary />
     </PageContentsWrapper>
   </>

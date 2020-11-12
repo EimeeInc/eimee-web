@@ -26,6 +26,10 @@ const Wrapper = styled.div`
       font-size: 7rem;
     `}
   }
+
+  span {
+    text-align: center;
+  }
 `;
 
 type CardTitleProps = {

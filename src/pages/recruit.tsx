@@ -2,13 +2,14 @@ import * as React from "react";
 import Helmet from "@/components/Helmet";
 import CommonHeaderBlock from "@/components/Molecule/CommonHeaderBlock";
 import PageContentsWrapper from "@/components/Atom/PageContentsWrapper";
+import CardTitle from "@/components/Atom/CardTitle";
 import Breadcrumbs from "@/components/Molecule/Breadcrumbs";
-import Tab from "@/components/Molecule/Tab";
-import RecruitImageList from "@/components/Organism/RecruitImageList";
-import RecruitProductManagerSummary from "@/components/Organism/RecruitProductManagerSummary";
 import RecruitSystemEngineerSummary from "@/components/Organism/RecruitSystemEngineerSummary";
+import styled from "@emotion/styled";
 
-type RecruitTabState = "pdm" | "se";
+const Wrapper = styled.div`
+  text-align: center;
+`;
 
 const IndexPage = () => (
   <>
@@ -28,24 +29,10 @@ const IndexPage = () => (
     />
     <Breadcrumbs name="recruit" />
     <PageContentsWrapper>
-      <Tab<RecruitTabState> selected="pdm">
-        <Tab.Menu<RecruitTabState>>
-          {({ Menu }) => (
-            <>
-              <Menu tag="pdm">elchika プロダクトマネージャー</Menu>
-              <Menu tag="se">elchika システムエンジニア（PL / PL候補）</Menu>
-            </>
-          )}
-        </Tab.Menu>
-        <Tab.Body<RecruitTabState> tag="pdm">
-          <RecruitImageList mode="pdm" />
-          <RecruitProductManagerSummary />
-        </Tab.Body>
-        <Tab.Body<RecruitTabState> tag="se">
-          <RecruitImageList mode="se" />
-          <RecruitSystemEngineerSummary />
-        </Tab.Body>
-      </Tab>
+      <Wrapper>
+        <CardTitle>elchika システムエンジニア（PL / PL候補）</CardTitle>
+      </Wrapper>
+      <RecruitSystemEngineerSummary />
     </PageContentsWrapper>
   </>
 );
